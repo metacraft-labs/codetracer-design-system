@@ -1,0 +1,7 @@
+{
+  "tokenSetOrder": [
+    "brand/brand",
+    "alias/alias",
+    "mapped/mapped"
+  ]
+}
