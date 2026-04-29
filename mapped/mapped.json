@@ -397,7 +397,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.450}"
+            "$value": "{colors.neutral.650}"
           },
           "tertiary-hover": {
             "$extensions": {
@@ -407,7 +407,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.350}"
+            "$value": "{colors.neutral.550}"
           },
           "disabled": {
             "$extensions": {
