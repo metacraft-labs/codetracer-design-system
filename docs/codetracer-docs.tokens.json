@@ -1,0 +1,78 @@
+{
+  "$description": "CodeTracer docs design system — the single, shared source of truth for the --docs-* design tokens used by every Metacraft documentation site (isonim/docs/users, isonim-docs/site, codetracer/docs/book-isonim). Ported faithfully from the WebFlow reference (codetracer-docs-review). This is an INDEPENDENT lineage from the canonical brand tokens in ../brand|alias|mapped; the divergences (Geist font, blue #4168cc accent, warm #f0eeea canvas) are catalogued in ./DESIGN-DIVERGENCES.md so the design team can decide whether to reconcile. Loaded via the isonim-docs framework's core/docs_tokens.loadDocsTokenLayer; `token` bindings resolve against the brand primitives (../brand/brand.json).",
+  "fontFaces": "@font-face {\n  font-family: \"Geist\";\n  font-style: normal;\n  font-weight: 100 900;\n  font-display: swap;\n  src: url(/assets/fonts/Geist-Variable.woff2) format(\"woff2\");\n}",
+  "vars": {
+    "--docs-font-sans": {
+      "light": { "literal": "\"Geist\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif" },
+      "dark":  { "literal": "\"Geist\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif" }
+    },
+    "--docs-font-mono": {
+      "light": { "literal": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace" },
+      "dark":  { "literal": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", monospace" }
+    },
+
+    "--docs-space-1": { "light": { "literal": "0.25rem" }, "dark": { "literal": "0.25rem" } },
+    "--docs-space-2": { "light": { "literal": "0.5rem" },  "dark": { "literal": "0.5rem" } },
+    "--docs-space-3": { "light": { "literal": "0.75rem" }, "dark": { "literal": "0.75rem" } },
+    "--docs-space-4": { "light": { "literal": "1rem" },    "dark": { "literal": "1rem" } },
+    "--docs-space-5": { "light": { "literal": "1.5rem" },  "dark": { "literal": "1.5rem" } },
+    "--docs-space-6": { "light": { "literal": "2rem" },    "dark": { "literal": "2rem" } },
+    "--docs-space-8": { "light": { "literal": "3rem" },    "dark": { "literal": "3rem" } },
+
+    "--docs-radius-sm":   { "light": { "literal": "4px" },   "dark": { "literal": "4px" } },
+    "--docs-radius-md":   { "light": { "literal": "8px" },   "dark": { "literal": "8px" } },
+    "--docs-radius-lg":   { "light": { "literal": "10px" },  "dark": { "literal": "10px" } },
+    "--docs-radius-code": { "light": { "literal": "6px" },   "dark": { "literal": "6px" } },
+    "--docs-radius-pill": { "light": { "literal": "999px" }, "dark": { "literal": "999px" } },
+
+    "--docs-font-size-sm":      { "light": { "literal": "0.85rem" }, "dark": { "literal": "0.85rem" } },
+    "--docs-font-size-base":    { "light": { "literal": "1rem" },    "dark": { "literal": "1rem" } },
+    "--docs-line-height":       { "light": { "literal": "1.5" },     "dark": { "literal": "1.5" } },
+    "--docs-max-content-width": { "light": { "literal": "50rem" },   "dark": { "literal": "50rem" } },
+    "--docs-sidebar-width":     { "light": { "literal": "20rem" },   "dark": { "literal": "20rem" } },
+
+    "--docs-bg":        { "light": { "literal": "#f0eeea" }, "dark": { "literal": "#161719" } },
+    "--docs-bg-raised": { "light": { "literal": "#E7E5E1" }, "dark": { "literal": "#31343a" } },
+    "--docs-fg":        { "light": { "literal": "#111111" }, "dark": { "literal": "#dfe0e4" } },
+    "--docs-fg-muted":  { "light": { "literal": "#7e7e7e" }, "dark": { "literal": "#a8aab1" } },
+    "--docs-border":    { "light": { "literal": "#e5e7eb" }, "dark": { "literal": "#3c4046" } },
+
+    "--docs-accent":    { "light": { "literal": "#4168cc" }, "dark": { "literal": "#88a4f2" } },
+    "--docs-accent-fg": { "light": { "literal": "#ffffff" }, "dark": { "literal": "#161719" } },
+    "--docs-link":      { "light": { "literal": "#4168cc" }, "dark": { "literal": "#88a4f2" } },
+
+    "--docs-code-bg":        { "light": { "literal": "#f6f8fa" }, "dark": { "literal": "#1d1f22" } },
+    "--docs-code-inline-bg": { "light": { "literal": "#f1f5f9" }, "dark": { "literal": "#272a2e" } },
+    "--docs-code-fg":        { "light": { "literal": "#282A2D" }, "dark": { "literal": "#eeeef1" } },
+
+    "--docs-focus-ring": { "light": { "token": "colors.blue.500" }, "dark": { "token": "colors.blue.500" } },
+
+    "--docs-shadow":   { "light": { "literal": "0 14px 40px rgba(0, 0, 0, 0.13)" }, "dark": { "literal": "0 14px 40px rgba(0, 0, 0, 0.55)" } },
+    "--docs-input-bg": { "light": { "literal": "#ffffff" }, "dark": { "literal": "#202124" } },
+
+    "--docs-tok-keyword": { "light": { "literal": "#a626a4" }, "dark": { "literal": "#d2a8ff" } },
+    "--docs-tok-string":  { "light": { "literal": "#22863a" }, "dark": { "literal": "#7ee787" } },
+    "--docs-tok-comment": { "light": { "literal": "#6a737d" }, "dark": { "literal": "#8b949e" } },
+    "--docs-tok-number":  { "light": { "literal": "#005cc5" }, "dark": { "literal": "#79c0ff" } },
+
+    "--docs-admonition-note-border":      { "light": { "token": "colors.blue.500" },   "dark": { "token": "colors.blue.500" } },
+    "--docs-admonition-note-bg":          { "light": { "literal": "#eff6ff" }, "dark": { "literal": "rgba(99, 160, 255, 0.12)" } },
+    "--docs-admonition-tip-border":       { "light": { "token": "colors.green.500" },  "dark": { "token": "colors.green.500" } },
+    "--docs-admonition-tip-bg":           { "light": { "literal": "#f0fdf4" }, "dark": { "literal": "rgba(74, 222, 128, 0.12)" } },
+    "--docs-admonition-warning-border":   { "light": { "token": "colors.amber.500" },  "dark": { "token": "colors.amber.500" } },
+    "--docs-admonition-warning-bg":       { "light": { "literal": "#fffbeb" }, "dark": { "literal": "rgba(251, 191, 36, 0.12)" } },
+    "--docs-admonition-danger-border":    { "light": { "token": "colors.red.500" },    "dark": { "token": "colors.red.500" } },
+    "--docs-admonition-danger-bg":        { "light": { "literal": "#fef2f2" }, "dark": { "literal": "rgba(248, 113, 113, 0.12)" } },
+    "--docs-admonition-important-border": { "light": { "token": "colors.violet.500" }, "dark": { "token": "colors.violet.500" } },
+    "--docs-admonition-important-bg":     { "light": { "literal": "#f5f3ff" }, "dark": { "literal": "rgba(139, 92, 246, 0.12)" } },
+    "--docs-admonition-caution-border":   { "light": { "token": "colors.red.500" },    "dark": { "token": "colors.red.500" } },
+    "--docs-admonition-caution-bg":       { "light": { "literal": "#fef2f2" }, "dark": { "literal": "rgba(248, 113, 113, 0.12)" } },
+
+    "--docs-api-get":   { "light": { "literal": "#1a8754" }, "dark": { "literal": "#56d364" } },
+    "--docs-api-post":  { "light": { "literal": "#2f6feb" }, "dark": { "literal": "#6ea8ff" } },
+    "--docs-api-put":   { "light": { "literal": "#b8860b" }, "dark": { "literal": "#e3b341" } },
+    "--docs-api-patch": { "light": { "literal": "#8250df" }, "dark": { "literal": "#d2a8ff" } },
+    "--docs-api-delete":{ "light": { "literal": "#cc3333" }, "dark": { "literal": "#ff7b72" } },
+    "--docs-api-other": { "light": { "literal": "#5b6270" }, "dark": { "literal": "#9aa2b1" } }
+  }
+}
