@@ -28,5 +28,21 @@ Generated after a library audit + consolidation pass:
   generic primitives (avatars, loaders, charts, navigation, lists) to their own base-library pages.
 - Every component now carries a description; no duplicate component names remain.
 
-The token JSON (`brand`/`alias`/`mapped`) is a separate Figma-native variable export and is
-unaffected by component changes.
+## Note on the token files
+
+This PR adds only the component manifest — it does **not** touch the token JSON
+(`brand`/`alias`/`mapped`).
+
+⚠️ A field-by-field diff of all 512 Figma variables against those files shows they are **out of
+date** and should be re-exported from Figma:
+
+- **mapped:** 7 changed values (`text/primary/caption`, `surface/base/card`, two
+  `primary/*-hover`, three `surface/alert/*`), 12 tokens present in Figma but missing here
+  (`colors/ui/role/*`, `icon/primary/subtle-hover`, `divider/secondary`, `text/primary/label-subtle`,
+  `caption-subtle`), and a `surface/canvas` → `surface/base/canvas` restructure.
+- **alias:** old `padding/*` names (Figma renamed them to `spacing/*`), missing `font-size/*`, and a
+  `deafult` typo Figma has since fixed.
+- **brand:** `type/fontFamily/Space Grotesk` is `"Space Grotesk"` in Figma (static-font migration)
+  but still `"Space Grotesk Variable"` here.
+
+Re-export these three files from Figma's variable export before relying on them.
