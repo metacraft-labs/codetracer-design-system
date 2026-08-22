@@ -2,136 +2,2125 @@
   "_meta": {
     "name": "CodeTracer Design System — component manifest",
     "description": "Structural inventory of every published component (component sets + single components) in the CodeTracer Design System Figma library.",
-    "source": { "tool": "Figma", "file": "CodeTracer Design System", "fileKey": "Ytr6Ux4bYZYRUBpgNsSVml" },
+    "source": {
+      "tool": "Figma",
+      "file": "CodeTracer Design System",
+      "fileKey": "Ytr6Ux4bYZYRUBpgNsSVml"
+    },
     "generatedBy": "Figma plugin API export",
     "fieldNotes": {
       "variantProperties": "Variant axes and their allowed values (long value lists capped with '…+N more').",
       "variantCount": "Total number of variant combinations in the set.",
       "properties": "Component property definitions: name -> type (VARIANT | TEXT | BOOLEAN | INSTANCE_SWAP).",
-      "variantError": "Present and true when the set has conflicting/incompatible variant combinations that must be fixed before publishing."
+      "variantError": "(resolved) previously flagged sets with variant conflicts; none remain."
     },
-    "counts": { "total": 116, "componentSets": 76, "singleComponents": 40 },
-    "knownIssues": [
-      { "component": "ui-icons", "id": "192:11889", "issue": "variant conflict — set reports existing variant errors (duplicate/incompatible combination); resolve before publishing." },
-      { "component": "Tooltip", "id": "4203:11656", "issue": "variant conflict — existing variant errors; resolve before publishing." }
-    ]
+    "counts": {
+      "total": 116,
+      "componentSets": 76,
+      "singleComponents": 40
+    },
+    "knownIssues": []
   },
   "components": [
-{"name":"agent-status-icon","page":"Agent Components Library","id":"4326:80","kind":"set","variantProperties":{"state":["idle","working","waiting-input","paused","completed","failed"]},"variantCount":6,"properties":{"state":"VARIANT"},"description":"Caption-bar agent glyph."},
-{"name":"progress-bar","page":"Agent Components Library","id":"3718:102","kind":"set","variantProperties":{"status":["running","done","stuck"]},"variantCount":3,"properties":{"count":"TEXT","status":"VARIANT"},"description":"Progress bar — determinate milestone progress for a fleet run."},
-{"name":"agent-progress-indicator","page":"Agent Components Library","id":"3761:178","kind":"set","variantProperties":{"state":["idle","initializing","working","waiting-input","paused","completed","failed"]},"variantCount":7,"properties":{"task":"TEXT","count":"TEXT","percent":"TEXT","state":"VARIANT"},"description":"Agent progress indicator (caption bar) — spec §3."},
-{"name":"workspace-view-switcher","page":"Agent Components Library","id":"4329:151","kind":"set","variantProperties":{"view":["mine","agent"]},"variantCount":2,"properties":{"view":"VARIANT"},"description":"Switches the whole editor between the user’s workspace and the agent’s isolated copy."},
-{"name":"file-tree-row","page":"Agent Components Library","id":"4329:174","kind":"set","variantProperties":{"kind":["folder","file"]},"variantCount":2,"properties":{"name":"TEXT","kind":"VARIANT"},"description":"One row of the agent workspace file tree: disclosure + glyph + name + file-state badge."},
-{"name":"file-state-badge","page":"Agent Components Library","id":"3763:139","kind":"set","variantProperties":{"state":["modified","modified-icon","added","added-icon","deleted","deleted-icon","testing","tested","failed"]},"variantCount":9,"properties":{"state":"VARIANT"},"description":"File state badge — a small colour-coded pill showing a file's status in the agent's workspace."},
-{"name":"file-diff-indicator","page":"Agent Components Library","id":"4329:209","kind":"set","variantProperties":{"state":["uncommitted","staged","conflict"]},"variantCount":3,"properties":{"state":"VARIANT"},"description":"Marks a file as changed against the base state, before any diff is opened."},
-{"name":"coverage-gutter-mark","page":"Agent Components Library","id":"3766:145","kind":"set","variantProperties":{"state":["covered","uncovered","partial","none"]},"variantCount":4,"properties":{"state":"VARIANT"},"description":"Coverage gutter mark — a thin bar in the editor gutter showing DeepReview line coverage from the agent's test runs."},
-{"name":"inline-value-label","page":"Agent Components Library","id":"3766:150","kind":"set","variantProperties":{"state":["default","current"]},"variantCount":2,"properties":{"value":"TEXT","state":"VARIANT"},"description":"Inline value label — a live variable value shown inline on a code line, rendered as a DeepReview flow annotation (NOT a text comment)."},
-{"name":"execution-context-selector","page":"Agent Components Library","id":"4330:226","kind":"set","variantProperties":{"mode":["latest","specific-test","comparison"]},"variantCount":3,"properties":{"mode":"VARIANT"},"description":"Chooses which recorded execution drives the inline values and gutter marks: latest run · a specific test · a comparison of two."},
-{"name":"milestone-row","page":"Agent Components Library","id":"3762:167","kind":"set","variantProperties":{"status":["pending","in-progress","completed","failed","skipped"]},"variantCount":5,"properties":{"content":"TEXT","meta":"TEXT","nested":"BOOLEAN","status":"VARIANT"},"description":"Milestone row (Agent Activity pane) — spec §6.1."},
-{"name":"milestone-priority-tag","page":"Agent Components Library","id":"4331:414","kind":"set","variantProperties":{"priority":["high","medium","low"]},"variantCount":3,"properties":{"priority":"VARIANT"},"description":"The priority a milestone carries in the agent plan — high · medium · low."},
-{"name":"event-row","page":"Agent Components Library","id":"3707:42","kind":"set","variantProperties":{"kind":["thought","tool","edit","diff","sub-agent","status","delivery","log","tool-result","workspace","llm-request","unknown"]},"variantCount":12,"properties":{"content":"TEXT","meta":"TEXT","kind":"VARIANT"},"description":"Event row — one entry in the Agent Panel's event stream (the net-new heart of the panel)."},
-{"name":"filter-chip","page":"Agent Components Library","id":"3711:42","kind":"set","variantProperties":{"state":["inactive","active"]},"variantCount":2,"properties":{"label":"TEXT","state":"VARIANT"},"description":"Filter chip — a toggle chip for filtering the event stream (All events · Thoughts · Tools · Edits · Diffs) and for small segmented controls (e.g."},
-{"name":"streaming-indicator","page":"Agent Components Library","id":"3764:144","kind":"set","variantProperties":{"state":["active","idle","stalled"]},"variantCount":3,"properties":{"state":"VARIANT"},"description":"Streaming indicator — shows the liveness of an agent's event stream so the user knows whether work is still flowing."},
-{"name":"stream-empty-state","page":"Agent Components Library","id":"4337:573","kind":"set","variantProperties":{"state":["no-events","loading-history","filtered-empty"]},"variantCount":3,"properties":{"state":"VARIANT"},"description":"The three ways the stream can show nothing: not started, catching up on history, or filtered to empty."},
-{"name":"agent-chip","page":"Agent Components Library","id":"3719:94","kind":"set","variantProperties":{"type":["configured","add"]},"variantCount":2,"properties":{"label":"TEXT","type":"VARIANT"},"description":"Agent chip — one configured agent in the Launch fan-out (each chip = one parallel session)."},
-{"name":"advanced-disclosure","page":"Agent Components Library","id":"4340:675","kind":"set","variantProperties":{"state":["collapsed","expanded"]},"variantCount":2,"properties":{"state":"VARIANT"},"description":"Keeps Harbor’s full task configuration available without putting it in front of the common case."},
-{"name":"status-pill","page":"Agent Components Library","id":"3689:26","kind":"set","variantProperties":{"status":["running","waiting","ready","failed","delivered"]},"variantCount":5,"properties":{"dot":"BOOLEAN","status":"VARIANT"},"description":"Status pill — a compact, colour-coded badge that encodes a run or event's state at a glance."},
-{"name":"elapsed-time","page":"Agent Components Library","id":"4341:592","kind":"set","variantProperties":{"state":["live","final"]},"variantCount":2,"properties":{"time":"TEXT","state":"VARIANT"},"description":"How long a run has been going, or how long it took."},
-{"name":"prompt-ack","page":"Agent Components Library","id":"4341:799","kind":"set","variantProperties":{"state":["queued","accepted","rejected"]},"variantCount":3,"properties":{"state":"VARIANT"},"description":"Confirms what happened to a steering prompt."},
-{"name":"mode-switcher","page":"Agent Components Library","id":"4342:744","kind":"set","variantProperties":{"mode":["diff","files"]},"variantCount":2,"properties":{"mode":"VARIANT"},"description":"Unified Diff ⇄ Full Files."},
-{"name":"modified-file-row","page":"Agent Components Library","id":"4342:804","kind":"set","variantProperties":{"state":["modified","added","deleted"]},"variantCount":3,"properties":{"path":"TEXT","lines":"TEXT","state":"VARIANT"},"description":"One file in the review set: state, path, and modified-line count."},
-{"name":"diff-line","page":"Agent Components Library","id":"4337:478","kind":"set","variantProperties":{"type":["added","removed","context"]},"variantCount":3,"properties":{"code":"TEXT","line-old":"TEXT","line-new":"TEXT","type":"VARIANT"},"description":"One line of a diff: old line number, new line number, sign, code."},
-{"name":"context-expander","page":"Agent Components Library","id":"4342:844","kind":"set","variantProperties":{"direction":["above","below"]},"variantCount":2,"properties":{"direction":"VARIANT"},"description":"Reveals surrounding unchanged code around a hunk."},
-{"name":"draggable-edge-line","page":"Agent Components Library","id":"4343:870","kind":"set","variantProperties":{"state":["default","hover"]},"variantCount":2,"properties":{"state":"VARIANT"},"description":"The grab handle on a context boundary."},
-{"name":"diff-gutter-decoration","page":"Agent Components Library","id":"4343:940","kind":"set","variantProperties":{"state":["added","removed","unchanged"]},"variantCount":3,"properties":{"code":"TEXT","state":"VARIANT"},"description":"Full Files mode: the normal CodeTracer editor with modified lines marked, fully loaded rather than clipped to hunks, and read-only by default."},
-{"name":"call-trace-row","page":"Agent Components Library","id":"4343:967","kind":"set","variantProperties":{"state":["passed","failed","running"]},"variantCount":3,"properties":{"name":"TEXT","state":"VARIANT"},"description":"One node of the agent’s test-execution tree in the call trace panel, filtered to tests and updating as each test completes."},
-{"name":"session-status-dot","page":"Agent Components Library","id":"3951:34","kind":"set","variantProperties":{"session":["running","queued","provisioning","paused","resuming","stopping","completed","failed","cancelled"]},"variantCount":9,"properties":{"session":"VARIANT"},"description":"Status indicator dot for a session card."},
-{"name":"session-action-button","page":"Agent Components Library","id":"3952:33","kind":"set","variantProperties":{"action":["stop","cancel"],"status":["default","hover"]},"variantCount":4,"properties":{"action":"VARIANT","status":"VARIANT"},"description":"Compact action button shown on a session card."},
-{"name":"session-activity-row","page":"Agent Components Library","id":"3953:33","kind":"set","variantProperties":{"emphasis":["current","past"]},"variantCount":2,"properties":{"emphasis":"VARIANT"},"description":"One activity line inside a session card: icon + truncating label + elapsed duration."},
-{"name":"session-card","page":"Agent Components Library","id":"3958:167","kind":"set","variantProperties":{"status":["default","hover","selected","focused"]},"variantCount":4,"properties":{"title":"TEXT","repo":"TEXT","agent":"TEXT","timestamp":"TEXT","showActivity":"BOOLEAN","showStop":"BOOLEAN","showCancel":"BOOLEAN","status":"VARIANT"},"description":"A single agent session in the dashboard feed."},
-{"name":"session-role-chip","page":"Agent Components Library","id":"3976:227","kind":"set","variantProperties":{"role":["manager","startup","implementation","coordinator","reviewer","supervisor","research","planning"]},"variantCount":8,"properties":{"name":"TEXT","showName":"BOOLEAN","role":"VARIANT"},"description":"One session in the orchestration, labelled by role."},
-{"name":"session-iteration-block","page":"Agent Components Library","id":"3978:261","kind":"set","variantProperties":{"outcome":["running","passed","failed"]},"variantCount":3,"properties":{"iteration":"TEXT","verdict":"TEXT","duration":"TEXT","outcome":"VARIANT"},"description":"OPTION 2 — Iteration ledger."},
-{"name":"session-graph-row","page":"Agent Components Library","id":"3979:256","kind":"set","variantProperties":{"topology":["linear","fork","merge","continuation"]},"variantCount":4,"properties":{"note":"TEXT","topology":"VARIANT"},"description":"OPTION 3 — Topology gutter."},
-{"name":"session-tree-group","page":"Agent Components Library","id":"3984:363","kind":"set","variantProperties":{"state":["expanded","collapsed"]},"variantCount":2,"properties":{"role":"TEXT","count":"TEXT","state":"VARIANT"},"description":"Role group header in the Session Navigator."},
-{"name":"session-tree-item","page":"Agent Components Library","id":"3986:657","kind":"set","variantProperties":{"status":["completed","active","failed","queued"],"state":["default","current"],"depth":["0","1"]},"variantCount":16,"properties":{"name":"TEXT","showMerge":"BOOLEAN","showCompaction":"BOOLEAN","status":"VARIANT","state":"VARIANT","depth":"VARIANT"},"description":"Session Navigator entry, per WebUI-PRD."},
-{"name":"session-agent-column","page":"Agent Components Library","id":"4184:894","kind":"set","variantProperties":{"outcome":["running","complete","failed"]},"variantCount":3,"properties":{"Row 1":"BOOLEAN","Row 2":"BOOLEAN","Row 3":"BOOLEAN","Row 4":"BOOLEAN","Row 5":"BOOLEAN","Row 6":"BOOLEAN","Row 7":"BOOLEAN","Row 8":"BOOLEAN","Row 9":"BOOLEAN","Row 10":"BOOLEAN","Agent":"TEXT","Verdict":"TEXT","Milestones":"TEXT","Elapsed":"TEXT","outcome":"VARIANT"},"description":"One competitor in arena mode — a complete execution loop belonging to a single agent."},
-{"name":"milestone-segment","page":"Agent Components Library","id":"3962:69","kind":"set","variantProperties":{"status":["planned","in_progress","completed","blocked"]},"variantCount":4,"properties":{"status":"VARIANT"},"description":"One milestone as a bar segment."},
-{"name":"milestone-deliverable-cell","page":"Agent Components Library","id":"3962:72","kind":"set","variantProperties":{"state":["done","todo"]},"variantCount":2,"properties":{"state":"VARIANT"},"description":"One deliverable inside a milestone, as a single cell in the deliverable matrix."},
-{"name":"milestone-rail","page":"Agent Components Library","id":"3963:82","kind":"set","variantProperties":{"size":["default","compact"]},"variantCount":2,"properties":{"currentLabel":"TEXT","count":"TEXT","size":"VARIANT"},"description":"OPTION 1 — Segmented progress rail."},
-{"name":"milestone-matrix-row","page":"Agent Components Library","id":"3964:109","kind":"set","variantProperties":{"status":["completed","in_progress","blocked","planned"]},"variantCount":4,"properties":{"id":"TEXT","title":"TEXT","count":"TEXT","status":"VARIANT"},"description":"OPTION 2 — Deliverable matrix."},
-{"name":"milestone-node","page":"Agent Components Library","id":"3965:101","kind":"set","variantProperties":{"status":["completed","in_progress","blocked","planned"]},"variantCount":4,"properties":{"title":"TEXT","blockedBy":"TEXT","showBlockedBy":"BOOLEAN","showConnectorTop":"BOOLEAN","showConnectorBottom":"BOOLEAN","status":"VARIANT"},"description":"OPTION 3 — Dependency rail."},
-{"name":"milestone-timeline-row","page":"Agent Components Library","id":"3971:184","kind":"set","variantProperties":{"status":["completed","in_progress","blocked","planned"]},"variantCount":4,"properties":{"id":"TEXT","title":"TEXT","duration":"TEXT","showBar":"BOOLEAN","status":"VARIANT"},"description":"OPTION 4 — Time waterfall."},
-{"name":"agent-task-label","page":"Agent Components Library","id":"4326:92","kind":"single","properties":{"task":"TEXT"},"description":"Caption-bar task name — the current milestone description from the agent plan."},
-{"name":"milestone-counter","page":"Agent Components Library","id":"4326:98","kind":"single","properties":{"count":"TEXT"},"description":"Completed / total milestones from the agent plan."},
-{"name":"progress-percentage","page":"Agent Components Library","id":"4326:113","kind":"single","properties":{"percent":"TEXT"},"description":"Numeric completion next to the progress bar."},
-{"name":"agent-context-menu","page":"Agent Components Library","id":"4326:131","kind":"single","description":"Right-click menu on the caption-bar progress indicator."},
-{"name":"workspace-readonly-banner","page":"Agent Components Library","id":"4329:214","kind":"single","properties":{"message":"TEXT"},"description":"Persistent banner shown while the editor is displaying the agent’s workspace, which is read-only."},
-{"name":"execution-slider","page":"Agent Components Library","id":"3766:151","kind":"single","properties":{"value":"TEXT"},"description":"Execution / loop slider — steps through the iterations of a line or function that ran multiple times, scrubbing which execution the inline values reflect."},
-{"name":"execution-comparison-view","page":"Agent Components Library","id":"4330:238","kind":"single","description":"Two recorded executions of the same code side by side, with their inline values aligned line for line."},
-{"name":"milestone-list","page":"Agent Components Library","id":"4331:241","kind":"single","description":"The agent plan rendered as a checklist, assembled from milestone-row instances including nested children."},
-{"name":"tool-call-card","page":"Agent Components Library","id":"4331:419","kind":"single","description":"A file-editing tool call, enriched with DeepReview context: which functions changed and what it did to coverage."},
-{"name":"test-result-card","page":"Agent Components Library","id":"4331:468","kind":"single","description":"A completed test with its recorded flow data: pass/fail, duration, how many times the function ran, and the values captured."},
-{"name":"card-action-row","page":"Agent Components Library","id":"4331:226","kind":"single","description":"The action pair at the foot of a tool-call or test-result card — jumps from the activity feed to the code or the recorded trace."},
-{"name":"event-stream","page":"Agent Components Library","id":"4335:390","kind":"single","description":"The live feed for one session: filter bar, time-grouped event rows, and a liveness indicator pinned at the foot."},
-{"name":"code-diff-block","page":"Agent Components Library","id":"4337:479","kind":"single","description":"Monospace code and diff rendering inside the event stream — what the diff and file_edit rows expand into."},
-{"name":"timestamp-divider","page":"Agent Components Library","id":"3764:145","kind":"single","properties":{"label":"TEXT"},"description":"Timestamp / grouping divider — a subtle labelled separator that groups the event stream by time."},
-{"name":"config-row","page":"Agent Components Library","id":"4340:541","kind":"single","properties":{"label":"TEXT","value":"TEXT"},"description":"One line of Harbor task configuration: label on the left, current value on the right, click to expand and edit."},
-{"name":"omnibar-agent-command","page":"Agent Components Library","id":"4340:634","kind":"single","properties":{"prompt":"TEXT"},"description":"Launching an agent task from the omnibar."},
-{"name":"fan-out-summary","page":"Agent Components Library","id":"4340:681","kind":"single","properties":{"summary":"TEXT"},"description":"States the consequence of the current agents[] configuration before the user commits: how many parallel sessions this task will create."},
-{"name":"fleet-list","page":"Agent Components Library","id":"4341:623","kind":"single","description":"Every run across every task in one view — the supervision surface."},
-{"name":"run-row","page":"Agent Components Library","id":"4341:593","kind":"single","properties":{"agent":"TEXT"},"description":"One session at a glance in the fleet: state, which agent is running it, size of the change so far, and elapsed time."},
-{"name":"task-group-header","page":"Agent Components Library","id":"4341:611","kind":"single","properties":{"task":"TEXT","count":"TEXT"},"description":"Groups the racing sessions of one task so a fan-out reads as a single thing rather than N unrelated runs."},
-{"name":"diff-stat","page":"Agent Components Library","id":"3764:127","kind":"single","properties":{"added":"TEXT","removed":"TEXT"},"description":"Diff stat — the two-colour '+N −M' added/removed line counts."},
-{"name":"steer-bar","page":"Agent Components Library","id":"4341:800","kind":"single","description":"Sends a follow-up prompt to a running session — redirect without restarting."},
-{"name":"review-workspace-header","page":"Agent Components Library","id":"4342:755","kind":"single","properties":{"title":"TEXT"},"description":"The frame around a DeepReview session: what is being reviewed, which trace drives the overlay, and which of the two review modes is showing."},
-{"name":"trace-context-selector","page":"Agent Components Library","id":"4342:745","kind":"single","properties":{"trace":"TEXT"},"description":"Chooses which recorded trace drives the Omniscience overlay across the review."},
-{"name":"modified-files-panel","page":"Agent Components Library","id":"4342:805","kind":"single","description":"The review set, shared by both DeepReview modes and the primary way to navigate a review."},
-{"name":"diff-file-section","page":"Agent Components Library","id":"4342:887","kind":"single","description":"One file rendered as a review section in Unified Diff mode: header, expandable context, and one or more hunks."},
-{"name":"diff-file-header","page":"Agent Components Library","id":"4342:878","kind":"single","properties":{"path":"TEXT","state":"TEXT"},"description":"Identifies one file section of the unified diff: path plus the usual diff metadata."},
-{"name":"diff-hunk","page":"Agent Components Library","id":"4342:845","kind":"single","properties":{"range":"TEXT"},"description":"One contiguous changed region: the @@ range marker and its lines."},
-{"name":"diff-omniscience-overlay","page":"Agent Components Library","id":"4343:876","kind":"single","description":"The standard CodeTracer Omniscience overlay laid on top of the unified diff — same coverage marks, inline values and loop slider as the editor, restricted to lines currently loaded into t…"},
-{"name":"delivery-card","page":"Agent Components Library","id":"4343:973","kind":"single","description":"Where the work lands: delivery mode, target branch or PR, and the action that ships it."},
-{"name":"accept-reject","page":"Agent Components Library","id":"4343:1011","kind":"single","description":"Per-hunk review decision."},
-{"name":"run-comparison-view","page":"Agent Components Library","id":"4343:1028","kind":"single","description":"Racing runs of one task side by side so a winner can be picked."},
-{"name":"waiting-for-input-alert","page":"Agent Components Library","id":"4344:931","kind":"single","properties":{"question":"TEXT"},"description":"The agent has stopped and needs an answer before it can continue — the highest-urgency state in the system."},
-{"name":"permission-request-modal","page":"Agent Components Library","id":"4344:963","kind":"single","properties":{"command":"TEXT"},"description":"Blocking approval for a risky or outward-facing action the agent wants to take."},
-{"name":"conflict-alert","page":"Agent Components Library","id":"4344:1078","kind":"single","description":"The user edited files an agent is working on."},
-{"name":"persistence-setting-row","page":"Agent Components Library","id":"4344:1113","kind":"single","description":"Whether DeepReview trace data survives after a session ends."},
-{"name":"session-lane","page":"Agent Components Library","id":"3977:195","kind":"single","description":"OPTION 1 — Role swimlane."},
-{"name":"notification-components","page":"Alert / Notification","id":"476:6158","kind":"set","variantProperties":{"notification":["primary","secondary","tertiary"],"type":["info","error","success","warning"]},"variantCount":12,"properties":{"Close":"BOOLEAN","Title":"BOOLEAN","↘︎ Title":"TEXT","Message":"TEXT","notification":"VARIANT","type":"VARIANT"},"description":"Status notification banners for system feedback."},
-{"name":"button","page":"Button","id":"69:171","kind":"set","variantProperties":{"type":["primary","secondary","tertiary"],"status":["default","disabled","focused","hover","selected"],"size":["large","medium","small"]},"variantCount":45,"properties":{"icon left":"BOOLEAN","icon right":"BOOLEAN","Label":"TEXT","type":"VARIANT","status":"VARIANT","size":"VARIANT"},"description":"Primary interactive control for triggering actions."},
-{"name":"icon-button","page":"Button","id":"99:867","kind":"set","variantProperties":{"type":["primary","outlined","secondary"],"status":["default","disabled","focused","hover","selected"],"size":["large","medium","small"],"radius":["sm","md"]},"variantCount":60,"properties":{"type":"VARIANT","status":"VARIANT","size":"VARIANT","radius":"VARIANT"},"description":"Compact button containing only an icon, without a text label."},
-{"name":"main-menu-buttons","page":"Button","id":"1843:6319","kind":"set","variantProperties":{"type":["primary","outlined","secondary"],"status":["default","disabled","focused","hover","selected"]},"variantCount":15,"properties":{"type":"VARIANT","status":"VARIANT"},"description":"Navigation buttons for the application main menu bar."},
-{"name":"check box","page":"Checkbox","id":"598:2395","kind":"set","variantProperties":{"status":["default","disabled","error","focused","hover"],"type":["selected","indeterminate","unselected"],"checkbox":["18x18","16x16","24x24"]},"variantCount":45,"properties":{"status":"VARIANT","type":"VARIANT","checkbox":"VARIANT"},"description":"Toggle control for binary or indeterminate selection."},
-{"name":"field","page":"Input","id":"88:1694","kind":"set","variantProperties":{"status":["empty","active","disabled","focused","hover"],"type":["form","cmdP","panel-lg","panel-sm"]},"variantCount":20,"properties":{"icon left":"BOOLEAN","icon right":"BOOLEAN","Label":"BOOLEAN","Hint copy":"BOOLEAN","Error copy":"BOOLEAN","Placeholder":"TEXT","status":"VARIANT","type":"VARIANT"},"description":"Text input field for user data entry."},
-{"name":"menu-item","page":"Menu","id":"1279:1317","kind":"set","variantProperties":{"status":["default","disabled","empty","focused","hover"],"type":["standard","checkbox","selected","line"],"corner":["squared","rounded"],"Size":["lg","md","sm"]},"variantCount":90,"properties":{"Label":"TEXT","Subtext":"BOOLEAN","Icon Right":"BOOLEAN","Icon Left":"BOOLEAN","status":"VARIANT","type":"VARIANT","corner":"VARIANT","Size":"VARIANT"},"description":"Individual row within a dropdown or context menu."},
-{"name":"tab","page":"Tabs","id":"1449:8686","kind":"set","variantProperties":{"status":["default","disabled","focused","hover","selected"],"size":["sm","lg","md"]},"variantCount":15,"properties":{"status":"VARIANT","size":"VARIANT"},"description":"Tab control for switching between content panels."},
-{"name":"switch","page":"Switch","id":"1953:6661","kind":"set","variantProperties":{"state":["disabled","enabled"],"status":["default","focused","hover"],"size":["md","sm"]},"variantCount":12,"properties":{"state":"VARIANT","status":"VARIANT","size":"VARIANT"},"description":"Binary toggle control for on/off settings."},
-{"name":"switch-label","page":"Switch","id":"1973:8476","kind":"set","variantProperties":{"status":["default","focused","hover"],"state":["disabled","enabled"],"size":["md","sm"]},"variantCount":12,"properties":{"Content":"BOOLEAN","Label":"TEXT","status":"VARIANT","state":"VARIANT","size":"VARIANT"},"description":"Switch toggle paired with a descriptive text label."},
-{"name":"code-icons","page":"Icons","id":"95:2817","kind":"set","variantProperties":{"code-icons":["chevron-down","chevron-left","chevron-right","chevron-up","close-sm","hidden","history-value-new","visible"]},"variantCount":8,"properties":{"code-icons":"VARIANT"},"description":"Small utility icons used in code-related UI contexts."},
-{"name":"browser-icons 24x24","page":"Icons","id":"95:2821","kind":"set","variantProperties":{"browser-icons":["close","expand","minimize"]},"variantCount":3,"properties":{"browser-icons":"VARIANT"},"description":"Window control icons at 24×24 pixel size for the application title bar."},
-{"name":"nav-icons 16x16","page":"Icons","id":"97:327","kind":"set","variantProperties":{"nav-icons":["arrow-left","arrow-right","rev-next","next-line","rev-step-in","step-in","rev-step-out","step-out","rev-continue","continue","run-to-entry","reset-operation","rec-and-replay"]},"variantCount":13,"properties":{"nav-icons":"VARIANT"},"description":"Debugger navigation icons at 16×16 pixel size."},
-{"name":"alert-icons","page":"Icons","id":"101:380","kind":"set","variantProperties":{"type":["error","warning","success","info"],"size":["lg","sm"]},"variantCount":8,"properties":{"type":"VARIANT","size":"VARIANT"},"description":"Status indicator icons for notification and alert contexts."},
-{"name":"extended-icon-set","page":"Icons","id":"4393:25743","kind":"set","variantProperties":{"type":["add-circle","add-square","add1","add2","alert-alarm-bell-off","alert-alarm-bell1","alert-alarm-bell2","alert-information-circle","alert-radio-active1","alert-radio-active2","alert-radio-active3","alert-warning-circle","alert-warning-diamond","alert-warning-triangle","align-back","align-front","…+553 more"]},"variantCount":569,"properties":{"type":"VARIANT"},"description":"Extended icon set — the full glyph library used across CodeTracer beyond the core ui-icons (569 variants)."},
-{"name":"ui-icons","page":"Icons","id":"192:11889","kind":"set","variantProperties":null,"variantCount":38,"properties":null,"description":"General-purpose interface icons for common actions and navigation.","variantError":true},
-{"name":"dot","page":"Icons","id":"2574:4935","kind":"set","variantProperties":{"Property 1":["Default","subtle","error","success","info","warning"],"Size":["sm","md","lg"]},"variantCount":18,"properties":{"Property 1":"VARIANT","Size":"VARIANT"},"description":"Dot — a small status/indicator dot."},
-{"name":"Tooltip","page":"Tooltip","id":"4203:11656","kind":"set","variantProperties":null,"variantCount":16,"properties":null,"description":"Tooltip — a small floating label that explains a control, value or icon on hover/focus.","variantError":true},
-{"name":"text area","page":"Text area","id":"4140:71","kind":"set","variantProperties":{"status":["empty","active","hover","focused","disabled"]},"variantCount":5,"properties":{"Label":"BOOLEAN","Value":"TEXT","Hint copy":"BOOLEAN","Error copy":"BOOLEAN","Counter":"BOOLEAN","Resize grip":"BOOLEAN","status":"VARIANT"},"description":"Multi-line text input."},
-{"name":"dropdown-item","page":"Dropdown","id":"3728:90","kind":"set","variantProperties":{"select":["single","multi"],"state":["default","hover","selected","disabled"]},"variantCount":8,"properties":{"label":"TEXT","secondary":"TEXT","select":"VARIANT","state":"VARIANT"},"description":"Dropdown item — one selectable option inside a dropdown menu; the building block for single- and multi-select menus."},
-{"name":"method-badge","page":"Table","id":"3734:19","kind":"set","variantProperties":{"method":["get","post","put","patch","delete"]},"variantCount":5,"properties":{"method":"VARIANT"},"description":"Method badge — a small HTTP-method pill for tables and request logs."},
-{"name":"table-cell","page":"Table","id":"3734:32","kind":"set","variantProperties":{"type":["default","muted","info","success","error"]},"variantCount":5,"properties":{"value":"TEXT","type":"VARIANT"},"description":"Table cell — a single data cell for building tables."},
-{"name":"table-row","page":"Table","id":"3735:81","kind":"set","variantProperties":{"state":["default","hover","selected"]},"variantCount":3,"properties":{"state":"VARIANT"},"description":"Table row — one data row for the network-requests table, composed from table-cell + method-badge across the columns (# · method · URL · STATUS · DURATION · SIZE)."},
-{"name":"table-header-cell","page":"Table","id":"3734:20","kind":"single","properties":{"label":"TEXT"},"description":"Table header cell — a column header label (uppercase, muted)."},
-{"name":"badge","page":"Badge","id":"4137:55","kind":"set","variantProperties":{"type":["neutral","info","success","warning","error"],"emphasis":["solid","subtle"]},"variantCount":10,"properties":{"Label":"TEXT","Dot":"BOOLEAN","type":"VARIANT","emphasis":"VARIANT"},"description":"Small status pill for counts, states and labels."},
-{"name":"chart-column","page":"Charts","id":"4152:456","kind":"set","variantProperties":{"value":["0","10","20","30","40","50","60","70","80","90","100"]},"variantCount":11,"properties":{"value":"VARIANT"},"description":"One bar in a bar chart."},
-{"name":"chart-legend-item","page":"Charts","id":"4152:469","kind":"set","variantProperties":{"series":["1","2","3","4"]},"variantCount":4,"properties":{"Label":"TEXT","series":"VARIANT"},"description":"One entry in a chart legend."},
-{"name":"chart-bar","page":"Charts","id":"4152:470","kind":"single","description":"Bar chart for admin and fleet dashboards."},
-{"name":"breadcrumb-item","page":"Navigation & Lists","id":"4150:432","kind":"set","variantProperties":{"type":["link","current"]},"variantCount":2,"properties":{"Label":"TEXT","Separator":"BOOLEAN","type":"VARIANT"},"description":"One segment of the header breadcrumb."},
-{"name":"nav-item","page":"Navigation & Lists","id":"4150:448","kind":"set","variantProperties":{"status":["default","hover","selected"]},"variantCount":3,"properties":{"Label":"TEXT","Count":"TEXT","Show count":"BOOLEAN","Show icon":"BOOLEAN","status":"VARIANT"},"description":"One entry in the side navigation."},
-{"name":"list-item","page":"Navigation & Lists","id":"4149:454","kind":"set","variantProperties":{"status":["default","hover","selected","disabled"]},"variantCount":4,"properties":{"Title":"TEXT","Description":"TEXT","Show description":"BOOLEAN","Trailing":"TEXT","Show trailing":"BOOLEAN","Show leading":"BOOLEAN","status":"VARIANT"},"description":"One row in a list — task sidebar, changed files, search results."},
-{"name":"top-nav","page":"Navigation & Lists","id":"4151:426","kind":"single","properties":{"Left toggle":"BOOLEAN","Right toggle":"BOOLEAN","Progress":"BOOLEAN","Notifications":"BOOLEAN"},"description":"Application header."},
-{"name":"avatar","page":"Avatars & Loaders","id":"4147:459","kind":"set","variantProperties":{"size":["small","medium","large"],"type":["initials","image","icon"]},"variantCount":9,"properties":{"Initials":"TEXT","Presence":"BOOLEAN","size":"VARIANT","type":"VARIANT"},"description":"User or agent identity marker."},
-{"name":"loader","page":"Avatars & Loaders","id":"4148:435","kind":"set","variantProperties":{"size":["small","medium","large"]},"variantCount":3,"properties":{"size":"VARIANT"},"description":"Indeterminate activity spinner."},
-{"name":"progress-circle","page":"Avatars & Loaders","id":"4148:455","kind":"set","variantProperties":{"progress":["0","25","50","75","100"]},"variantCount":5,"properties":{"Label":"TEXT","Show label":"BOOLEAN","progress":"VARIANT"},"description":"Determinate radial progress."}
+    {
+      "name": "agent-status-icon",
+      "page": "Agent Components Library",
+      "id": "4326:80",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "idle",
+          "working",
+          "waiting-input",
+          "paused",
+          "completed",
+          "failed"
+        ]
+      },
+      "variantCount": 6,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Caption-bar agent glyph."
+    },
+    {
+      "name": "progress-bar",
+      "page": "Agent Components Library",
+      "id": "3718:102",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "running",
+          "done",
+          "stuck"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "count": "TEXT",
+        "status": "VARIANT"
+      },
+      "description": "Progress bar — determinate milestone progress for a fleet run."
+    },
+    {
+      "name": "agent-progress-indicator",
+      "page": "Agent Components Library",
+      "id": "3761:178",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "idle",
+          "initializing",
+          "working",
+          "waiting-input",
+          "paused",
+          "completed",
+          "failed"
+        ]
+      },
+      "variantCount": 7,
+      "properties": {
+        "task": "TEXT",
+        "count": "TEXT",
+        "percent": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "Agent progress indicator (caption bar) — spec §3."
+    },
+    {
+      "name": "workspace-view-switcher",
+      "page": "Agent Components Library",
+      "id": "4329:151",
+      "kind": "set",
+      "variantProperties": {
+        "view": [
+          "mine",
+          "agent"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "view": "VARIANT"
+      },
+      "description": "Switches the whole editor between the user’s workspace and the agent’s isolated copy."
+    },
+    {
+      "name": "file-tree-row",
+      "page": "Agent Components Library",
+      "id": "4329:174",
+      "kind": "set",
+      "variantProperties": {
+        "kind": [
+          "folder",
+          "file"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "name": "TEXT",
+        "kind": "VARIANT"
+      },
+      "description": "One row of the agent workspace file tree: disclosure + glyph + name + file-state badge."
+    },
+    {
+      "name": "file-state-badge",
+      "page": "Agent Components Library",
+      "id": "3763:139",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "modified",
+          "modified-icon",
+          "added",
+          "added-icon",
+          "deleted",
+          "deleted-icon",
+          "testing",
+          "tested",
+          "failed"
+        ]
+      },
+      "variantCount": 9,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "File state badge — a small colour-coded pill showing a file's status in the agent's workspace."
+    },
+    {
+      "name": "file-diff-indicator",
+      "page": "Agent Components Library",
+      "id": "4329:209",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "uncommitted",
+          "staged",
+          "conflict"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Marks a file as changed against the base state, before any diff is opened."
+    },
+    {
+      "name": "coverage-gutter-mark",
+      "page": "Agent Components Library",
+      "id": "3766:145",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "covered",
+          "uncovered",
+          "partial",
+          "none"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Coverage gutter mark — a thin bar in the editor gutter showing DeepReview line coverage from the agent's test runs."
+    },
+    {
+      "name": "inline-value-label",
+      "page": "Agent Components Library",
+      "id": "3766:150",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "default",
+          "current"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "value": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "Inline value label — a live variable value shown inline on a code line, rendered as a DeepReview flow annotation (NOT a text comment)."
+    },
+    {
+      "name": "execution-context-selector",
+      "page": "Agent Components Library",
+      "id": "4330:226",
+      "kind": "set",
+      "variantProperties": {
+        "mode": [
+          "latest",
+          "specific-test",
+          "comparison"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "mode": "VARIANT"
+      },
+      "description": "Chooses which recorded execution drives the inline values and gutter marks: latest run · a specific test · a comparison of two."
+    },
+    {
+      "name": "milestone-row",
+      "page": "Agent Components Library",
+      "id": "3762:167",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "pending",
+          "in-progress",
+          "completed",
+          "failed",
+          "skipped"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "content": "TEXT",
+        "meta": "TEXT",
+        "nested": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "Milestone row (Agent Activity pane) — spec §6.1."
+    },
+    {
+      "name": "milestone-priority-tag",
+      "page": "Agent Components Library",
+      "id": "4331:414",
+      "kind": "set",
+      "variantProperties": {
+        "priority": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "priority": "VARIANT"
+      },
+      "description": "The priority a milestone carries in the agent plan — high · medium · low."
+    },
+    {
+      "name": "event-row",
+      "page": "Agent Components Library",
+      "id": "3707:42",
+      "kind": "set",
+      "variantProperties": {
+        "kind": [
+          "thought",
+          "tool",
+          "edit",
+          "diff",
+          "sub-agent",
+          "status",
+          "delivery",
+          "log",
+          "tool-result",
+          "workspace",
+          "llm-request",
+          "unknown"
+        ]
+      },
+      "variantCount": 12,
+      "properties": {
+        "content": "TEXT",
+        "meta": "TEXT",
+        "kind": "VARIANT"
+      },
+      "description": "Event row — one entry in the Agent Panel's event stream (the net-new heart of the panel)."
+    },
+    {
+      "name": "filter-chip",
+      "page": "Agent Components Library",
+      "id": "3711:42",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "inactive",
+          "active"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "label": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "Filter chip — a toggle chip for filtering the event stream (All events · Thoughts · Tools · Edits · Diffs) and for small segmented controls (e.g."
+    },
+    {
+      "name": "streaming-indicator",
+      "page": "Agent Components Library",
+      "id": "3764:144",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "active",
+          "idle",
+          "stalled"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Streaming indicator — shows the liveness of an agent's event stream so the user knows whether work is still flowing."
+    },
+    {
+      "name": "stream-empty-state",
+      "page": "Agent Components Library",
+      "id": "4337:573",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "no-events",
+          "loading-history",
+          "filtered-empty"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "The three ways the stream can show nothing: not started, catching up on history, or filtered to empty."
+    },
+    {
+      "name": "agent-chip",
+      "page": "Agent Components Library",
+      "id": "3719:94",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "configured",
+          "add"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "label": "TEXT",
+        "type": "VARIANT"
+      },
+      "description": "Agent chip — one configured agent in the Launch fan-out (each chip = one parallel session)."
+    },
+    {
+      "name": "advanced-disclosure",
+      "page": "Agent Components Library",
+      "id": "4340:675",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "collapsed",
+          "expanded"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Keeps Harbor’s full task configuration available without putting it in front of the common case."
+    },
+    {
+      "name": "status-pill",
+      "page": "Agent Components Library",
+      "id": "3689:26",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "running",
+          "waiting",
+          "ready",
+          "failed",
+          "delivered"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "dot": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "Status pill — a compact, colour-coded badge that encodes a run or event's state at a glance."
+    },
+    {
+      "name": "elapsed-time",
+      "page": "Agent Components Library",
+      "id": "4341:592",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "live",
+          "final"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "time": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "How long a run has been going, or how long it took."
+    },
+    {
+      "name": "prompt-ack",
+      "page": "Agent Components Library",
+      "id": "4341:799",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "queued",
+          "accepted",
+          "rejected"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Confirms what happened to a steering prompt."
+    },
+    {
+      "name": "mode-switcher",
+      "page": "Agent Components Library",
+      "id": "4342:744",
+      "kind": "set",
+      "variantProperties": {
+        "mode": [
+          "diff",
+          "files"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "mode": "VARIANT"
+      },
+      "description": "Unified Diff ⇄ Full Files."
+    },
+    {
+      "name": "modified-file-row",
+      "page": "Agent Components Library",
+      "id": "4342:804",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "modified",
+          "added",
+          "deleted"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "path": "TEXT",
+        "lines": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "One file in the review set: state, path, and modified-line count."
+    },
+    {
+      "name": "diff-line",
+      "page": "Agent Components Library",
+      "id": "4337:478",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "added",
+          "removed",
+          "context"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "code": "TEXT",
+        "line-old": "TEXT",
+        "line-new": "TEXT",
+        "type": "VARIANT"
+      },
+      "description": "One line of a diff: old line number, new line number, sign, code."
+    },
+    {
+      "name": "context-expander",
+      "page": "Agent Components Library",
+      "id": "4342:844",
+      "kind": "set",
+      "variantProperties": {
+        "direction": [
+          "above",
+          "below"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "direction": "VARIANT"
+      },
+      "description": "Reveals surrounding unchanged code around a hunk."
+    },
+    {
+      "name": "draggable-edge-line",
+      "page": "Agent Components Library",
+      "id": "4343:870",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "default",
+          "hover"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "The grab handle on a context boundary."
+    },
+    {
+      "name": "diff-gutter-decoration",
+      "page": "Agent Components Library",
+      "id": "4343:940",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "added",
+          "removed",
+          "unchanged"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "code": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "Full Files mode: the normal CodeTracer editor with modified lines marked, fully loaded rather than clipped to hunks, and read-only by default."
+    },
+    {
+      "name": "call-trace-row",
+      "page": "Agent Components Library",
+      "id": "4343:967",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "passed",
+          "failed",
+          "running"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "name": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "One node of the agent’s test-execution tree in the call trace panel, filtered to tests and updating as each test completes."
+    },
+    {
+      "name": "session-status-dot",
+      "page": "Agent Components Library",
+      "id": "3951:34",
+      "kind": "set",
+      "variantProperties": {
+        "session": [
+          "running",
+          "queued",
+          "provisioning",
+          "paused",
+          "resuming",
+          "stopping",
+          "completed",
+          "failed",
+          "cancelled"
+        ]
+      },
+      "variantCount": 9,
+      "properties": {
+        "session": "VARIANT"
+      },
+      "description": "Status indicator dot for a session card."
+    },
+    {
+      "name": "session-action-button",
+      "page": "Agent Components Library",
+      "id": "3952:33",
+      "kind": "set",
+      "variantProperties": {
+        "action": [
+          "stop",
+          "cancel"
+        ],
+        "status": [
+          "default",
+          "hover"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "action": "VARIANT",
+        "status": "VARIANT"
+      },
+      "description": "Compact action button shown on a session card."
+    },
+    {
+      "name": "session-activity-row",
+      "page": "Agent Components Library",
+      "id": "3953:33",
+      "kind": "set",
+      "variantProperties": {
+        "emphasis": [
+          "current",
+          "past"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "emphasis": "VARIANT"
+      },
+      "description": "One activity line inside a session card: icon + truncating label + elapsed duration."
+    },
+    {
+      "name": "session-card",
+      "page": "Agent Components Library",
+      "id": "3958:167",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "hover",
+          "selected",
+          "focused"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "title": "TEXT",
+        "repo": "TEXT",
+        "agent": "TEXT",
+        "timestamp": "TEXT",
+        "showActivity": "BOOLEAN",
+        "showStop": "BOOLEAN",
+        "showCancel": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "A single agent session in the dashboard feed."
+    },
+    {
+      "name": "session-role-chip",
+      "page": "Agent Components Library",
+      "id": "3976:227",
+      "kind": "set",
+      "variantProperties": {
+        "role": [
+          "manager",
+          "startup",
+          "implementation",
+          "coordinator",
+          "reviewer",
+          "supervisor",
+          "research",
+          "planning"
+        ]
+      },
+      "variantCount": 8,
+      "properties": {
+        "name": "TEXT",
+        "showName": "BOOLEAN",
+        "role": "VARIANT"
+      },
+      "description": "One session in the orchestration, labelled by role."
+    },
+    {
+      "name": "session-iteration-block",
+      "page": "Agent Components Library",
+      "id": "3978:261",
+      "kind": "set",
+      "variantProperties": {
+        "outcome": [
+          "running",
+          "passed",
+          "failed"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "iteration": "TEXT",
+        "verdict": "TEXT",
+        "duration": "TEXT",
+        "outcome": "VARIANT"
+      },
+      "description": "OPTION 2 — Iteration ledger."
+    },
+    {
+      "name": "session-graph-row",
+      "page": "Agent Components Library",
+      "id": "3979:256",
+      "kind": "set",
+      "variantProperties": {
+        "topology": [
+          "linear",
+          "fork",
+          "merge",
+          "continuation"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "note": "TEXT",
+        "topology": "VARIANT"
+      },
+      "description": "OPTION 3 — Topology gutter."
+    },
+    {
+      "name": "session-tree-group",
+      "page": "Agent Components Library",
+      "id": "3984:363",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "expanded",
+          "collapsed"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "role": "TEXT",
+        "count": "TEXT",
+        "state": "VARIANT"
+      },
+      "description": "Role group header in the Session Navigator."
+    },
+    {
+      "name": "session-tree-item",
+      "page": "Agent Components Library",
+      "id": "3986:657",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "completed",
+          "active",
+          "failed",
+          "queued"
+        ],
+        "state": [
+          "default",
+          "current"
+        ],
+        "depth": [
+          "0",
+          "1"
+        ]
+      },
+      "variantCount": 16,
+      "properties": {
+        "name": "TEXT",
+        "showMerge": "BOOLEAN",
+        "showCompaction": "BOOLEAN",
+        "status": "VARIANT",
+        "state": "VARIANT",
+        "depth": "VARIANT"
+      },
+      "description": "Session Navigator entry, per WebUI-PRD."
+    },
+    {
+      "name": "session-agent-column",
+      "page": "Agent Components Library",
+      "id": "4184:894",
+      "kind": "set",
+      "variantProperties": {
+        "outcome": [
+          "running",
+          "complete",
+          "failed"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "Row 1": "BOOLEAN",
+        "Row 2": "BOOLEAN",
+        "Row 3": "BOOLEAN",
+        "Row 4": "BOOLEAN",
+        "Row 5": "BOOLEAN",
+        "Row 6": "BOOLEAN",
+        "Row 7": "BOOLEAN",
+        "Row 8": "BOOLEAN",
+        "Row 9": "BOOLEAN",
+        "Row 10": "BOOLEAN",
+        "Agent": "TEXT",
+        "Verdict": "TEXT",
+        "Milestones": "TEXT",
+        "Elapsed": "TEXT",
+        "outcome": "VARIANT"
+      },
+      "description": "One competitor in arena mode — a complete execution loop belonging to a single agent."
+    },
+    {
+      "name": "milestone-segment",
+      "page": "Agent Components Library",
+      "id": "3962:69",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "planned",
+          "in_progress",
+          "completed",
+          "blocked"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "status": "VARIANT"
+      },
+      "description": "One milestone as a bar segment."
+    },
+    {
+      "name": "milestone-deliverable-cell",
+      "page": "Agent Components Library",
+      "id": "3962:72",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "done",
+          "todo"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "One deliverable inside a milestone, as a single cell in the deliverable matrix."
+    },
+    {
+      "name": "milestone-rail",
+      "page": "Agent Components Library",
+      "id": "3963:82",
+      "kind": "set",
+      "variantProperties": {
+        "size": [
+          "default",
+          "compact"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "currentLabel": "TEXT",
+        "count": "TEXT",
+        "size": "VARIANT"
+      },
+      "description": "OPTION 1 — Segmented progress rail."
+    },
+    {
+      "name": "milestone-matrix-row",
+      "page": "Agent Components Library",
+      "id": "3964:109",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "completed",
+          "in_progress",
+          "blocked",
+          "planned"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "id": "TEXT",
+        "title": "TEXT",
+        "count": "TEXT",
+        "status": "VARIANT"
+      },
+      "description": "OPTION 2 — Deliverable matrix."
+    },
+    {
+      "name": "milestone-node",
+      "page": "Agent Components Library",
+      "id": "3965:101",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "completed",
+          "in_progress",
+          "blocked",
+          "planned"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "title": "TEXT",
+        "blockedBy": "TEXT",
+        "showBlockedBy": "BOOLEAN",
+        "showConnectorTop": "BOOLEAN",
+        "showConnectorBottom": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "OPTION 3 — Dependency rail."
+    },
+    {
+      "name": "milestone-timeline-row",
+      "page": "Agent Components Library",
+      "id": "3971:184",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "completed",
+          "in_progress",
+          "blocked",
+          "planned"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "id": "TEXT",
+        "title": "TEXT",
+        "duration": "TEXT",
+        "showBar": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "OPTION 4 — Time waterfall."
+    },
+    {
+      "name": "agent-task-label",
+      "page": "Agent Components Library",
+      "id": "4326:92",
+      "kind": "single",
+      "properties": {
+        "task": "TEXT"
+      },
+      "description": "Caption-bar task name — the current milestone description from the agent plan."
+    },
+    {
+      "name": "milestone-counter",
+      "page": "Agent Components Library",
+      "id": "4326:98",
+      "kind": "single",
+      "properties": {
+        "count": "TEXT"
+      },
+      "description": "Completed / total milestones from the agent plan."
+    },
+    {
+      "name": "progress-percentage",
+      "page": "Agent Components Library",
+      "id": "4326:113",
+      "kind": "single",
+      "properties": {
+        "percent": "TEXT"
+      },
+      "description": "Numeric completion next to the progress bar."
+    },
+    {
+      "name": "agent-context-menu",
+      "page": "Agent Components Library",
+      "id": "4326:131",
+      "kind": "single",
+      "description": "Right-click menu on the caption-bar progress indicator."
+    },
+    {
+      "name": "workspace-readonly-banner",
+      "page": "Agent Components Library",
+      "id": "4329:214",
+      "kind": "single",
+      "properties": {
+        "message": "TEXT"
+      },
+      "description": "Persistent banner shown while the editor is displaying the agent’s workspace, which is read-only."
+    },
+    {
+      "name": "execution-slider",
+      "page": "Agent Components Library",
+      "id": "3766:151",
+      "kind": "single",
+      "properties": {
+        "value": "TEXT"
+      },
+      "description": "Execution / loop slider — steps through the iterations of a line or function that ran multiple times, scrubbing which execution the inline values reflect."
+    },
+    {
+      "name": "execution-comparison-view",
+      "page": "Agent Components Library",
+      "id": "4330:238",
+      "kind": "single",
+      "description": "Two recorded executions of the same code side by side, with their inline values aligned line for line."
+    },
+    {
+      "name": "milestone-list",
+      "page": "Agent Components Library",
+      "id": "4331:241",
+      "kind": "single",
+      "description": "The agent plan rendered as a checklist, assembled from milestone-row instances including nested children."
+    },
+    {
+      "name": "tool-call-card",
+      "page": "Agent Components Library",
+      "id": "4331:419",
+      "kind": "single",
+      "description": "A file-editing tool call, enriched with DeepReview context: which functions changed and what it did to coverage."
+    },
+    {
+      "name": "test-result-card",
+      "page": "Agent Components Library",
+      "id": "4331:468",
+      "kind": "single",
+      "description": "A completed test with its recorded flow data: pass/fail, duration, how many times the function ran, and the values captured."
+    },
+    {
+      "name": "card-action-row",
+      "page": "Agent Components Library",
+      "id": "4331:226",
+      "kind": "single",
+      "description": "The action pair at the foot of a tool-call or test-result card — jumps from the activity feed to the code or the recorded trace."
+    },
+    {
+      "name": "event-stream",
+      "page": "Agent Components Library",
+      "id": "4335:390",
+      "kind": "single",
+      "description": "The live feed for one session: filter bar, time-grouped event rows, and a liveness indicator pinned at the foot."
+    },
+    {
+      "name": "code-diff-block",
+      "page": "Agent Components Library",
+      "id": "4337:479",
+      "kind": "single",
+      "description": "Monospace code and diff rendering inside the event stream — what the diff and file_edit rows expand into."
+    },
+    {
+      "name": "timestamp-divider",
+      "page": "Agent Components Library",
+      "id": "3764:145",
+      "kind": "single",
+      "properties": {
+        "label": "TEXT"
+      },
+      "description": "Timestamp / grouping divider — a subtle labelled separator that groups the event stream by time."
+    },
+    {
+      "name": "config-row",
+      "page": "Agent Components Library",
+      "id": "4340:541",
+      "kind": "single",
+      "properties": {
+        "label": "TEXT",
+        "value": "TEXT"
+      },
+      "description": "One line of Harbor task configuration: label on the left, current value on the right, click to expand and edit."
+    },
+    {
+      "name": "omnibar-agent-command",
+      "page": "Agent Components Library",
+      "id": "4340:634",
+      "kind": "single",
+      "properties": {
+        "prompt": "TEXT"
+      },
+      "description": "Launching an agent task from the omnibar."
+    },
+    {
+      "name": "fan-out-summary",
+      "page": "Agent Components Library",
+      "id": "4340:681",
+      "kind": "single",
+      "properties": {
+        "summary": "TEXT"
+      },
+      "description": "States the consequence of the current agents[] configuration before the user commits: how many parallel sessions this task will create."
+    },
+    {
+      "name": "fleet-list",
+      "page": "Agent Components Library",
+      "id": "4341:623",
+      "kind": "single",
+      "description": "Every run across every task in one view — the supervision surface."
+    },
+    {
+      "name": "run-row",
+      "page": "Agent Components Library",
+      "id": "4341:593",
+      "kind": "single",
+      "properties": {
+        "agent": "TEXT"
+      },
+      "description": "One session at a glance in the fleet: state, which agent is running it, size of the change so far, and elapsed time."
+    },
+    {
+      "name": "task-group-header",
+      "page": "Agent Components Library",
+      "id": "4341:611",
+      "kind": "single",
+      "properties": {
+        "task": "TEXT",
+        "count": "TEXT"
+      },
+      "description": "Groups the racing sessions of one task so a fan-out reads as a single thing rather than N unrelated runs."
+    },
+    {
+      "name": "diff-stat",
+      "page": "Agent Components Library",
+      "id": "3764:127",
+      "kind": "single",
+      "properties": {
+        "added": "TEXT",
+        "removed": "TEXT"
+      },
+      "description": "Diff stat — the two-colour '+N −M' added/removed line counts."
+    },
+    {
+      "name": "steer-bar",
+      "page": "Agent Components Library",
+      "id": "4341:800",
+      "kind": "single",
+      "description": "Sends a follow-up prompt to a running session — redirect without restarting."
+    },
+    {
+      "name": "review-workspace-header",
+      "page": "Agent Components Library",
+      "id": "4342:755",
+      "kind": "single",
+      "properties": {
+        "title": "TEXT"
+      },
+      "description": "The frame around a DeepReview session: what is being reviewed, which trace drives the overlay, and which of the two review modes is showing."
+    },
+    {
+      "name": "trace-context-selector",
+      "page": "Agent Components Library",
+      "id": "4342:745",
+      "kind": "single",
+      "properties": {
+        "trace": "TEXT"
+      },
+      "description": "Chooses which recorded trace drives the Omniscience overlay across the review."
+    },
+    {
+      "name": "modified-files-panel",
+      "page": "Agent Components Library",
+      "id": "4342:805",
+      "kind": "single",
+      "description": "The review set, shared by both DeepReview modes and the primary way to navigate a review."
+    },
+    {
+      "name": "diff-file-section",
+      "page": "Agent Components Library",
+      "id": "4342:887",
+      "kind": "single",
+      "description": "One file rendered as a review section in Unified Diff mode: header, expandable context, and one or more hunks."
+    },
+    {
+      "name": "diff-file-header",
+      "page": "Agent Components Library",
+      "id": "4342:878",
+      "kind": "single",
+      "properties": {
+        "path": "TEXT",
+        "state": "TEXT"
+      },
+      "description": "Identifies one file section of the unified diff: path plus the usual diff metadata."
+    },
+    {
+      "name": "diff-hunk",
+      "page": "Agent Components Library",
+      "id": "4342:845",
+      "kind": "single",
+      "properties": {
+        "range": "TEXT"
+      },
+      "description": "One contiguous changed region: the @@ range marker and its lines."
+    },
+    {
+      "name": "diff-omniscience-overlay",
+      "page": "Agent Components Library",
+      "id": "4343:876",
+      "kind": "single",
+      "description": "The standard CodeTracer Omniscience overlay laid on top of the unified diff — same coverage marks, inline values and loop slider as the editor, restricted to lines currently loaded into t…"
+    },
+    {
+      "name": "delivery-card",
+      "page": "Agent Components Library",
+      "id": "4343:973",
+      "kind": "single",
+      "description": "Where the work lands: delivery mode, target branch or PR, and the action that ships it."
+    },
+    {
+      "name": "accept-reject",
+      "page": "Agent Components Library",
+      "id": "4343:1011",
+      "kind": "single",
+      "description": "Per-hunk review decision."
+    },
+    {
+      "name": "run-comparison-view",
+      "page": "Agent Components Library",
+      "id": "4343:1028",
+      "kind": "single",
+      "description": "Racing runs of one task side by side so a winner can be picked."
+    },
+    {
+      "name": "waiting-for-input-alert",
+      "page": "Agent Components Library",
+      "id": "4344:931",
+      "kind": "single",
+      "properties": {
+        "question": "TEXT"
+      },
+      "description": "The agent has stopped and needs an answer before it can continue — the highest-urgency state in the system."
+    },
+    {
+      "name": "permission-request-modal",
+      "page": "Agent Components Library",
+      "id": "4344:963",
+      "kind": "single",
+      "properties": {
+        "command": "TEXT"
+      },
+      "description": "Blocking approval for a risky or outward-facing action the agent wants to take."
+    },
+    {
+      "name": "conflict-alert",
+      "page": "Agent Components Library",
+      "id": "4344:1078",
+      "kind": "single",
+      "description": "The user edited files an agent is working on."
+    },
+    {
+      "name": "persistence-setting-row",
+      "page": "Agent Components Library",
+      "id": "4344:1113",
+      "kind": "single",
+      "description": "Whether DeepReview trace data survives after a session ends."
+    },
+    {
+      "name": "session-lane",
+      "page": "Agent Components Library",
+      "id": "3977:195",
+      "kind": "single",
+      "description": "OPTION 1 — Role swimlane."
+    },
+    {
+      "name": "notification-components",
+      "page": "Alert / Notification",
+      "id": "476:6158",
+      "kind": "set",
+      "variantProperties": {
+        "notification": [
+          "primary",
+          "secondary",
+          "tertiary"
+        ],
+        "type": [
+          "info",
+          "error",
+          "success",
+          "warning"
+        ]
+      },
+      "variantCount": 12,
+      "properties": {
+        "Close": "BOOLEAN",
+        "Title": "BOOLEAN",
+        "↘︎ Title": "TEXT",
+        "Message": "TEXT",
+        "notification": "VARIANT",
+        "type": "VARIANT"
+      },
+      "description": "Status notification banners for system feedback."
+    },
+    {
+      "name": "button",
+      "page": "Button",
+      "id": "69:171",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "primary",
+          "secondary",
+          "tertiary"
+        ],
+        "status": [
+          "default",
+          "disabled",
+          "focused",
+          "hover",
+          "selected"
+        ],
+        "size": [
+          "large",
+          "medium",
+          "small"
+        ]
+      },
+      "variantCount": 45,
+      "properties": {
+        "icon left": "BOOLEAN",
+        "icon right": "BOOLEAN",
+        "Label": "TEXT",
+        "type": "VARIANT",
+        "status": "VARIANT",
+        "size": "VARIANT"
+      },
+      "description": "Primary interactive control for triggering actions."
+    },
+    {
+      "name": "icon-button",
+      "page": "Button",
+      "id": "99:867",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "primary",
+          "outlined",
+          "secondary"
+        ],
+        "status": [
+          "default",
+          "disabled",
+          "focused",
+          "hover",
+          "selected"
+        ],
+        "size": [
+          "large",
+          "medium",
+          "small"
+        ],
+        "radius": [
+          "sm",
+          "md"
+        ]
+      },
+      "variantCount": 60,
+      "properties": {
+        "type": "VARIANT",
+        "status": "VARIANT",
+        "size": "VARIANT",
+        "radius": "VARIANT"
+      },
+      "description": "Compact button containing only an icon, without a text label."
+    },
+    {
+      "name": "main-menu-buttons",
+      "page": "Button",
+      "id": "1843:6319",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "primary",
+          "outlined",
+          "secondary"
+        ],
+        "status": [
+          "default",
+          "disabled",
+          "focused",
+          "hover",
+          "selected"
+        ]
+      },
+      "variantCount": 15,
+      "properties": {
+        "type": "VARIANT",
+        "status": "VARIANT"
+      },
+      "description": "Navigation buttons for the application main menu bar."
+    },
+    {
+      "name": "check box",
+      "page": "Checkbox",
+      "id": "598:2395",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "disabled",
+          "error",
+          "focused",
+          "hover"
+        ],
+        "type": [
+          "selected",
+          "indeterminate",
+          "unselected"
+        ],
+        "checkbox": [
+          "18x18",
+          "16x16",
+          "24x24"
+        ]
+      },
+      "variantCount": 45,
+      "properties": {
+        "status": "VARIANT",
+        "type": "VARIANT",
+        "checkbox": "VARIANT"
+      },
+      "description": "Toggle control for binary or indeterminate selection."
+    },
+    {
+      "name": "field",
+      "page": "Input",
+      "id": "88:1694",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "empty",
+          "active",
+          "disabled",
+          "focused",
+          "hover"
+        ],
+        "type": [
+          "form",
+          "cmdP",
+          "panel-lg",
+          "panel-sm"
+        ]
+      },
+      "variantCount": 20,
+      "properties": {
+        "icon left": "BOOLEAN",
+        "icon right": "BOOLEAN",
+        "Label": "BOOLEAN",
+        "Hint copy": "BOOLEAN",
+        "Error copy": "BOOLEAN",
+        "Placeholder": "TEXT",
+        "status": "VARIANT",
+        "type": "VARIANT"
+      },
+      "description": "Text input field for user data entry."
+    },
+    {
+      "name": "menu-item",
+      "page": "Menu",
+      "id": "1279:1317",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "disabled",
+          "empty",
+          "focused",
+          "hover"
+        ],
+        "type": [
+          "standard",
+          "checkbox",
+          "selected",
+          "line"
+        ],
+        "corner": [
+          "squared",
+          "rounded"
+        ],
+        "Size": [
+          "lg",
+          "md",
+          "sm"
+        ]
+      },
+      "variantCount": 90,
+      "properties": {
+        "Label": "TEXT",
+        "Subtext": "BOOLEAN",
+        "Icon Right": "BOOLEAN",
+        "Icon Left": "BOOLEAN",
+        "status": "VARIANT",
+        "type": "VARIANT",
+        "corner": "VARIANT",
+        "Size": "VARIANT"
+      },
+      "description": "Individual row within a dropdown or context menu."
+    },
+    {
+      "name": "tab",
+      "page": "Tabs",
+      "id": "1449:8686",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "disabled",
+          "focused",
+          "hover",
+          "selected"
+        ],
+        "size": [
+          "sm",
+          "lg",
+          "md"
+        ]
+      },
+      "variantCount": 15,
+      "properties": {
+        "status": "VARIANT",
+        "size": "VARIANT"
+      },
+      "description": "Tab control for switching between content panels."
+    },
+    {
+      "name": "switch",
+      "page": "Switch",
+      "id": "1953:6661",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "disabled",
+          "enabled"
+        ],
+        "status": [
+          "default",
+          "focused",
+          "hover"
+        ],
+        "size": [
+          "md",
+          "sm"
+        ]
+      },
+      "variantCount": 12,
+      "properties": {
+        "state": "VARIANT",
+        "status": "VARIANT",
+        "size": "VARIANT"
+      },
+      "description": "Binary toggle control for on/off settings."
+    },
+    {
+      "name": "switch-label",
+      "page": "Switch",
+      "id": "1973:8476",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "focused",
+          "hover"
+        ],
+        "state": [
+          "disabled",
+          "enabled"
+        ],
+        "size": [
+          "md",
+          "sm"
+        ]
+      },
+      "variantCount": 12,
+      "properties": {
+        "Content": "BOOLEAN",
+        "Label": "TEXT",
+        "status": "VARIANT",
+        "state": "VARIANT",
+        "size": "VARIANT"
+      },
+      "description": "Switch toggle paired with a descriptive text label."
+    },
+    {
+      "name": "code-icons",
+      "page": "Icons",
+      "id": "95:2817",
+      "kind": "set",
+      "variantProperties": {
+        "code-icons": [
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up",
+          "close-sm",
+          "hidden",
+          "history-value-new",
+          "visible"
+        ]
+      },
+      "variantCount": 8,
+      "properties": {
+        "code-icons": "VARIANT"
+      },
+      "description": "Small utility icons used in code-related UI contexts."
+    },
+    {
+      "name": "browser-icons 24x24",
+      "page": "Icons",
+      "id": "95:2821",
+      "kind": "set",
+      "variantProperties": {
+        "browser-icons": [
+          "close",
+          "expand",
+          "minimize"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "browser-icons": "VARIANT"
+      },
+      "description": "Window control icons at 24×24 pixel size for the application title bar."
+    },
+    {
+      "name": "nav-icons 16x16",
+      "page": "Icons",
+      "id": "97:327",
+      "kind": "set",
+      "variantProperties": {
+        "nav-icons": [
+          "arrow-left",
+          "arrow-right",
+          "rev-next",
+          "next-line",
+          "rev-step-in",
+          "step-in",
+          "rev-step-out",
+          "step-out",
+          "rev-continue",
+          "continue",
+          "run-to-entry",
+          "reset-operation",
+          "rec-and-replay"
+        ]
+      },
+      "variantCount": 13,
+      "properties": {
+        "nav-icons": "VARIANT"
+      },
+      "description": "Debugger navigation icons at 16×16 pixel size."
+    },
+    {
+      "name": "alert-icons",
+      "page": "Icons",
+      "id": "101:380",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "error",
+          "warning",
+          "success",
+          "info"
+        ],
+        "size": [
+          "lg",
+          "sm"
+        ]
+      },
+      "variantCount": 8,
+      "properties": {
+        "type": "VARIANT",
+        "size": "VARIANT"
+      },
+      "description": "Status indicator icons for notification and alert contexts."
+    },
+    {
+      "name": "extended-icon-set",
+      "page": "Icons",
+      "id": "4393:25743",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "add-circle",
+          "add-square",
+          "add1",
+          "add2",
+          "alert-alarm-bell-off",
+          "alert-alarm-bell1",
+          "alert-alarm-bell2",
+          "alert-information-circle",
+          "alert-radio-active1",
+          "alert-radio-active2",
+          "alert-radio-active3",
+          "alert-warning-circle",
+          "alert-warning-diamond",
+          "alert-warning-triangle",
+          "align-back",
+          "align-front",
+          "…+553 more"
+        ]
+      },
+      "variantCount": 569,
+      "properties": {
+        "type": "VARIANT"
+      },
+      "description": "Extended icon set — the full glyph library used across CodeTracer beyond the core ui-icons (569 variants)."
+    },
+    {
+      "name": "ui-icons",
+      "page": "Icons",
+      "id": "192:11889",
+      "kind": "set",
+      "variantProperties": {
+        "icons-lg": [
+          "agent",
+          "attach",
+          "bug-icon",
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up",
+          "close-lg",
+          "close-sm",
+          "copy",
+          "edit",
+          "time-back",
+          "person",
+          "play",
+          "play-frame",
+          "search",
+          "…+22 more"
+        ]
+      },
+      "variantCount": 38,
+      "properties": {
+        "icons-lg": "VARIANT"
+      },
+      "description": "General-purpose interface icons for common actions and navigation."
+    },
+    {
+      "name": "dot",
+      "page": "Icons",
+      "id": "2574:4935",
+      "kind": "set",
+      "variantProperties": {
+        "Property 1": [
+          "Default",
+          "subtle",
+          "error",
+          "success",
+          "info",
+          "warning"
+        ],
+        "Size": [
+          "sm",
+          "md",
+          "lg"
+        ]
+      },
+      "variantCount": 18,
+      "properties": {
+        "Property 1": "VARIANT",
+        "Size": "VARIANT"
+      },
+      "description": "Dot — a small status/indicator dot."
+    },
+    {
+      "name": "Tooltip",
+      "page": "Tooltip",
+      "id": "4203:11656",
+      "kind": "set",
+      "variantProperties": {
+        "Mode": [
+          "Dark",
+          "Light"
+        ],
+        "Size": [
+          "Default",
+          "lg",
+          "sm"
+        ],
+        "Direction": [
+          "Left",
+          "Right",
+          "Down",
+          "Up"
+        ]
+      },
+      "variantCount": 10,
+      "properties": {
+        "Mode": "VARIANT",
+        "Size": "VARIANT",
+        "Direction": "VARIANT"
+      },
+      "description": "Tooltip — a small floating label that explains a control, value or icon on hover/focus."
+    },
+    {
+      "name": "text area",
+      "page": "Text area",
+      "id": "4140:71",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "empty",
+          "active",
+          "hover",
+          "focused",
+          "disabled"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "Label": "BOOLEAN",
+        "Value": "TEXT",
+        "Hint copy": "BOOLEAN",
+        "Error copy": "BOOLEAN",
+        "Counter": "BOOLEAN",
+        "Resize grip": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "Multi-line text input."
+    },
+    {
+      "name": "dropdown-item",
+      "page": "Dropdown",
+      "id": "3728:90",
+      "kind": "set",
+      "variantProperties": {
+        "select": [
+          "single",
+          "multi"
+        ],
+        "state": [
+          "default",
+          "hover",
+          "selected",
+          "disabled"
+        ]
+      },
+      "variantCount": 8,
+      "properties": {
+        "label": "TEXT",
+        "secondary": "TEXT",
+        "select": "VARIANT",
+        "state": "VARIANT"
+      },
+      "description": "Dropdown item — one selectable option inside a dropdown menu; the building block for single- and multi-select menus."
+    },
+    {
+      "name": "method-badge",
+      "page": "Table",
+      "id": "3734:19",
+      "kind": "set",
+      "variantProperties": {
+        "method": [
+          "get",
+          "post",
+          "put",
+          "patch",
+          "delete"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "method": "VARIANT"
+      },
+      "description": "Method badge — a small HTTP-method pill for tables and request logs."
+    },
+    {
+      "name": "table-cell",
+      "page": "Table",
+      "id": "3734:32",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "default",
+          "muted",
+          "info",
+          "success",
+          "error"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "value": "TEXT",
+        "type": "VARIANT"
+      },
+      "description": "Table cell — a single data cell for building tables."
+    },
+    {
+      "name": "table-row",
+      "page": "Table",
+      "id": "3735:81",
+      "kind": "set",
+      "variantProperties": {
+        "state": [
+          "default",
+          "hover",
+          "selected"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "state": "VARIANT"
+      },
+      "description": "Table row — one data row for the network-requests table, composed from table-cell + method-badge across the columns (# · method · URL · STATUS · DURATION · SIZE)."
+    },
+    {
+      "name": "table-header-cell",
+      "page": "Table",
+      "id": "3734:20",
+      "kind": "single",
+      "properties": {
+        "label": "TEXT"
+      },
+      "description": "Table header cell — a column header label (uppercase, muted)."
+    },
+    {
+      "name": "badge",
+      "page": "Badge",
+      "id": "4137:55",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "neutral",
+          "info",
+          "success",
+          "warning",
+          "error"
+        ],
+        "emphasis": [
+          "solid",
+          "subtle"
+        ]
+      },
+      "variantCount": 10,
+      "properties": {
+        "Label": "TEXT",
+        "Dot": "BOOLEAN",
+        "type": "VARIANT",
+        "emphasis": "VARIANT"
+      },
+      "description": "Small status pill for counts, states and labels."
+    },
+    {
+      "name": "chart-column",
+      "page": "Charts",
+      "id": "4152:456",
+      "kind": "set",
+      "variantProperties": {
+        "value": [
+          "0",
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "70",
+          "80",
+          "90",
+          "100"
+        ]
+      },
+      "variantCount": 11,
+      "properties": {
+        "value": "VARIANT"
+      },
+      "description": "One bar in a bar chart."
+    },
+    {
+      "name": "chart-legend-item",
+      "page": "Charts",
+      "id": "4152:469",
+      "kind": "set",
+      "variantProperties": {
+        "series": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "Label": "TEXT",
+        "series": "VARIANT"
+      },
+      "description": "One entry in a chart legend."
+    },
+    {
+      "name": "chart-bar",
+      "page": "Charts",
+      "id": "4152:470",
+      "kind": "single",
+      "description": "Bar chart for admin and fleet dashboards."
+    },
+    {
+      "name": "breadcrumb-item",
+      "page": "Navigation & Lists",
+      "id": "4150:432",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "link",
+          "current"
+        ]
+      },
+      "variantCount": 2,
+      "properties": {
+        "Label": "TEXT",
+        "Separator": "BOOLEAN",
+        "type": "VARIANT"
+      },
+      "description": "One segment of the header breadcrumb."
+    },
+    {
+      "name": "nav-item",
+      "page": "Navigation & Lists",
+      "id": "4150:448",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "hover",
+          "selected"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "Label": "TEXT",
+        "Count": "TEXT",
+        "Show count": "BOOLEAN",
+        "Show icon": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "One entry in the side navigation."
+    },
+    {
+      "name": "list-item",
+      "page": "Navigation & Lists",
+      "id": "4149:454",
+      "kind": "set",
+      "variantProperties": {
+        "status": [
+          "default",
+          "hover",
+          "selected",
+          "disabled"
+        ]
+      },
+      "variantCount": 4,
+      "properties": {
+        "Title": "TEXT",
+        "Description": "TEXT",
+        "Show description": "BOOLEAN",
+        "Trailing": "TEXT",
+        "Show trailing": "BOOLEAN",
+        "Show leading": "BOOLEAN",
+        "status": "VARIANT"
+      },
+      "description": "One row in a list — task sidebar, changed files, search results."
+    },
+    {
+      "name": "top-nav",
+      "page": "Navigation & Lists",
+      "id": "4151:426",
+      "kind": "single",
+      "properties": {
+        "Left toggle": "BOOLEAN",
+        "Right toggle": "BOOLEAN",
+        "Progress": "BOOLEAN",
+        "Notifications": "BOOLEAN"
+      },
+      "description": "Application header."
+    },
+    {
+      "name": "avatar",
+      "page": "Avatars & Loaders",
+      "id": "4147:459",
+      "kind": "set",
+      "variantProperties": {
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ],
+        "type": [
+          "initials",
+          "image",
+          "icon"
+        ]
+      },
+      "variantCount": 9,
+      "properties": {
+        "Initials": "TEXT",
+        "Presence": "BOOLEAN",
+        "size": "VARIANT",
+        "type": "VARIANT"
+      },
+      "description": "User or agent identity marker."
+    },
+    {
+      "name": "loader",
+      "page": "Avatars & Loaders",
+      "id": "4148:435",
+      "kind": "set",
+      "variantProperties": {
+        "size": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      "variantCount": 3,
+      "properties": {
+        "size": "VARIANT"
+      },
+      "description": "Indeterminate activity spinner."
+    },
+    {
+      "name": "progress-circle",
+      "page": "Avatars & Loaders",
+      "id": "4148:455",
+      "kind": "set",
+      "variantProperties": {
+        "progress": [
+          "0",
+          "25",
+          "50",
+          "75",
+          "100"
+        ]
+      },
+      "variantCount": 5,
+      "properties": {
+        "Label": "TEXT",
+        "Show label": "BOOLEAN",
+        "progress": "VARIANT"
+      },
+      "description": "Determinate radial progress."
+    }
   ]
 }

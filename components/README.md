@@ -13,10 +13,9 @@ plugin API. It sits alongside the token exports (`brand/`, `alias/`, `mapped/`).
   `description`.
 - `_meta.counts` and `_meta.knownIssues` summarise totals and outstanding fixes.
 
-## Known issues (fix before publishing)
+## Known issues
 
-- **`ui-icons`** (`192:11889`) and **`Tooltip`** (`4203:11656`) report Figma *variant conflicts*
-  (duplicate/incompatible variant combinations). Flagged with `"variantError": true`.
+- None outstanding. The earlier `ui-icons` / `Tooltip` variant conflicts have been resolved.
 
 ## Provenance
 
