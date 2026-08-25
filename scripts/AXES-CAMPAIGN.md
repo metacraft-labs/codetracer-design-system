@@ -47,17 +47,49 @@ real is mechanical (the exact Plugin-API ops are proven — `addMode`,
    most are aliases to brand ramps — e.g. `surface/base/canvas` Dark→`neutral.900`,
    Light→`neutral.50`). Dark stays the DEFAULT mode, so the flat `$value` export is
    unchanged and today's desktop keeps rendering Dark with no consumer change.
-2. **New `space` collection** with modes `Compact` / `Comfortable` / `Spacious` and
-   the density roles the prototype uses: `space/panel-padding`, `space/card-padding`,
-   `space/card-gap`, `space/control-pad-x`, `space/control-pad-y`, `space/control-gap`,
-   `radius/card`, `radius/control`, `font/heading`, `font/body` (extend as needed).
-   Compact is the default mode.
+2. **New `space` collection** with modes `Compact` / `Comfortable` / `Spacious`
+   (Compact = default) holding the density-varying spacing/radius roles, named
+   per the reconciliation below:
+   - `padding/panel`, `padding/card`, `padding/control-horizontal`,
+     `padding/control-vertical`
+   - `gap/card`, `gap/control`
+   - `border/border radius/card`, `border/border radius/control`
+   Font-size density is **not** new tokens here — it is density modes on the
+   **existing** `type/ui/size/heading/md` + `type/ui/size/body/md` role tokens
+   (see the reconciliation note).
 3. Bind production components' paddings/gaps/radii/font-sizes to the `space`
    variables and their paints to `mapped`, so components auto-theme.
 
 **Naming stays convention-clean** (see `TOKEN-EXPORT-CONVENTIONS.md`): collection =
 file, `/`-name = token path, base types 1:1 with Figma `resolvedType`. Adding these
 modes/variables needs **no exporter change** — the transform is generic.
+
+### Naming reconciliation (designer sign-off note, 2026-08-25)
+
+The designer signed off the prototype structurally, flagging that some prototype
+token names didn't match production. `zz-demo/mapped` was already byte-identical to
+production (176 names). The divergence was confined to the density collection I
+authored; the 10 tokens were renamed in the disposable prototype to follow
+production conventions (property-first groups, spelled-out words, reuse of existing
+roles). Every rename is justified:
+
+| Prototype (`zz-demo/space`) | → Production-consistent | Why |
+|---|---|---|
+| `space/panel-padding` | `padding/panel` | production's spacing group is `padding/`, not `space/`; suffix redundant under it |
+| `space/card-padding` | `padding/card` | same |
+| `space/control-pad-x` | `padding/control-horizontal` | production spells words out; matches Figma auto-layout's "Horizontal padding" field |
+| `space/control-pad-y` | `padding/control-vertical` | matches Figma's "Vertical padding" field |
+| `space/card-gap` | `gap/card` | `gap` (itemSpacing) is a distinct layout property; its own honest group |
+| `space/control-gap` | `gap/control` | same |
+| `radius/card` | `border/border radius/card` | production radii live under `border/border radius/`; `card` is a role beside the ramp |
+| `radius/control` | `border/border radius/control` | same |
+| `font/heading` | `type/ui/size/heading/md` | **duplicated an existing production role** — reuse the exact name; density = modes on it |
+| `font/body` | `type/ui/size/body/md` | same |
+
+The last two mean **font-size density is NOT a new token** — it is density modes on
+the role tokens production already has, exactly as `zz-demo/mapped` mirrors `mapped`.
+No production rename was needed: production names stayed; the prototype was aligned
+to them.
 
 ---
 
