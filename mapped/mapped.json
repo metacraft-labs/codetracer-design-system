@@ -41,7 +41,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.150}"
+            "$value": "{colors.neutral.200}"
           },
           "body-subtle": {
             "$extensions": {
@@ -72,6 +72,26 @@
             },
             "$type": "color",
             "$value": "{colors.brand.400}"
+          },
+          "caption-subtle": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.400}"
+          },
+          "label-subtle": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.300}"
           }
         },
         "on-color": {
@@ -308,46 +328,6 @@
         }
       },
       "surface": {
-        "canvas": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "{colors.neutral.900}"
-        },
-        "panel": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "{colors.neutral.700}"
-        },
-        "card": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "{colors.neutral.650}"
-        },
-        "raised": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "{colors.neutral.950}"
-        },
         "primary": {
           "default": {
             "$extensions": {
@@ -367,7 +347,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.850}"
+            "$value": "{colors.neutral.750}"
           },
           "secondary": {
             "$extensions": {
@@ -387,7 +367,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.800}"
+            "$value": "{colors.neutral.650}"
           },
           "tertiary": {
             "$extensions": {
@@ -451,7 +431,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.error.900}"
+            "$value": "{colors.error.700}"
           },
           "error-subtle": {
             "$extensions": {
@@ -471,7 +451,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.success.900}"
+            "$value": "{colors.success.700}"
           },
           "success-subtle": {
             "$extensions": {
@@ -511,7 +491,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.warning.900}"
+            "$value": "{colors.warning.700}"
           },
           "warning-subtle": {
             "$extensions": {
@@ -575,7 +555,7 @@
               "com.figma.hiddenFromPublishing": false
             },
             "$type": "color",
-            "$value": "{colors.neutral.650}"
+            "$value": "{colors.neutral.750}"
           },
           "raised": {
             "$extensions": {
@@ -671,16 +651,6 @@
           },
           "$type": "color",
           "$value": "{colors.neutral.600}"
-        },
-        "secondary-dark": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "color",
-          "$value": "{colors.neutral.900}"
         },
         "error": {
           "$extensions": {
@@ -823,6 +793,16 @@
           },
           "$type": "color",
           "$value": "{colors.neutral.700}"
+        },
+        "secondary": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.neutral.450}"
         }
       },
       "icon": {
@@ -886,6 +866,16 @@
             },
             "$type": "color",
             "$value": "{colors.neutral.700}"
+          },
+          "subtle-hover": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.150}"
           }
         },
         "error": {
@@ -1055,6 +1045,88 @@
             "$type": "color",
             "$value": "{colors.warning.300}"
           }
+        }
+      },
+      "role": {
+        "manager": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.violet.400}"
+        },
+        "startup": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.blue.400}"
+        },
+        "planning": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.slate.400}"
+        },
+        "research": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.indigo.300}"
+        },
+        "implementation": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.cyan.400}"
+        },
+        "coordinator": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.orange.400}"
+        },
+        "reviewer": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.green.400}"
+        },
+        "supervisor": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "{colors.yellow.400}"
         }
       }
     },
