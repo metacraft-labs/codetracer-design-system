@@ -63,6 +63,11 @@ mode / text style in Figma and the scripts need **no edits** — are in
 **[`scripts/TOKEN-EXPORT-CONVENTIONS.md`](scripts/TOKEN-EXPORT-CONVENTIONS.md)**.
 Read that before touching the scripts.
 
+The in-flight plan to add **colour-mode (Dark/Light) × density
+(Compact/Comfortable/Spacious)** mode axes — the prototype, the additive
+migration procedure, the consumer opt-in, and the designer sign-off gate — is in
+**[`scripts/AXES-CAMPAIGN.md`](scripts/AXES-CAMPAIGN.md)**.
+
 ## For coding agents (Claude / Cursor / … with the Figma MCP)
 - You can reflect the DS directly: `getLocalVariableCollectionsAsync()` /
   `getLocalTextStylesAsync()` via `use_figma` — see `scripts/figma-dump.js` for the
