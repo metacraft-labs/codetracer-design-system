@@ -30,8 +30,24 @@ differing ONLY by their two explicit modes).
 | **Safety gate** | ✅ `check-token-refs.mjs` fails a build if a consumer still references a removed/renamed token; every removal is migrated in the same change. |
 | **Faithful-mirror guarantee** | ✅ `validate-collection.mjs` content hash == live Figma (proven during the drift-sync landing). |
 
-**Not done, and deliberately gated on designer sign-off:** any mutation of the
-**production-canonical** `mapped`/`space` collections in Figma.
+**PROMOTED TO PRODUCTION (2026-08-26)** — after structural sign-off. Additive edits
+in the production Figma file: `mapped` gained a **Light** mode (14 semantic overrides
+seeded via `neutral`/`brand`, the other 162 = Dark; designer refines values); a new
+**`space`** collection (Compact/Comfortable/Spacious) holds the 8 reconciled
+spacing/radii roles. The demo page was **rebound to production** `mapped` + `space`
+(bindings by id, so the matrix is intact) and the disposable `zz-demo/*` collections
+were deleted. Fresh export shipped: `mapped.json` carries `$extensions.modes.{Dark,
+Light}` (default `$value` = Dark, so the `$extensions`-stripped hash is unchanged =
+3707008020) and a new `space/space.json`. Every ref across all layers and all modes
+resolves (657 scanned, 0 broken). **Figma is the source and matches the repo** — the
+Light overrides were rewritten to the semantic layer in Figma too, so a re-export is
+stable. Font sizes stay fixed (density = spacing/radii only, the chosen v1 scope).
+
+**Still pending (app-level milestones, not blocking):** wiring the running desktop app
+to *select* a colour-mode and density (generate the Light/density stylus sets via
+`tokens-to-styl.sh … <mode>` and switch themes); optionally migrating docs' own
+light/dark onto the shared `mapped` modes. Designer still to refine the seeded Light
+values + density magnitudes.
 
 ---
 

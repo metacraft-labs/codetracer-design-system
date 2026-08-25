@@ -1,0 +1,98 @@
+{
+  "padding": {
+    "panel": {
+      "$type": "number",
+      "$value": 20,
+      "$extensions": {
+        "modes": {
+          "Compact": 20,
+          "Comfortable": 28,
+          "Spacious": 40
+        }
+      }
+    },
+    "card": {
+      "$type": "number",
+      "$value": 16,
+      "$extensions": {
+        "modes": {
+          "Compact": 16,
+          "Comfortable": 22,
+          "Spacious": 32
+        }
+      }
+    },
+    "control-horizontal": {
+      "$type": "number",
+      "$value": 10,
+      "$extensions": {
+        "modes": {
+          "Compact": 10,
+          "Comfortable": 14,
+          "Spacious": 20
+        }
+      }
+    },
+    "control-vertical": {
+      "$type": "number",
+      "$value": 6,
+      "$extensions": {
+        "modes": {
+          "Compact": 6,
+          "Comfortable": 8,
+          "Spacious": 12
+        }
+      }
+    }
+  },
+  "gap": {
+    "card": {
+      "$type": "number",
+      "$value": 6,
+      "$extensions": {
+        "modes": {
+          "Compact": 6,
+          "Comfortable": 10,
+          "Spacious": 16
+        }
+      }
+    },
+    "control": {
+      "$type": "number",
+      "$value": 6,
+      "$extensions": {
+        "modes": {
+          "Compact": 6,
+          "Comfortable": 8,
+          "Spacious": 10
+        }
+      }
+    }
+  },
+  "border": {
+    "border radius": {
+      "card": {
+        "$type": "number",
+        "$value": 8,
+        "$extensions": {
+          "modes": {
+            "Compact": 8,
+            "Comfortable": 12,
+            "Spacious": 16
+          }
+        }
+      },
+      "control": {
+        "$type": "number",
+        "$value": 6,
+        "$extensions": {
+          "modes": {
+            "Compact": 6,
+            "Comfortable": 8,
+            "Spacious": 12
+          }
+        }
+      }
+    }
+  }
+}
