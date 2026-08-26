@@ -89,6 +89,10 @@ migration procedure, the consumer opt-in, and the designer sign-off gate — is 
   `codetracer/src/frontend/styles/generated/*.styl`.
 - **Docs / web** — isonim-docs' `metacraft_docs_theme.nim` emits CSS custom
   properties from `docs/codetracer-docs.tokens.json`.
+- **codetracer-ci WebUI** — `codetracer-ci/scripts/generate-design-tokens.py`
+  (+ `scripts/design-tokens.map.json`) resolves `brand`/`alias`/`mapped`/`space`
+  into `wwwroot/css/tokens.css` as `--cci-*` CSS custom properties, mode-aware
+  (colour-mode `[data-theme]` + density `[data-density]`), plus self-hosted fonts.
 
 Don't change a token **value** here to fix a downstream look — fix it in Figma and
 re-export, so every surface stays consistent.
