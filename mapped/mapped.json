@@ -8,7 +8,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.50}",
+                "Light": "{colors.neutral.1000}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.50}"
@@ -18,7 +22,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.50}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.50}"
@@ -28,7 +36,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.150}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.150}"
@@ -38,7 +50,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.200}",
+                "Light": "{colors.neutral.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.200}"
@@ -48,7 +64,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.200}",
+                "Light": "{colors.neutral.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.200}"
@@ -58,7 +78,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.400}",
+                "Light": "{colors.neutral.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.400}"
@@ -68,30 +92,42 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.brand.400}",
+                "Light": "{colors.brand.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.brand.400}"
-          },
-          "label-subtle": {
-            "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false
-            },
-            "$type": "color",
-            "$value": "{colors.neutral.300}"
           },
           "caption-subtle": {
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.400}",
+                "Light": "{colors.neutral.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.400}"
+          },
+          "label-subtle": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.300}",
+                "Light": "{colors.neutral.300}"
+              }
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.300}"
           }
         },
         "on-color": {
@@ -100,7 +136,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.800}",
+                "Light": "{colors.neutral.800}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.800}"
@@ -110,7 +150,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.900}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.900}"
@@ -120,7 +164,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.650}",
+                "Light": "{colors.neutral.650}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.650}"
@@ -130,7 +178,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.600}",
+                "Light": "{colors.neutral.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.600}"
@@ -142,7 +194,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.50}",
+                "Light": "{colors.neutral.50}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.50}"
@@ -152,7 +208,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.150}",
+                "Light": "{colors.neutral.150}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.150}"
@@ -164,7 +224,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.300}",
+                "Light": "{colors.error.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.300}"
@@ -174,7 +238,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.400}",
+                "Light": "{colors.error.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.400}"
@@ -184,7 +252,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.200}",
+                "Light": "{colors.error.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.200}"
@@ -194,7 +266,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.300}",
+                "Light": "{colors.error.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.300}"
@@ -206,7 +282,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.200}",
+                "Light": "{colors.success.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.200}"
@@ -216,7 +296,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.300}",
+                "Light": "{colors.success.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.300}"
@@ -226,7 +310,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.200}",
+                "Light": "{colors.success.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.200}"
@@ -236,7 +324,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.300}",
+                "Light": "{colors.success.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.300}"
@@ -248,7 +340,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.300}",
+                "Light": "{colors.information.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.300}"
@@ -258,7 +354,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.400}",
+                "Light": "{colors.information.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.400}"
@@ -268,7 +368,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.200}",
+                "Light": "{colors.information.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.200}"
@@ -278,7 +382,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.300}",
+                "Light": "{colors.information.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.300}"
@@ -290,7 +398,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.300}",
+                "Light": "{colors.warning.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.300}"
@@ -300,7 +412,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.400}",
+                "Light": "{colors.warning.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.400}"
@@ -310,7 +426,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.200}",
+                "Light": "{colors.warning.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.200}"
@@ -320,7 +440,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.300}",
+                "Light": "{colors.warning.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.300}"
@@ -328,55 +452,17 @@
         }
       },
       "surface": {
-        "base": {
-          "canvas": {
-            "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false
-            },
-            "$type": "color",
-            "$value": "{colors.neutral.900}"
-          },
-          "panel": {
-            "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false
-            },
-            "$type": "color",
-            "$value": "{colors.neutral.700}"
-          },
-          "card": {
-            "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false
-            },
-            "$type": "color",
-            "$value": "{colors.neutral.750}"
-          },
-          "raised": {
-            "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false
-            },
-            "$type": "color",
-            "$value": "{colors.neutral.950}"
-          }
-        },
         "primary": {
           "default": {
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.900}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.900}"
@@ -386,7 +472,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.750}",
+                "Light": "{colors.neutral.750}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.750}"
@@ -396,7 +486,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.700}",
+                "Light": "{colors.neutral.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.700}"
@@ -406,7 +500,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.650}",
+                "Light": "{colors.neutral.650}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.650}"
@@ -416,7 +514,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.650}",
+                "Light": "{colors.neutral.650}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.650}"
@@ -426,7 +528,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.550}",
+                "Light": "{colors.neutral.550}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.550}"
@@ -436,7 +542,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.700}",
+                "Light": "{colors.neutral.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.700}"
@@ -448,7 +558,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.800}",
+                "Light": "{colors.neutral.800}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.800}"
@@ -458,7 +572,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.700}",
+                "Light": "{colors.neutral.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.700}"
@@ -470,7 +588,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.700}",
+                "Light": "{colors.error.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.700}"
@@ -480,7 +602,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.600}",
+                "Light": "{colors.error.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.600}"
@@ -490,7 +616,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.700}",
+                "Light": "{colors.success.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.700}"
@@ -500,7 +630,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.600}",
+                "Light": "{colors.success.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.600}"
@@ -510,7 +644,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.900}",
+                "Light": "{colors.information.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.900}"
@@ -520,7 +658,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.600}",
+                "Light": "{colors.information.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.600}"
@@ -530,7 +672,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.700}",
+                "Light": "{colors.warning.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.700}"
@@ -540,7 +686,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.600}",
+                "Light": "{colors.warning.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.600}"
@@ -552,7 +702,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.brand.600}",
+                "Light": "{colors.brand.600}"
+              }
             },
             "$type": "color",
             "$value": "{colors.brand.600}"
@@ -562,10 +716,72 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.brand.700}",
+                "Light": "{colors.brand.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.brand.700}"
+          }
+        },
+        "base": {
+          "canvas": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.900}",
+                "Light": "{colors.neutral.100}"
+              }
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.900}"
+          },
+          "panel": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.700}",
+                "Light": "{colors.neutral.50}"
+              }
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.700}"
+          },
+          "card": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.750}",
+                "Light": "{colors.neutral.50}"
+              }
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.750}"
+          },
+          "raised": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.950}",
+                "Light": "{colors.neutral.50}"
+              }
+            },
+            "$type": "color",
+            "$value": "{colors.neutral.950}"
           }
         },
         "on-color": {
@@ -574,7 +790,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.200}",
+                "Light": "{colors.neutral.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.200}"
@@ -584,7 +804,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.100}",
+                "Light": "{colors.neutral.100}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.100}"
@@ -594,7 +818,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.400}",
+                "Light": "{colors.neutral.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.400}"
@@ -604,7 +832,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.50}",
+                "Light": "{colors.neutral.50}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.50}"
@@ -614,7 +846,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.200}",
+                "Light": "{colors.neutral.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.200}"
@@ -627,7 +863,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.450}",
+              "Light": "{colors.neutral.200}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.450}"
@@ -637,7 +877,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.350}",
+              "Light": "{colors.neutral.350}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.350}"
@@ -647,7 +891,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.600}",
+              "Light": "{colors.neutral.200}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.600}"
@@ -657,7 +905,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.error.300}",
+              "Light": "{colors.error.300}"
+            }
           },
           "$type": "color",
           "$value": "{colors.error.300}"
@@ -667,7 +919,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.success.300}",
+              "Light": "{colors.success.300}"
+            }
           },
           "$type": "color",
           "$value": "{colors.success.300}"
@@ -677,7 +933,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.warning.300}",
+              "Light": "{colors.warning.300}"
+            }
           },
           "$type": "color",
           "$value": "{colors.warning.300}"
@@ -687,7 +947,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.information.300}",
+              "Light": "{colors.information.300}"
+            }
           },
           "$type": "color",
           "$value": "{colors.information.300}"
@@ -697,7 +961,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.brand.500}",
+              "Light": "{colors.brand.500}"
+            }
           },
           "$type": "color",
           "$value": "{colors.brand.500}"
@@ -707,7 +975,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.blue.500}",
+              "Light": "{colors.blue.500}"
+            }
           },
           "$type": "color",
           "$value": "{colors.blue.500}"
@@ -717,7 +989,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.650}",
+              "Light": "{colors.neutral.650}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.650}"
@@ -727,7 +1003,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.base.white}",
+              "Light": "{colors.base.white}"
+            }
           },
           "$type": "color",
           "$value": "{colors.base.white}"
@@ -737,7 +1017,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.200}",
+              "Light": "{colors.neutral.200}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.200}"
@@ -747,7 +1031,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.100}",
+              "Light": "{colors.neutral.100}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.100}"
@@ -757,7 +1045,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.700}",
+              "Light": "{colors.neutral.700}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.700}"
@@ -767,7 +1059,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.800}",
+              "Light": "{colors.neutral.800}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.800}"
@@ -779,7 +1075,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.600}",
+              "Light": "{colors.neutral.200}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.600}"
@@ -789,7 +1089,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.700}",
+              "Light": "{colors.neutral.700}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.700}"
@@ -799,7 +1103,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.450}",
+              "Light": "{colors.neutral.450}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.450}"
@@ -812,7 +1120,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.100}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.100}"
@@ -822,7 +1134,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.350}",
+                "Light": "{colors.neutral.350}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.350}"
@@ -832,7 +1148,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.300}",
+                "Light": "{colors.neutral.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.300}"
@@ -842,7 +1162,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.50}",
+                "Light": "{colors.neutral.50}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.50}"
@@ -852,7 +1176,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.900}",
+                "Light": "{colors.neutral.900}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.900}"
@@ -862,7 +1190,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.700}",
+                "Light": "{colors.neutral.700}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.700}"
@@ -872,7 +1204,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.150}",
+                "Light": "{colors.neutral.150}"
+              }
             },
             "$type": "color",
             "$value": "{colors.neutral.150}"
@@ -884,7 +1220,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.300}",
+                "Light": "{colors.error.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.300}"
@@ -894,7 +1234,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.400}",
+                "Light": "{colors.error.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.400}"
@@ -904,7 +1248,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.200}",
+                "Light": "{colors.error.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.200}"
@@ -914,7 +1262,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.error.300}",
+                "Light": "{colors.error.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.error.300}"
@@ -926,7 +1278,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.300}",
+                "Light": "{colors.success.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.300}"
@@ -936,7 +1292,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.400}",
+                "Light": "{colors.success.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.400}"
@@ -946,7 +1306,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.200}",
+                "Light": "{colors.success.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.200}"
@@ -956,7 +1320,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.success.300}",
+                "Light": "{colors.success.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.success.300}"
@@ -968,7 +1336,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.300}",
+                "Light": "{colors.information.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.300}"
@@ -978,7 +1350,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.400}",
+                "Light": "{colors.information.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.400}"
@@ -988,7 +1364,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.200}",
+                "Light": "{colors.information.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.200}"
@@ -998,7 +1378,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.information.300}",
+                "Light": "{colors.information.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.information.300}"
@@ -1010,7 +1394,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.300}",
+                "Light": "{colors.warning.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.300}"
@@ -1020,7 +1408,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.400}",
+                "Light": "{colors.warning.400}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.400}"
@@ -1030,7 +1422,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.200}",
+                "Light": "{colors.warning.200}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.200}"
@@ -1040,7 +1436,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.warning.300}",
+                "Light": "{colors.warning.300}"
+              }
             },
             "$type": "color",
             "$value": "{colors.warning.300}"
@@ -1051,12 +1451,13 @@
         "manager": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.violet.400}",
+              "Light": "{colors.violet.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.violet.400}"
@@ -1064,12 +1465,13 @@
         "startup": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.blue.400}",
+              "Light": "{colors.blue.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.blue.400}"
@@ -1077,12 +1479,13 @@
         "planning": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.slate.400}",
+              "Light": "{colors.slate.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.slate.400}"
@@ -1090,12 +1493,13 @@
         "research": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.indigo.300}",
+              "Light": "{colors.indigo.300}"
+            }
           },
           "$type": "color",
           "$value": "{colors.indigo.300}"
@@ -1103,12 +1507,13 @@
         "implementation": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.cyan.400}",
+              "Light": "{colors.cyan.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.cyan.400}"
@@ -1116,12 +1521,13 @@
         "coordinator": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.orange.400}",
+              "Light": "{colors.orange.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.orange.400}"
@@ -1129,12 +1535,13 @@
         "reviewer": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.green.400}",
+              "Light": "{colors.green.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.green.400}"
@@ -1142,12 +1549,13 @@
         "supervisor": {
           "$extensions": {
             "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
+              "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.yellow.400}",
+              "Light": "{colors.yellow.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.yellow.400}"
@@ -1161,7 +1569,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.50}",
+              "Light": "{colors.neutral.50}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.50}"
@@ -1171,7 +1583,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.400}",
+              "Light": "{colors.neutral.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.400}"
@@ -1181,7 +1597,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.150}",
+              "Light": "{colors.neutral.150}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.150}"
@@ -1191,7 +1611,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.500}",
+              "Light": "{colors.neutral.500}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.500}"
@@ -1203,7 +1627,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.900}",
+              "Light": "{colors.neutral.900}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.900}"
@@ -1213,7 +1641,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.700}",
+              "Light": "{colors.neutral.700}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.700}"
@@ -1223,7 +1655,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.450}",
+              "Light": "{colors.neutral.450}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.450}"
@@ -1233,7 +1669,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral-warm.500}",
+              "Light": "{colors.neutral-warm.500}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral-warm.500}"
@@ -1245,7 +1685,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.brand.400}",
+              "Light": "{colors.brand.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.brand.400}"
@@ -1255,7 +1699,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.yellow.400}",
+              "Light": "{colors.yellow.400}"
+            }
           },
           "$type": "color",
           "$value": "{colors.yellow.400}"
@@ -1265,7 +1713,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.neutral.50}",
+              "Light": "{colors.neutral.50}"
+            }
           },
           "$type": "color",
           "$value": "{colors.neutral.50}"
@@ -1275,6 +1727,94 @@
   },
   "type": {
     "ui": {
+      "fontFamily": {
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.ui-primary}",
+              "Light": "{type.fontFamily.ui-primary}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontFamily.ui-primary}"
+        },
+        "secondary": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.ui-secondary}",
+              "Light": "{type.fontFamily.ui-secondary}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontFamily.ui-secondary}"
+        }
+      },
+      "fontWeight": {
+        "regular": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.regular}",
+              "Light": "{type.fontWeight.regular}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontWeight.regular}"
+        },
+        "medium": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.medium}",
+              "Light": "{type.fontWeight.medium}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontWeight.medium}"
+        },
+        "bold": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.bold}",
+              "Light": "{type.fontWeight.bold}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontWeight.bold}"
+        },
+        "light": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.light}",
+              "Light": "{type.fontWeight.light}"
+            }
+          },
+          "$type": "text",
+          "$value": "{type.fontWeight.light}"
+        }
+      },
       "size": {
         "heading": {
           "sm": {
@@ -1282,7 +1822,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.sm}",
+                "Light": "{type.fontSize.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.sm}"
@@ -1292,7 +1836,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.md}",
+                "Light": "{type.fontSize.md}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.md}"
@@ -1302,7 +1850,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.lg}",
+                "Light": "{type.fontSize.lg}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.lg}"
@@ -1314,7 +1866,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.xs}",
+                "Light": "{type.fontSize.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.xs}"
@@ -1324,7 +1880,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.sm}",
+                "Light": "{type.fontSize.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.sm}"
@@ -1334,7 +1894,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.md}",
+                "Light": "{type.fontSize.md}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.md}"
@@ -1346,7 +1910,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.2xs}",
+                "Light": "{type.fontSize.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.2xs}"
@@ -1356,7 +1924,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.xs}",
+                "Light": "{type.fontSize.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.xs}"
@@ -1366,7 +1938,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.sm}",
+                "Light": "{type.fontSize.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.sm}"
@@ -1378,7 +1954,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.2xs}",
+                "Light": "{type.fontSize.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.2xs}"
@@ -1388,7 +1968,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.xs}",
+                "Light": "{type.fontSize.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.xs}"
@@ -1398,7 +1982,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.sm}",
+                "Light": "{type.fontSize.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.sm}"
@@ -1410,7 +1998,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.2xl}",
+                "Light": "{type.fontSize.2xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.2xl}"
@@ -1420,7 +2012,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.3xl}",
+                "Light": "{type.fontSize.3xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.3xl}"
@@ -1430,7 +2026,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.4xl}",
+                "Light": "{type.fontSize.4xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.4xl}"
@@ -1444,7 +2044,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xl}",
+                "Light": "{type.lineHeight.xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xl}"
@@ -1454,7 +2058,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xl}",
+                "Light": "{type.lineHeight.2xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xl}"
@@ -1464,7 +2072,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.3xl}",
+                "Light": "{type.lineHeight.3xl}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.3xl}"
@@ -1476,7 +2088,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xs}",
+                "Light": "{type.lineHeight.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xs}"
@@ -1486,7 +2102,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.sm}",
+                "Light": "{type.lineHeight.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.sm}"
@@ -1496,7 +2116,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.md}",
+                "Light": "{type.lineHeight.md}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.md}"
@@ -1508,7 +2132,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xs}",
+                "Light": "{type.lineHeight.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xs}"
@@ -1518,7 +2146,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xs}",
+                "Light": "{type.lineHeight.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xs}"
@@ -1528,7 +2160,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.sm}",
+                "Light": "{type.lineHeight.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.sm}"
@@ -1540,7 +2176,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.3xs}",
+                "Light": "{type.lineHeight.3xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.3xs}"
@@ -1550,7 +2190,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xs}",
+                "Light": "{type.lineHeight.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xs}"
@@ -1560,7 +2204,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xs}",
+                "Light": "{type.lineHeight.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xs}"
@@ -1572,7 +2220,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xs}",
+                "Light": "{type.lineHeight.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xs}"
@@ -1582,7 +2234,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xs}",
+                "Light": "{type.lineHeight.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xs}"
@@ -1592,7 +2248,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xs}",
+                "Light": "{type.lineHeight.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xs}"
@@ -1605,7 +2265,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 0,
+              "Light": 0
+            }
           },
           "$type": "number",
           "$value": 0
@@ -1615,7 +2279,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 1,
+              "Light": 1
+            }
           },
           "$type": "number",
           "$value": 1
@@ -1625,7 +2293,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": -1,
+              "Light": -1
+            }
           },
           "$type": "number",
           "$value": -1
@@ -1635,74 +2307,14 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 2,
+              "Light": 2
+            }
           },
           "$type": "number",
           "$value": 2
-        }
-      },
-      "fontFamily": {
-        "primary": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontFamily.ui-primary}"
-        },
-        "secondary": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontFamily.ui-secondary}"
-        }
-      },
-      "fontWeight": {
-        "regular": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontWeight.regular}"
-        },
-        "medium": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontWeight.medium}"
-        },
-        "bold": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontWeight.bold}"
-        },
-        "light": {
-          "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false
-          },
-          "$type": "text",
-          "$value": "{type.fontWeight.light}"
         }
       }
     },
@@ -1713,7 +2325,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.code-primary}",
+              "Light": "{type.fontFamily.code-primary}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.code-primary}"
@@ -1723,7 +2339,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.ui-secondary}",
+              "Light": "{type.fontFamily.ui-secondary}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.ui-secondary}"
@@ -1735,7 +2355,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.Space Mono.weight.Light}",
+              "Light": "{type.fontFamily.Space Mono.weight.Light}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Light}"
@@ -1745,7 +2369,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.Space Mono.weight.Regular}",
+              "Light": "{type.fontFamily.Space Mono.weight.Regular}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Regular}"
@@ -1755,7 +2383,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.Space Mono.weight.Medium}",
+              "Light": "{type.fontFamily.Space Mono.weight.Medium}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Medium}"
@@ -1765,7 +2397,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontFamily.Space Mono.weight.Bold}",
+              "Light": "{type.fontFamily.Space Mono.weight.Bold}"
+            }
           },
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Bold}"
@@ -1778,7 +2414,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.xs}",
+                "Light": "{type.fontSize.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.xs}"
@@ -1788,7 +2428,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.sm}",
+                "Light": "{type.fontSize.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.sm}"
@@ -1798,7 +2442,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.fontSize.md}",
+                "Light": "{type.fontSize.md}"
+              }
             },
             "$type": "number",
             "$value": "{type.fontSize.md}"
@@ -1812,7 +2460,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.2xs}",
+                "Light": "{type.lineHeight.2xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.2xs}"
@@ -1822,7 +2474,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.xs}",
+                "Light": "{type.lineHeight.xs}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.xs}"
@@ -1832,7 +2488,11 @@
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
-              "com.figma.hiddenFromPublishing": false
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{type.lineHeight.sm}",
+                "Light": "{type.lineHeight.sm}"
+              }
             },
             "$type": "number",
             "$value": "{type.lineHeight.sm}"
@@ -1845,7 +2505,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": -1,
+              "Light": -1
+            }
           },
           "$type": "number",
           "$value": -1
@@ -1855,7 +2519,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 0,
+              "Light": 0
+            }
           },
           "$type": "number",
           "$value": 0
@@ -1865,7 +2533,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 1,
+              "Light": 1
+            }
           },
           "$type": "number",
           "$value": 1
@@ -1875,7 +2547,11 @@
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
-            "com.figma.hiddenFromPublishing": false
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": 2,
+              "Light": 2
+            }
           },
           "$type": "number",
           "$value": 2
@@ -1888,7 +2564,11 @@
       "com.figma.scopes": [
         "ALL_SCOPES"
       ],
-      "com.figma.hiddenFromPublishing": false
+      "com.figma.hiddenFromPublishing": false,
+      "modes": {
+        "Dark": "Label",
+        "Light": "Label"
+      }
     },
     "$type": "text",
     "$value": "Label"

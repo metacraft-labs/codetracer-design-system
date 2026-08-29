@@ -27,25 +27,17 @@ Generated after a library audit + consolidation pass:
   generic primitives (avatars, loaders, charts, navigation, lists) to their own base-library pages.
 - Every component now carries a description; no duplicate component names remain.
 
-## Token files — re-exported to match Figma
+## Token files
 
-The `brand` / `alias` / `mapped` token files were **regenerated from the live Figma variables** in
-this PR and verified field-by-field: **0 differences across all 512 variables.** What changed:
+This PR is **purely additive** — it adds only the component manifest. The `brand` / `alias` /
+`mapped` token corrections that earlier revisions of this branch carried have since landed on `dev`
+independently (via the convention-driven export tooling and the colour-mode × density axes export),
+so `dev`'s token files already reflect the live Figma variables and this branch no longer touches
+them.
 
-- **mapped:** 7 value corrections (`text/primary/caption`, `surface/base/card`, two
-  `primary/*-hover`, three `surface/alert/*`), 12 tokens added (`colors/ui/role/*`,
-  `icon/primary/subtle-hover`, `divider/secondary`, `text/primary/label-subtle`, `caption-subtle`),
-  and the `surface/canvas` → `surface/base/canvas` restructure. The 8 `role/*` tokens keep their
-  specific Figma scopes.
-- **alias:** `padding/*` renamed to `spacing/*`, `font-size/*` added, the `deafult` typo fixed.
-- **brand:** `type/fontFamily/Space Grotesk` variable set to `"Space Grotesk"` (static-font
-  migration).
+### Known text-style caveat (unchanged by this PR)
 
-### Caveats (please review)
-
-- Rebuilt via the Figma **plugin API**, not Figma's native variable exporter — so some key ordering
-  differs from the previous files (values are verified equal). Review the diff before merge.
-- **Typography text styles are not variables** and were *not* re-exported. One stale reference
-  remains: `brand.json → fontfamilies.2` still reads `"Space Grotesk Variable"`. Updating that (and
-  any other text-style drift) needs a native **text-style** export, which the variable API can't
-  produce.
+- **Typography text styles are not variables**, so they are not covered by the variable export. One
+  stale reference remains on `dev`: `brand.json → fontfamilies.2` still reads
+  `"Space Grotesk Variable"`. Fixing that (and any other text-style drift) needs a native
+  **text-style** export, which the Figma variable API can't produce.

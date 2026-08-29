@@ -1173,7 +1173,7 @@
         "$type": "number",
         "$value": "{scale.50}"
       },
-      "default": {
+      "deafult": {
         "$extensions": {
           "com.figma.scopes": [
             "ALL_SCOPES"
@@ -1317,17 +1317,7 @@
       }
     }
   },
-  "spacing": {
-    "25": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "number",
-      "$value": "{scale.200}"
-    },
+  "padding": {
     "50": {
       "$extensions": {
         "com.figma.scopes": [
@@ -1527,9 +1517,27 @@
       },
       "$type": "number",
       "$value": 0
-    }
-  },
-  "font-size": {
+    },
+    "3xs": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "number",
+      "$value": "{scale.250}"
+    },
+    "2xs": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "number",
+      "$value": "{scale.300}"
+    },
     "xs": {
       "$extensions": {
         "com.figma.scopes": [
@@ -1538,7 +1546,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "number",
-      "$value": 12
+      "$value": "{scale.350}"
     },
     "sm": {
       "$extensions": {
@@ -1548,7 +1556,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "number",
-      "$value": 14
+      "$value": "{scale.400}"
     },
     "md": {
       "$extensions": {
@@ -1558,7 +1566,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "number",
-      "$value": 16
+      "$value": "{scale.450}"
     },
     "lg": {
       "$extensions": {
@@ -1568,7 +1576,37 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "number",
-      "$value": 20
+      "$value": "{scale.500}"
+    },
+    "xl": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "number",
+      "$value": "{scale.550}"
+    },
+    "2xl": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "number",
+      "$value": "{scale.600}"
+    },
+    "3xl": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "number",
+      "$value": "{scale.650}"
     }
   }
 }
