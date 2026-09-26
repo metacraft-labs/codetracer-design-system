@@ -162,3 +162,54 @@ mechanical tag the "How this doc is meant to be used" section calls for.
 _Maintained alongside the docs theme in `isonim/docs/users/`. Last updated by the
 M3 landing + FAQ build (WebFlow-equivalent home, FAQ accordion, prev/next fix);
 see the design-port spec for exact CSS line references and per-component mapping._
+
+---
+
+# Terminal front-end (`codetracer-tui`) ↔ design-system divergences
+
+**Purpose.** Since 2026-09-26 the terminal
+front-end paints every colour from this repository's tokens: `scripts/tokens-to-styl.sh`
+in `codetracer` writes the desktop's stylus AND a resolved Nim token module
+(`src/frontend/styles/generated/design_tokens.nim`, both modes) from ONE run over the
+pinned revision, and every terminal `SemanticRole` names the token it paints with
+(`src/frontend/tui/app/theme/roles.nim`). This section records where the terminal
+needed something this system does not publish, and where the terminal and the desktop
+deliberately paint a shared role with different tokens.
+
+## Roles the terminal needed that the system lacks (filed, painted with the nearest token)
+
+| Role | What the terminal paints instead | Filed as |
+|------|----------------------------------|----------|
+| `srSyntaxOperator` — operators, distinct from punctuation | `colors/editor/syntax/secondary` (the punctuation tier) + bold on every colour rung | `codetracer-specs/issues/2026-09-26-design-system-no-operator-syntax-token.md` |
+| `srHeat0`…`srHeat5` — the heatmap's ordered execution-count scale | syntax tertiary → error → parameter → string → editor action secondary → syntax primary | `…/2026-09-26-design-system-no-heat-scale.md` |
+
+## Token values the terminal paints as published, and which fail there (filed, not adjusted)
+
+- `colors/editor/syntax/current-line` resolves to the SAME hex as
+  `colors/editor/syntax/comment` in both modes, so a comment on the execution line is
+  invisible (1.0:1) — `…/2026-09-26-design-system-current-line-equals-comment.md`.
+- WCAG AA failures, mostly the Light mode's `colors/editor/surface/primary` (`#7a756a`,
+  a mid-grey under Alucard's syntax colours) and the Light selection/status tiers —
+  `…/2026-09-26-design-system-contrast-failures.md`. The terminal's read-back contrast
+  suite carries exactly these pairs in a counted register.
+
+## Shared roles the desktop and the terminal paint differently (recorded, by decision)
+
+Measured by `tests/real_terminal/test_plat46_desktop_parity.nim` against the Electron
+front-end's computed CSS (`src/tests/visual/answers/plat46-token-parity.electron.json`).
+Tab surfaces and labels, the layout ground, the pane surface and pane text agree to the
+byte.
+
+| Role | Desktop | Terminal | Why |
+|------|---------|----------|-----|
+| Editor syntax (`syntax-keyword` …) | hand-written Monaco theme (`codetracerDark.json`, keyword `#5a9dd4`) | `colors/editor/syntax/*` (keyword `#ff79c6`) | The desktop's Monaco theme is not generated from this system — `…/2026-09-26-desktop-editor-syntax-not-from-design-tokens.md` |
+| Editor surface | transparent over the pane: `colors/ui/surface/base/panel` | `colors/editor/surface/primary` | The terminal paints the editor on the editor surface; the desktop never painted it |
+| Inactive tab background | the pane's `colors/ui/surface/base/panel` | the strip's `colors/ui/surface/primary/default` | The terminal distinguishes the active tab by SURFACE as well as by label tier; a terminal tab has no connector curves to do it |
+
+## Where the design-system revision is pinned
+
+`codetracer/libs/codetracer-design-system` pins **3d0703d** (the commit the desktop's
+committed stylus actually encodes: dark primary action / active text on `brand/500`),
+which is on this repository's `ui-design-improvements-part4` branch (pull request #7,
+opened against `main`) and not yet on `dev`. Until it reaches `dev`, deleting that
+branch would leave CodeTracer's submodule pin unreachable — `…/2026-09-26-design-system-pin-behind-generated-stylus.md`.
