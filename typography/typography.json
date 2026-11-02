@@ -1,0 +1,258 @@
+{
+  "titles": {
+    "title-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.bold}",
+        "fontSize": "{type.ui.size.title.lg}",
+        "lineHeight": "{type.ui.lineHeight.title.lg}",
+        "letterSpacing": -1
+      }
+    },
+    "title-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.bold}",
+        "fontSize": "{type.ui.size.title.md}",
+        "lineHeight": "{type.ui.lineHeight.title.md}",
+        "letterSpacing": -1
+      }
+    },
+    "title-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.bold}",
+        "fontSize": "{type.ui.size.title.sm}",
+        "lineHeight": "{type.ui.lineHeight.title.sm}",
+        "letterSpacing": -1
+      }
+    }
+  },
+  "header": {
+    "heading-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.medium}",
+        "fontSize": "{type.ui.size.heading.lg}",
+        "lineHeight": "{type.ui.lineHeight.heading.lg}",
+        "letterSpacing": -1
+      }
+    },
+    "heading-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.medium}",
+        "fontSize": "{type.ui.size.heading.md}",
+        "lineHeight": "{type.ui.lineHeight.heading.md}",
+        "letterSpacing": 0
+      }
+    },
+    "heading-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.medium}",
+        "fontSize": "{type.ui.size.heading.sm}",
+        "lineHeight": "{type.ui.lineHeight.heading.sm}",
+        "letterSpacing": 0
+      }
+    }
+  },
+  "body": {
+    "body-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.body.lg}",
+        "lineHeight": "{type.ui.lineHeight.body.lg}",
+        "letterSpacing": 0
+      }
+    },
+    "body-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.body.md}",
+        "lineHeight": 20,
+        "letterSpacing": 0
+      }
+    },
+    "body-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.body.sm}",
+        "lineHeight": "{type.ui.lineHeight.body.sm}",
+        "letterSpacing": 0
+      }
+    }
+  },
+  "label": {
+    "UPPER-CASE": {
+      "label-xl": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "Space Grotesk",
+          "fontWeight": "{type.ui.fontWeight.regular}",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "letterSpacing": 0
+        },
+        "$extensions": {
+          "textCase": "UPPER"
+        }
+      },
+      "label-lg": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "Space Grotesk",
+          "fontWeight": "{type.ui.fontWeight.regular}",
+          "fontSize": "{type.ui.size.label.lg}",
+          "lineHeight": "{type.ui.lineHeight.label.lg}",
+          "letterSpacing": 0
+        },
+        "$extensions": {
+          "textCase": "UPPER"
+        }
+      },
+      "label-md": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "Space Grotesk",
+          "fontWeight": "{type.ui.fontWeight.regular}",
+          "fontSize": "{type.ui.size.label.md}",
+          "lineHeight": 20,
+          "letterSpacing": 0
+        },
+        "$extensions": {
+          "textCase": "UPPER"
+        }
+      },
+      "label-sm": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "Space Grotesk",
+          "fontWeight": "{type.ui.fontWeight.regular}",
+          "fontSize": "{type.ui.size.label.sm}",
+          "lineHeight": "{type.ui.lineHeight.label.sm}",
+          "letterSpacing": 0.5
+        },
+        "$extensions": {
+          "textCase": "UPPER"
+        }
+      }
+    },
+    "label-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": 16,
+        "lineHeight": 20,
+        "letterSpacing": -0.5
+      }
+    },
+    "label-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.label.lg}",
+        "lineHeight": 16,
+        "letterSpacing": 0
+      }
+    },
+    "label-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.label.md}",
+        "lineHeight": "{type.ui.lineHeight.label.md}",
+        "letterSpacing": 0
+      }
+    },
+    "label-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.label.sm}",
+        "lineHeight": "{type.ui.lineHeight.label.sm}",
+        "letterSpacing": 0
+      }
+    }
+  },
+  "caption": {
+    "caption-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.caption.lg}",
+        "lineHeight": "{type.ui.lineHeight.caption.lg}",
+        "letterSpacing": 0
+      }
+    },
+    "caption-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.caption.md}",
+        "lineHeight": "{type.ui.lineHeight.caption.md}",
+        "letterSpacing": 0
+      }
+    },
+    "caption-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontWeight": "{type.ui.fontWeight.regular}",
+        "fontSize": "{type.ui.size.caption.sm}",
+        "lineHeight": "{type.ui.lineHeight.caption.sm}",
+        "letterSpacing": 0
+      }
+    }
+  },
+  "editor": {
+    "lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{type.editor.fontFamily.primary}",
+        "fontWeight": "{type.editor.fontWeight.regular}",
+        "fontSize": "{type.editor.size.body.lg}",
+        "lineHeight": "AUTO",
+        "letterSpacing": 0
+      }
+    },
+    "md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{type.editor.fontFamily.primary}",
+        "fontWeight": "{type.editor.fontWeight.regular}",
+        "fontSize": "{type.editor.size.body.md}",
+        "lineHeight": "AUTO",
+        "letterSpacing": 0
+      }
+    },
+    "sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{type.editor.fontFamily.primary}",
+        "fontWeight": "{type.editor.fontWeight.regular}",
+        "fontSize": "{type.editor.size.body.sm}",
+        "lineHeight": "AUTO",
+        "letterSpacing": 0
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ Figma and re-export (see below).
 - `alias/alias.json` — semantic aliases (neutral/brand/error…, fontSize/lineHeight/spacing/icon → `{scale.*}`).
 - `mapped/mapped.json` — role/component tokens (`colors/ui/*`, `colors/editor/*`, `colors/ui/role/*`, `type/ui/*`, `type/editor/*`). Colour roles carry **Dark + Light** under `$extensions.modes` (default `$value` = Dark).
 - `space/space.json` — density roles (`padding/*`, `gap/*`, `border/border radius/*`) with **Compact/Comfortable/Spacious** under `$extensions.modes` (default `$value` = Compact). See `scripts/AXES-CAMPAIGN.md`.
+- `typography/typography.json` — the Figma text styles as DTCG `typography` composites (no consumer reads it yet; `brand.json` keeps the Tokens Studio composites).
 - `docs/` — the docs token layer + `DESIGN-DIVERGENCES.md`.
 - `nim/metacraft_docs_theme.nim` — the shared docs-theme helper consumed by isonim-docs sites.
 - `scripts/` — the export tooling + its conventions (below).

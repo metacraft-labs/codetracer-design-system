@@ -12,19 +12,21 @@
       "variantProperties": "Variant axes and their allowed values (long value lists capped with '…+N more').",
       "variantCount": "Total number of variant combinations in the set.",
       "properties": "Component property definitions: name -> type (VARIANT | TEXT | BOOLEAN | INSTANCE_SWAP).",
-      "variantError": "(resolved) previously flagged sets with variant conflicts; none remain."
+      "variantError": "Present on a set with a variant conflict in Figma; its variantProperties are read from the variant names instead."
     },
     "counts": {
-      "total": 116,
-      "componentSets": 76,
-      "singleComponents": 40
+      "total": 113,
+      "componentSets": 72,
+      "singleComponents": 41
     },
-    "knownIssues": []
+    "knownIssues": [
+      "ui-icons: the variant icons-lg=folder-close exists twice (Figma node 192:11889), so Figma reports a conflict on the set."
+    ]
   },
   "components": [
     {
       "name": "agent-status-icon",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4326:80",
       "kind": "set",
       "variantProperties": {
@@ -45,7 +47,7 @@
     },
     {
       "name": "progress-bar",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3718:102",
       "kind": "set",
       "variantProperties": {
@@ -64,7 +66,7 @@
     },
     {
       "name": "agent-progress-indicator",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3761:178",
       "kind": "set",
       "variantProperties": {
@@ -89,7 +91,7 @@
     },
     {
       "name": "workspace-view-switcher",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4329:151",
       "kind": "set",
       "variantProperties": {
@@ -106,7 +108,7 @@
     },
     {
       "name": "file-tree-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4329:174",
       "kind": "set",
       "variantProperties": {
@@ -124,7 +126,7 @@
     },
     {
       "name": "file-state-badge",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3763:139",
       "kind": "set",
       "variantProperties": {
@@ -148,7 +150,7 @@
     },
     {
       "name": "file-diff-indicator",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4329:209",
       "kind": "set",
       "variantProperties": {
@@ -166,7 +168,7 @@
     },
     {
       "name": "coverage-gutter-mark",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3766:145",
       "kind": "set",
       "variantProperties": {
@@ -184,26 +186,8 @@
       "description": "Coverage gutter mark — a thin bar in the editor gutter showing DeepReview line coverage from the agent's test runs."
     },
     {
-      "name": "inline-value-label",
-      "page": "Agent Components Library",
-      "id": "3766:150",
-      "kind": "set",
-      "variantProperties": {
-        "state": [
-          "default",
-          "current"
-        ]
-      },
-      "variantCount": 2,
-      "properties": {
-        "value": "TEXT",
-        "state": "VARIANT"
-      },
-      "description": "Inline value label — a live variable value shown inline on a code line, rendered as a DeepReview flow annotation (NOT a text comment)."
-    },
-    {
       "name": "execution-context-selector",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4330:226",
       "kind": "set",
       "variantProperties": {
@@ -221,7 +205,7 @@
     },
     {
       "name": "milestone-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3762:167",
       "kind": "set",
       "variantProperties": {
@@ -244,7 +228,7 @@
     },
     {
       "name": "milestone-priority-tag",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4331:414",
       "kind": "set",
       "variantProperties": {
@@ -262,7 +246,7 @@
     },
     {
       "name": "event-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3707:42",
       "kind": "set",
       "variantProperties": {
@@ -291,7 +275,7 @@
     },
     {
       "name": "filter-chip",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3711:42",
       "kind": "set",
       "variantProperties": {
@@ -309,7 +293,7 @@
     },
     {
       "name": "streaming-indicator",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3764:144",
       "kind": "set",
       "variantProperties": {
@@ -327,7 +311,7 @@
     },
     {
       "name": "stream-empty-state",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4337:573",
       "kind": "set",
       "variantProperties": {
@@ -345,7 +329,7 @@
     },
     {
       "name": "agent-chip",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3719:94",
       "kind": "set",
       "variantProperties": {
@@ -363,7 +347,7 @@
     },
     {
       "name": "advanced-disclosure",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4340:675",
       "kind": "set",
       "variantProperties": {
@@ -380,7 +364,7 @@
     },
     {
       "name": "status-pill",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3689:26",
       "kind": "set",
       "variantProperties": {
@@ -401,7 +385,7 @@
     },
     {
       "name": "elapsed-time",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:592",
       "kind": "set",
       "variantProperties": {
@@ -419,7 +403,7 @@
     },
     {
       "name": "prompt-ack",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:799",
       "kind": "set",
       "variantProperties": {
@@ -437,7 +421,7 @@
     },
     {
       "name": "mode-switcher",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:744",
       "kind": "set",
       "variantProperties": {
@@ -454,7 +438,7 @@
     },
     {
       "name": "modified-file-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:804",
       "kind": "set",
       "variantProperties": {
@@ -474,7 +458,7 @@
     },
     {
       "name": "diff-line",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4337:478",
       "kind": "set",
       "variantProperties": {
@@ -495,7 +479,7 @@
     },
     {
       "name": "context-expander",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:844",
       "kind": "set",
       "variantProperties": {
@@ -512,7 +496,7 @@
     },
     {
       "name": "draggable-edge-line",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:870",
       "kind": "set",
       "variantProperties": {
@@ -529,7 +513,7 @@
     },
     {
       "name": "diff-gutter-decoration",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:940",
       "kind": "set",
       "variantProperties": {
@@ -548,7 +532,7 @@
     },
     {
       "name": "call-trace-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:967",
       "kind": "set",
       "variantProperties": {
@@ -567,7 +551,7 @@
     },
     {
       "name": "session-status-dot",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3951:34",
       "kind": "set",
       "variantProperties": {
@@ -591,7 +575,7 @@
     },
     {
       "name": "session-action-button",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3952:33",
       "kind": "set",
       "variantProperties": {
@@ -613,7 +597,7 @@
     },
     {
       "name": "session-activity-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3953:33",
       "kind": "set",
       "variantProperties": {
@@ -630,7 +614,7 @@
     },
     {
       "name": "session-card",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3958:167",
       "kind": "set",
       "variantProperties": {
@@ -656,7 +640,7 @@
     },
     {
       "name": "session-role-chip",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3976:227",
       "kind": "set",
       "variantProperties": {
@@ -681,7 +665,7 @@
     },
     {
       "name": "session-iteration-block",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3978:261",
       "kind": "set",
       "variantProperties": {
@@ -702,7 +686,7 @@
     },
     {
       "name": "session-graph-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3979:256",
       "kind": "set",
       "variantProperties": {
@@ -722,7 +706,7 @@
     },
     {
       "name": "session-tree-group",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3984:363",
       "kind": "set",
       "variantProperties": {
@@ -741,7 +725,7 @@
     },
     {
       "name": "session-tree-item",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3986:657",
       "kind": "set",
       "variantProperties": {
@@ -773,7 +757,7 @@
     },
     {
       "name": "session-agent-column",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4184:894",
       "kind": "set",
       "variantProperties": {
@@ -805,7 +789,7 @@
     },
     {
       "name": "milestone-segment",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3962:69",
       "kind": "set",
       "variantProperties": {
@@ -824,7 +808,7 @@
     },
     {
       "name": "milestone-deliverable-cell",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3962:72",
       "kind": "set",
       "variantProperties": {
@@ -841,7 +825,7 @@
     },
     {
       "name": "milestone-rail",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3963:82",
       "kind": "set",
       "variantProperties": {
@@ -856,11 +840,11 @@
         "count": "TEXT",
         "size": "VARIANT"
       },
-      "description": "OPTION 1 — Segmented progress rail."
+      "description": "CANONICAL milestone visualization."
     },
     {
       "name": "milestone-matrix-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3964:109",
       "kind": "set",
       "variantProperties": {
@@ -878,35 +862,11 @@
         "count": "TEXT",
         "status": "VARIANT"
       },
-      "description": "OPTION 2 — Deliverable matrix."
-    },
-    {
-      "name": "milestone-node",
-      "page": "Agent Components Library",
-      "id": "3965:101",
-      "kind": "set",
-      "variantProperties": {
-        "status": [
-          "completed",
-          "in_progress",
-          "blocked",
-          "planned"
-        ]
-      },
-      "variantCount": 4,
-      "properties": {
-        "title": "TEXT",
-        "blockedBy": "TEXT",
-        "showBlockedBy": "BOOLEAN",
-        "showConnectorTop": "BOOLEAN",
-        "showConnectorBottom": "BOOLEAN",
-        "status": "VARIANT"
-      },
-      "description": "OPTION 3 — Dependency rail."
+      "description": "EXPLORATION — not the canonical milestone visualization; use milestone-rail instead."
     },
     {
       "name": "milestone-timeline-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3971:184",
       "kind": "set",
       "variantProperties": {
@@ -925,11 +885,11 @@
         "showBar": "BOOLEAN",
         "status": "VARIANT"
       },
-      "description": "OPTION 4 — Time waterfall."
+      "description": "EXPLORATION — not the canonical milestone visualization; use milestone-rail instead."
     },
     {
       "name": "agent-task-label",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4326:92",
       "kind": "single",
       "properties": {
@@ -939,7 +899,7 @@
     },
     {
       "name": "milestone-counter",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4326:98",
       "kind": "single",
       "properties": {
@@ -949,7 +909,7 @@
     },
     {
       "name": "progress-percentage",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4326:113",
       "kind": "single",
       "properties": {
@@ -959,14 +919,14 @@
     },
     {
       "name": "agent-context-menu",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4326:131",
       "kind": "single",
       "description": "Right-click menu on the caption-bar progress indicator."
     },
     {
       "name": "workspace-readonly-banner",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4329:214",
       "kind": "single",
       "properties": {
@@ -976,7 +936,7 @@
     },
     {
       "name": "execution-slider",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3766:151",
       "kind": "single",
       "properties": {
@@ -986,56 +946,56 @@
     },
     {
       "name": "execution-comparison-view",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4330:238",
       "kind": "single",
       "description": "Two recorded executions of the same code side by side, with their inline values aligned line for line."
     },
     {
       "name": "milestone-list",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4331:241",
       "kind": "single",
       "description": "The agent plan rendered as a checklist, assembled from milestone-row instances including nested children."
     },
     {
       "name": "tool-call-card",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4331:419",
       "kind": "single",
       "description": "A file-editing tool call, enriched with DeepReview context: which functions changed and what it did to coverage."
     },
     {
       "name": "test-result-card",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4331:468",
       "kind": "single",
       "description": "A completed test with its recorded flow data: pass/fail, duration, how many times the function ran, and the values captured."
     },
     {
       "name": "card-action-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4331:226",
       "kind": "single",
       "description": "The action pair at the foot of a tool-call or test-result card — jumps from the activity feed to the code or the recorded trace."
     },
     {
       "name": "event-stream",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4335:390",
       "kind": "single",
       "description": "The live feed for one session: filter bar, time-grouped event rows, and a liveness indicator pinned at the foot."
     },
     {
       "name": "code-diff-block",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4337:479",
       "kind": "single",
       "description": "Monospace code and diff rendering inside the event stream — what the diff and file_edit rows expand into."
     },
     {
       "name": "timestamp-divider",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3764:145",
       "kind": "single",
       "properties": {
@@ -1045,7 +1005,7 @@
     },
     {
       "name": "config-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4340:541",
       "kind": "single",
       "properties": {
@@ -1056,7 +1016,7 @@
     },
     {
       "name": "omnibar-agent-command",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4340:634",
       "kind": "single",
       "properties": {
@@ -1066,7 +1026,7 @@
     },
     {
       "name": "fan-out-summary",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4340:681",
       "kind": "single",
       "properties": {
@@ -1076,14 +1036,14 @@
     },
     {
       "name": "fleet-list",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:623",
       "kind": "single",
       "description": "Every run across every task in one view — the supervision surface."
     },
     {
       "name": "run-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:593",
       "kind": "single",
       "properties": {
@@ -1093,7 +1053,7 @@
     },
     {
       "name": "task-group-header",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:611",
       "kind": "single",
       "properties": {
@@ -1104,7 +1064,7 @@
     },
     {
       "name": "diff-stat",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3764:127",
       "kind": "single",
       "properties": {
@@ -1115,14 +1075,14 @@
     },
     {
       "name": "steer-bar",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4341:800",
       "kind": "single",
       "description": "Sends a follow-up prompt to a running session — redirect without restarting."
     },
     {
       "name": "review-workspace-header",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:755",
       "kind": "single",
       "properties": {
@@ -1132,7 +1092,7 @@
     },
     {
       "name": "trace-context-selector",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:745",
       "kind": "single",
       "properties": {
@@ -1142,21 +1102,21 @@
     },
     {
       "name": "modified-files-panel",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:805",
       "kind": "single",
       "description": "The review set, shared by both DeepReview modes and the primary way to navigate a review."
     },
     {
       "name": "diff-file-section",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:887",
       "kind": "single",
       "description": "One file rendered as a review section in Unified Diff mode: header, expandable context, and one or more hunks."
     },
     {
       "name": "diff-file-header",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:878",
       "kind": "single",
       "properties": {
@@ -1167,7 +1127,7 @@
     },
     {
       "name": "diff-hunk",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4342:845",
       "kind": "single",
       "properties": {
@@ -1177,35 +1137,35 @@
     },
     {
       "name": "diff-omniscience-overlay",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:876",
       "kind": "single",
-      "description": "The standard CodeTracer Omniscience overlay laid on top of the unified diff — same coverage marks, inline values and loop slider as the editor, restricted to lines currently loaded into t…"
+      "description": "The standard CodeTracer Omniscience overlay laid on top of the unified diff — same coverage marks, inline values and loop slider as the editor, restricted to lines currently loaded into the diff surface."
     },
     {
       "name": "delivery-card",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:973",
       "kind": "single",
       "description": "Where the work lands: delivery mode, target branch or PR, and the action that ships it."
     },
     {
       "name": "accept-reject",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:1011",
       "kind": "single",
       "description": "Per-hunk review decision."
     },
     {
       "name": "run-comparison-view",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4343:1028",
       "kind": "single",
       "description": "Racing runs of one task side by side so a winner can be picked."
     },
     {
       "name": "waiting-for-input-alert",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4344:931",
       "kind": "single",
       "properties": {
@@ -1215,7 +1175,7 @@
     },
     {
       "name": "permission-request-modal",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4344:963",
       "kind": "single",
       "properties": {
@@ -1225,24 +1185,44 @@
     },
     {
       "name": "conflict-alert",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4344:1078",
       "kind": "single",
       "description": "The user edited files an agent is working on."
     },
     {
       "name": "persistence-setting-row",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "4344:1113",
       "kind": "single",
       "description": "Whether DeepReview trace data survives after a session ends."
     },
     {
       "name": "session-lane",
-      "page": "Agent Components Library",
+      "page": "New Components Library",
       "id": "3977:195",
       "kind": "single",
       "description": "OPTION 1 — Role swimlane."
+    },
+    {
+      "name": "inline-value-label/default",
+      "page": "New Components Library",
+      "id": "3766:146",
+      "kind": "single",
+      "properties": {
+        "value": "TEXT"
+      },
+      "description": ""
+    },
+    {
+      "name": "inline-value-label/current",
+      "page": "New Components Library",
+      "id": "3766:148",
+      "kind": "single",
+      "properties": {
+        "value": "TEXT"
+      },
+      "description": ""
     },
     {
       "name": "notification-components",
@@ -1469,8 +1449,11 @@
       "properties": {
         "Label": "TEXT",
         "Subtext": "BOOLEAN",
+        "⮑ Subtext": "TEXT",
         "Icon Right": "BOOLEAN",
+        "⮑ Icon Left": "INSTANCE_SWAP",
         "Icon Left": "BOOLEAN",
+        "⮑ Icon Right": "INSTANCE_SWAP",
         "status": "VARIANT",
         "type": "VARIANT",
         "corner": "VARIANT",
@@ -1679,11 +1662,15 @@
           "align-back",
           "align-front",
           "…+553 more"
+        ],
+        "theme": [
+          "dark"
         ]
       },
       "variantCount": 569,
       "properties": {
-        "type": "VARIANT"
+        "type": "VARIANT",
+        "theme": "VARIANT"
       },
       "description": "Extended icon set — the full glyph library used across CodeTracer beyond the core ui-icons (569 variants)."
     },
@@ -1692,28 +1679,29 @@
       "page": "Icons",
       "id": "192:11889",
       "kind": "set",
+      "variantError": "Duplicate variant icons-lg=folder-close; Figma reports a variant conflict on this set.",
       "variantProperties": {
         "icons-lg": [
-          "agent",
-          "attach",
-          "bug-icon",
-          "chevron-down",
-          "chevron-left",
-          "chevron-right",
-          "chevron-up",
-          "close-lg",
-          "close-sm",
-          "copy",
-          "edit",
           "time-back",
-          "person",
+          "share",
           "play",
-          "play-frame",
-          "search",
+          "bug-icon",
+          "person",
+          "edit",
+          "agent",
+          "sidebar-close",
+          "folder-close",
+          "footer-open",
+          "sidebar-open",
+          "copy",
+          "chevron-right",
+          "chevron-left",
+          "chevron-up",
+          "chevron-down",
           "…+22 more"
         ]
       },
-      "variantCount": 38,
+      "variantCount": 39,
       "properties": {
         "icons-lg": "VARIANT"
       },
@@ -1725,7 +1713,7 @@
       "id": "2574:4935",
       "kind": "set",
       "variantProperties": {
-        "Property 1": [
+        "status": [
           "Default",
           "subtle",
           "error",
@@ -1741,10 +1729,46 @@
       },
       "variantCount": 18,
       "properties": {
-        "Property 1": "VARIANT",
+        "status": "VARIANT",
         "Size": "VARIANT"
       },
       "description": "Dot — a small status/indicator dot."
+    },
+    {
+      "name": "extended-icon-set",
+      "page": "Icons",
+      "id": "5040:13286",
+      "kind": "set",
+      "variantProperties": {
+        "type": [
+          "add-circle",
+          "add-square",
+          "add1",
+          "add2",
+          "alert-alarm-bell-off",
+          "alert-alarm-bell1",
+          "alert-alarm-bell2",
+          "alert-information-circle",
+          "alert-radio-active1",
+          "alert-radio-active2",
+          "alert-radio-active3",
+          "alert-warning-circle",
+          "alert-warning-diamond",
+          "alert-warning-triangle",
+          "align-back",
+          "align-front",
+          "…+553 more"
+        ],
+        "theme": [
+          "light"
+        ]
+      },
+      "variantCount": 569,
+      "properties": {
+        "type": "VARIANT",
+        "theme": "VARIANT"
+      },
+      "description": "Extended icon set — the full glyph library used across CodeTracer beyond the core ui-icons (569 variants)."
     },
     {
       "name": "Tooltip",
@@ -1793,10 +1817,14 @@
       "variantCount": 5,
       "properties": {
         "Label": "BOOLEAN",
+        "↘︎ Label": "TEXT",
         "Value": "TEXT",
         "Hint copy": "BOOLEAN",
+        "↘︎ Hint copy": "TEXT",
         "Error copy": "BOOLEAN",
+        "↘︎ Error copy": "TEXT",
         "Counter": "BOOLEAN",
+        "↘︎ Counter": "TEXT",
         "Resize grip": "BOOLEAN",
         "status": "VARIANT"
       },
@@ -1827,75 +1855,6 @@
         "state": "VARIANT"
       },
       "description": "Dropdown item — one selectable option inside a dropdown menu; the building block for single- and multi-select menus."
-    },
-    {
-      "name": "method-badge",
-      "page": "Table",
-      "id": "3734:19",
-      "kind": "set",
-      "variantProperties": {
-        "method": [
-          "get",
-          "post",
-          "put",
-          "patch",
-          "delete"
-        ]
-      },
-      "variantCount": 5,
-      "properties": {
-        "method": "VARIANT"
-      },
-      "description": "Method badge — a small HTTP-method pill for tables and request logs."
-    },
-    {
-      "name": "table-cell",
-      "page": "Table",
-      "id": "3734:32",
-      "kind": "set",
-      "variantProperties": {
-        "type": [
-          "default",
-          "muted",
-          "info",
-          "success",
-          "error"
-        ]
-      },
-      "variantCount": 5,
-      "properties": {
-        "value": "TEXT",
-        "type": "VARIANT"
-      },
-      "description": "Table cell — a single data cell for building tables."
-    },
-    {
-      "name": "table-row",
-      "page": "Table",
-      "id": "3735:81",
-      "kind": "set",
-      "variantProperties": {
-        "state": [
-          "default",
-          "hover",
-          "selected"
-        ]
-      },
-      "variantCount": 3,
-      "properties": {
-        "state": "VARIANT"
-      },
-      "description": "Table row — one data row for the network-requests table, composed from table-cell + method-badge across the columns (# · method · URL · STATUS · DURATION · SIZE)."
-    },
-    {
-      "name": "table-header-cell",
-      "page": "Table",
-      "id": "3734:20",
-      "kind": "single",
-      "properties": {
-        "label": "TEXT"
-      },
-      "description": "Table header cell — a column header label (uppercase, muted)."
     },
     {
       "name": "badge",
@@ -2052,6 +2011,7 @@
         "Left toggle": "BOOLEAN",
         "Right toggle": "BOOLEAN",
         "Progress": "BOOLEAN",
+        "↘︎ Progress count": "TEXT",
         "Notifications": "BOOLEAN"
       },
       "description": "Application header."

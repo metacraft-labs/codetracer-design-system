@@ -6,7 +6,7 @@ plugin API. It sits alongside the token exports (`brand/`, `alias/`, `mapped/`).
 
 ## Contents
 
-- **116 components** — 76 component sets + 40 single components.
+- **113 components** — 72 component sets + 41 single components.
 - Per component: `name`, `page`, Figma `id`, `kind` (`set` | `single`), `variantProperties`
   (variant axes → allowed values, long lists capped as `…+N more`), `variantCount`, `properties`
   (component properties → type: `VARIANT` | `TEXT` | `BOOLEAN` | `INSTANCE_SWAP`), and a short
@@ -15,7 +15,8 @@ plugin API. It sits alongside the token exports (`brand/`, `alias/`, `mapped/`).
 
 ## Known issues
 
-- None outstanding. The earlier `ui-icons` / `Tooltip` variant conflicts have been resolved.
+- `ui-icons`: the variant `icons-lg=folder-close` exists twice, so Figma reports a conflict on the
+  set. Its `variantProperties` are read from the variant names, and the entry carries `variantError`.
 
 ## Provenance
 

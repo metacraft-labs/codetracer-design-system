@@ -117,14 +117,14 @@
           },
           "active": {
             "$type": "color",
-            "$value": "{colors.brand.500}",
+            "$value": "{colors.brand.600}",
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
               "com.figma.hiddenFromPublishing": false,
               "modes": {
-                "Dark": "{colors.brand.500}",
+                "Dark": "{colors.brand.600}",
                 "Light": "{colors.indigo.200}"
               }
             }
@@ -655,14 +655,14 @@
           },
           "secondary-hover": {
             "$type": "color",
-            "$value": "{colors.neutral.cold.200}",
+            "$value": "{colors.neutral.cold.100}",
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
               "com.figma.hiddenFromPublishing": false,
               "modes": {
-                "Dark": "{colors.neutral.cold.200}",
+                "Dark": "{colors.neutral.cold.100}",
                 "Light": "{colors.neutral.warm.200}"
               }
             }
@@ -729,14 +729,34 @@
           },
           "primary-hover": {
             "$type": "color",
-            "$value": "{colors.brand.700}",
+            "$value": "{colors.brand.600}",
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
               "com.figma.hiddenFromPublishing": false,
               "modes": {
-                "Dark": "{colors.brand.700}",
+                "Dark": "{colors.brand.600}",
+                "Light": "{colors.brand.400}"
+              }
+            }
+          },
+          "secondary": {
+            "$type": "color",
+            "$value": "{colors.brand.100}",
+            "$extensions": {
+              "modes": {
+                "Dark": "{colors.brand.100}",
+                "Light": "{colors.brand.300}"
+              }
+            }
+          },
+          "secondary-hover": {
+            "$type": "color",
+            "$value": "{colors.brand.200}",
+            "$extensions": {
+              "modes": {
+                "Dark": "{colors.brand.200}",
                 "Light": "{colors.brand.400}"
               }
             }
@@ -1050,7 +1070,7 @@
             "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.blue.500}",
-              "Light": "{colors.blue.500}"
+              "Light": "{colors.blue.600}"
             }
           }
         },
@@ -1996,14 +2016,14 @@
       "action": {
         "primary": {
           "$type": "color",
-          "$value": "{colors.brand.400}",
+          "$value": "{colors.brand.300}",
           "$extensions": {
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
             "com.figma.hiddenFromPublishing": false,
             "modes": {
-              "Dark": "{colors.brand.400}",
+              "Dark": "{colors.brand.300}",
               "Light": "{colors.indigo.400}"
             }
           }
