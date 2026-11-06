@@ -1,4 +1,4 @@
-// Fixture tests for the pure dump→DTCG transform. Run: `node --test scripts/`
+// Fixture tests for the pure dump→DTCG transform. Run: `node --test` (from the repo root)
 // Exercises every convention in TOKEN-EXPORT-CONVENTIONS.md so a change to the
 // transform that breaks a convention fails here instead of in a live export.
 import { test } from 'node:test';

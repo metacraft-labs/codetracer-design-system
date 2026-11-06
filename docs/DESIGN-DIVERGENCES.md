@@ -195,16 +195,44 @@ deliberately paint a shared role with different tokens.
 
 ## Shared roles the desktop and the terminal paint differently (recorded, by decision)
 
-Measured by `tests/real_terminal/test_plat46_desktop_parity.nim` against the Electron
-front-end's computed CSS (`src/tests/visual/answers/plat46-token-parity.electron.json`).
-Tab surfaces and labels, the layout ground, the pane surface and pane text agree to the
-byte.
+Measured by `codetracer`'s
+`src/frontend/tui/tests/real_terminal/test_plat46_desktop_parity.nim` against the
+Electron front-end's computed CSS (`src/tests/visual/answers/plat46-token-parity.electron.json`).
+Its `KnownDivergences` register is counted, so a row below that stops diverging, or a
+new divergence, fails that suite. The pane surface and pane text, the inactive tab's
+label, the layout ground, the editor surface, and the editor's keyword and identifier
+colours (the two syntax roles the capture measures) agree to the byte.
 
 | Role | Desktop | Terminal | Why |
 |------|---------|----------|-----|
-| Editor syntax (`syntax-keyword` …) | hand-written Monaco theme (`codetracerDark.json`, keyword `#5a9dd4`) | `colors/editor/syntax/*` (keyword `#ff79c6`) | The desktop's Monaco theme is not generated from this system — `…/2026-09-26-desktop-editor-syntax-not-from-design-tokens.md` |
-| Editor surface | transparent over the pane: `colors/ui/surface/base/panel` | `colors/editor/surface/primary` | The terminal paints the editor on the editor surface; the desktop never painted it |
-| Inactive tab background | the pane's `colors/ui/surface/base/panel` | the strip's `colors/ui/surface/primary/default` | The terminal distinguishes the active tab by SURFACE as well as by label tier; a terminal tab has no connector curves to do it |
+| Active tab background | the pane's `colors/ui/surface/base/panel` | `colors/ui/surface/primary/tertiary` | The user, 2026-10-01 (PLAT-49 finding 4): the selected tab has a ground of its own |
+| Active tab label | the label tier | the headings tier | PLAT-49 finding 4: the selected tab differs from the others by foreground as well as ground |
+| Inactive tab background | the pane's `colors/ui/surface/base/panel` | the strip's `colors/ui/surface/primary/default` | PLAT-50 (the user, 2026-10-02): the strip has a ground of its own, the one the desktop's tabs sit on |
+
+## The editor is painted from the desktop's Monaco theme, not `colors/editor/syntax/*` (by decision)
+
+No CodeTracer front-end paints its editor's syntax colours from this system's
+`colors/editor/syntax/*` (Dracula / Alucard: keyword `#ff79c6`, string `#f1fa8c`, comment
+`#6272a4`). The desktop feeds Monaco two theme documents maintained in `codetracer`,
+`src/public/third_party/monaco-themes/themes/customThemes/json/codetracerDark.json` and
+`codetracerWhite.json` (Dark keyword `#5a9dd4`). The terminal and GPUI front-ends paint
+from the same documents, resolved to `editor-theme/*` tokens by the same
+`scripts/tokens-to-styl.sh --editor-theme` run that writes the stylus. The user required
+on 2026-09-27 that the native front-ends' editor match the desktop's; PLAT-47 met that by
+making the desktop's theme documents the single source, which the desktop keeps feeding
+to Monaco. This replaces the PLAT-46 arrangement, in which the terminal painted
+`colors/editor/syntax/*` and counted the editor's syntax and surface as divergences from
+the desktop.
+
+Only the Dark document refers into this system, in its `codetracer` block: the editor
+ground is `colors/ui/surface/base/panel` and the active line number
+`colors/ui/text/primary/label`. The White document's `codetracer` block holds measured
+hexes. The `colors/editor/*` tokens still paint the terminal's roles outside the editor
+text: gutter marks, the heat scale, value categories and chrome accents. The
+`srSyntaxOperator` row and the `colors/editor/syntax/current-line` bullet above describe
+the PLAT-46 arrangement and are tracked by their own issues. The owning spec is
+`codetracer-pm`'s `spec/Front-Ends/CodeTracer-TUI.md` §6, under "The editor is the
+desktop's Monaco theme (PLAT-47)".
 
 ## Where the design-system revision is pinned
 

@@ -117,14 +117,14 @@
           },
           "active": {
             "$type": "color",
-            "$value": "{colors.brand.600}",
+            "$value": "{colors.brand.500}",
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
               "com.figma.hiddenFromPublishing": false,
               "modes": {
-                "Dark": "{colors.brand.600}",
+                "Dark": "{colors.brand.500}",
                 "Light": "{colors.indigo.200}"
               }
             }
@@ -715,14 +715,14 @@
         "action": {
           "primary": {
             "$type": "color",
-            "$value": "{colors.brand.600}",
+            "$value": "{colors.brand.500}",
             "$extensions": {
               "com.figma.scopes": [
                 "ALL_SCOPES"
               ],
               "com.figma.hiddenFromPublishing": false,
               "modes": {
-                "Dark": "{colors.brand.600}",
+                "Dark": "{colors.brand.500}",
                 "Light": "{colors.brand.300}"
               }
             }
