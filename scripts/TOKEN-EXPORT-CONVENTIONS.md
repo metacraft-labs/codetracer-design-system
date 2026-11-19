@@ -110,9 +110,11 @@ Two clean ways to handle typography (a design decision):
   layer (colours + spacing + scale) and continue exporting the typographic composites
   via the TS plugin. Smallest change; two producers for one repo.
 
-Recommendation: start with **(ii)** (the exporter owns the colour/spacing/density
-system we're actively changing; typography is stable), and add **(i)** later if we
-want a single producer.
+**Decided 2026-11-19 (Nikolay): (i).** Figma is the single producer.
+`figma-dump.js` reflects the text styles, `build-tokens.mjs` emits them to
+`typography/typography.json`, and `brand.json` holds variables only. The old
+Tokens Studio sets (`fontSize.0–7`, `lineHeights.0–17`, `fontfamilies.2`, …) were
+removed; nothing consumed them.
 
 ## What is guaranteed generic (the payoff)
 - **Add a variable / group / collection / mode / text style in Figma → run the script,

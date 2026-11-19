@@ -6,11 +6,8 @@
           "headings": {
             "$type": "color",
             "$value": "{colors.neutral.cold.50}",
+            "$description": "Text on a standard surface. The main reading ramp. Headings only — heavier than body.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.1000}"
@@ -20,11 +17,8 @@
           "body": {
             "$type": "color",
             "$value": "{colors.neutral.cold.50}",
+            "$description": "Text on a standard surface. The main reading ramp. Default reading text.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.950}"
@@ -34,11 +28,8 @@
           "body-subtle": {
             "$type": "color",
             "$value": "{colors.neutral.cold.200}",
+            "$description": "Text on a standard surface. The main reading ramp. De-emphasised body; supporting copy.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.200}",
                 "Light": "{colors.neutral.stone.850}"
@@ -48,11 +39,8 @@
           "label": {
             "$type": "color",
             "$value": "{colors.neutral.cold.150}",
+            "$description": "Text on a standard surface. The main reading ramp. Form and control labels.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.150}",
                 "Light": "{colors.neutral.stone.900}"
@@ -62,11 +50,8 @@
           "label-subtle": {
             "$type": "color",
             "$value": "{colors.neutral.cold.300}",
+            "$description": "Text on a standard surface. The main reading ramp. De-emphasised label.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.300}",
                 "Light": "{colors.neutral.stone.750}"
@@ -76,11 +61,8 @@
           "caption": {
             "$type": "color",
             "$value": "{colors.neutral.cold.200}",
+            "$description": "Text on a standard surface. The main reading ramp. Small supporting text.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.200}",
                 "Light": "{colors.neutral.stone.800}"
@@ -90,11 +72,8 @@
           "caption-subtle": {
             "$type": "color",
             "$value": "{colors.neutral.cold.400}",
+            "$description": "Text on a standard surface. The main reading ramp. The dimmest readable text. Fails AA for small sizes on some surfaces — use for timestamps and metadata, never for content the user must read.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.400}",
                 "Light": "{colors.neutral.stone.700}"
@@ -104,11 +83,8 @@
           "disabled": {
             "$type": "color",
             "$value": "{colors.neutral.cold.400}",
+            "$description": "Text on a standard surface. The main reading ramp. Non-interactive state. Never rely on colour alone to signal this.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.400}",
                 "Light": "{colors.neutral.stone.600}"
@@ -118,11 +94,8 @@
           "active": {
             "$type": "color",
             "$value": "{colors.brand.500}",
+            "$description": "Text on a standard surface. The main reading ramp. Currently selected or active item.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.brand.500}",
                 "Light": "{colors.brand.600}"
@@ -134,11 +107,8 @@
           "headings": {
             "$type": "color",
             "$value": "{colors.neutral.cold.800}",
+            "$description": "Text sitting on an inverted surface (colors/ui/surface/on-color/*). Do not use on the normal page background. Headings only — heavier than body.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.800}",
                 "Light": "{colors.neutral.stone.50}"
@@ -148,11 +118,8 @@
           "body": {
             "$type": "color",
             "$value": "{colors.neutral.cold.900}",
+            "$description": "Text sitting on an inverted surface (colors/ui/surface/on-color/*). Do not use on the normal page background. Default reading text.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.900}",
                 "Light": "{colors.neutral.stone.100}"
@@ -162,11 +129,8 @@
           "caption": {
             "$type": "color",
             "$value": "{colors.neutral.cold.650}",
+            "$description": "Text sitting on an inverted surface (colors/ui/surface/on-color/*). Do not use on the normal page background. Small supporting text.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.650}",
                 "Light": "{colors.neutral.stone.300}"
@@ -176,11 +140,8 @@
           "placeholder": {
             "$type": "color",
             "$value": "{colors.neutral.cold.600}",
+            "$description": "Text sitting on an inverted surface (colors/ui/surface/on-color/*). Do not use on the normal page background. Empty-field placeholder.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.600}",
                 "Light": "{colors.neutral.stone.500}"
@@ -192,11 +153,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.neutral.cold.50}",
+            "$description": "Text sitting on the brand action fill. Held identical in Light and Dark because the action surface is. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.50}"
@@ -206,11 +164,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.150}",
+            "$description": "Text sitting on the brand action fill. Held identical in Light and Dark because the action surface is. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.150}",
                 "Light": "{colors.neutral.stone.50}"
@@ -222,11 +177,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.error.300}",
+            "$description": "Error-coloured text. Something failed or is invalid. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.300}",
                 "Light": "{colors.error.700}"
@@ -236,11 +188,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.error.400}",
+            "$description": "Error-coloured text. Something failed or is invalid. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.400}",
                 "Light": "{colors.error.800}"
@@ -250,11 +199,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.error.200}",
+            "$description": "Error-coloured text. Something failed or is invalid. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.200}",
                 "Light": "{colors.error.100}"
@@ -264,11 +210,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.error.300}",
+            "$description": "Error-coloured text. Something failed or is invalid. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -280,11 +223,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.success.200}",
+            "$description": "Success-coloured text. Something completed. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.200}",
                 "Light": "{colors.success.800}"
@@ -294,11 +234,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.success.300}",
+            "$description": "Success-coloured text. Something completed. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.300}",
                 "Light": "{colors.success.900}"
@@ -308,11 +245,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.success.200}",
+            "$description": "Success-coloured text. Something completed. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.200}",
                 "Light": "{colors.success.100}"
@@ -322,11 +256,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.success.300}",
+            "$description": "Success-coloured text. Something completed. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -338,11 +269,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.information.300}",
+            "$description": "Informational text. Neutral emphasis, not a success or a failure. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.300}",
                 "Light": "{colors.information.700}"
@@ -352,11 +280,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.information.400}",
+            "$description": "Informational text. Neutral emphasis, not a success or a failure. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.400}",
                 "Light": "{colors.information.800}"
@@ -366,11 +291,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.information.200}",
+            "$description": "Informational text. Neutral emphasis, not a success or a failure. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.200}",
                 "Light": "{colors.information.100}"
@@ -380,11 +302,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.information.300}",
+            "$description": "Informational text. Neutral emphasis, not a success or a failure. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -396,11 +315,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.warning.300}",
+            "$description": "Warning-coloured text. Also the convention for \"waiting on the user\" — see agent-progress-indicator. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.300}",
                 "Light": "{colors.warning.800}"
@@ -410,11 +326,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.warning.400}",
+            "$description": "Warning-coloured text. Also the convention for \"waiting on the user\" — see agent-progress-indicator. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.400}",
                 "Light": "{colors.warning.900}"
@@ -424,11 +337,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.warning.200}",
+            "$description": "Warning-coloured text. Also the convention for \"waiting on the user\" — see agent-progress-indicator. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.200}",
                 "Light": "{colors.warning.100}"
@@ -438,11 +348,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.warning.300}",
+            "$description": "Warning-coloured text. Also the convention for \"waiting on the user\" — see agent-progress-indicator. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -456,11 +363,8 @@
           "canvas": {
             "$type": "color",
             "$value": "{colors.neutral.cold.900}",
+            "$description": "Structural page layer, non-interactive. Use for the fixed chrome a screen is built from. For anything with a hover state use colors/ui/surface/primary/* instead. The page itself; the bottom-most layer.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.900}",
                 "Light": "{colors.neutral.stone.150}"
@@ -470,11 +374,8 @@
           "panel": {
             "$type": "color",
             "$value": "{colors.neutral.cold.700}",
+            "$description": "Structural page layer, non-interactive. Use for the fixed chrome a screen is built from. For anything with a hover state use colors/ui/surface/primary/* instead. A sidebar or docked region sitting on the canvas.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
                 "Light": "{colors.neutral.stone.100}"
@@ -484,11 +385,8 @@
           "card": {
             "$type": "color",
             "$value": "{colors.neutral.cold.750}",
+            "$description": "Structural page layer, non-interactive. Use for the fixed chrome a screen is built from. For anything with a hover state use colors/ui/surface/primary/* instead. A discrete content block.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.750}",
                 "Light": "{colors.neutral.stone.50}"
@@ -498,11 +396,8 @@
           "raised": {
             "$type": "color",
             "$value": "{colors.neutral.cold.950}",
+            "$description": "Structural page layer, non-interactive. Use for the fixed chrome a screen is built from. For anything with a hover state use colors/ui/surface/primary/* instead. Sits behind the canvas — app chrome under the content.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.950}",
                 "Light": "{colors.neutral.stone.50}"
@@ -514,11 +409,8 @@
           "default": {
             "$type": "color",
             "$value": "{colors.neutral.cold.900}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Resting state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.900}",
                 "Light": "{colors.neutral.stone.50}"
@@ -528,11 +420,8 @@
           "default-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.750}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Hover state of default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.750}",
                 "Light": "{colors.neutral.stone.150}"
@@ -542,11 +431,8 @@
           "secondary": {
             "$type": "color",
             "$value": "{colors.neutral.cold.700}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. One step lifted from default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
                 "Light": "{colors.neutral.stone.150}"
@@ -556,11 +442,8 @@
           "secondary-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.650}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Hover state of secondary.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.650}",
                 "Light": "{colors.neutral.stone.200}"
@@ -570,11 +453,8 @@
           "tertiary": {
             "$type": "color",
             "$value": "{colors.neutral.cold.650}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Two steps lifted; the most prominent resting surface.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.650}",
                 "Light": "{colors.neutral.stone.200}"
@@ -584,11 +464,8 @@
           "tertiary-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.550}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Hover state of tertiary.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.550}",
                 "Light": "{colors.neutral.stone.250}"
@@ -598,11 +475,8 @@
           "disabled": {
             "$type": "color",
             "$value": "{colors.neutral.cold.700}",
+            "$description": "Interactive component surface. This is the ramp with hover and disabled states — use it for cards, rows, chips and controls the user can act on. For static page structure use colors/ui/surface/base/*. Non-interactive state. Never rely on colour alone to signal this.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
                 "Light": "{colors.neutral.stone.150}"
@@ -614,11 +488,8 @@
           "default": {
             "$type": "color",
             "$value": "{colors.neutral.cold.200}",
+            "$description": "Inverted surface — a light block in Dark mode, a dark block in Light. Use when a panel must contrast against the page rather than sit in it. Pair with colors/ui/text/on-color/*. Resting state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.200}",
                 "Light": "{colors.neutral.stone.50}"
@@ -628,11 +499,8 @@
           "default-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.100}",
+            "$description": "Inverted surface — a light block in Dark mode, a dark block in Light. Use when a panel must contrast against the page rather than sit in it. Pair with colors/ui/text/on-color/*. Hover state of default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.100}",
                 "Light": "{colors.neutral.stone.100}"
@@ -642,11 +510,8 @@
           "secondary": {
             "$type": "color",
             "$value": "{colors.neutral.cold.50}",
+            "$description": "Inverted surface — a light block in Dark mode, a dark block in Light. Use when a panel must contrast against the page rather than sit in it. Pair with colors/ui/text/on-color/*. One step lifted from default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.900}"
@@ -656,11 +521,8 @@
           "secondary-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.200}",
+            "$description": "Inverted surface — a light block in Dark mode, a dark block in Light. Use when a panel must contrast against the page rather than sit in it. Pair with colors/ui/text/on-color/*. Hover state of secondary.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.200}",
                 "Light": "{colors.neutral.stone.850}"
@@ -670,11 +532,8 @@
           "disabled": {
             "$type": "color",
             "$value": "{colors.neutral.cold.400}",
+            "$description": "Inverted surface — a light block in Dark mode, a dark block in Light. Use when a panel must contrast against the page rather than sit in it. Pair with colors/ui/text/on-color/*. Non-interactive state. Never rely on colour alone to signal this.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.400}",
                 "Light": "{colors.neutral.stone.300}"
@@ -686,11 +545,8 @@
           "default": {
             "$type": "color",
             "$value": "{colors.neutral.cold.800}",
+            "$description": "Form control fill. Text fields, text areas, selects. Resting state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.800}",
                 "Light": "{colors.neutral.stone.50}"
@@ -700,11 +556,8 @@
           "secondary": {
             "$type": "color",
             "$value": "{colors.neutral.cold.700}",
+            "$description": "Form control fill. Text fields, text areas, selects. One step lifted from default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
                 "Light": "{colors.neutral.stone.100}"
@@ -716,11 +569,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.brand.500}",
+            "$description": "Primary action fill (brand indigo). Reserved for the single most important action on a screen. Held identical in Light and Dark; pair with colors/ui/text/on-action/*. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.brand.500}",
                 "Light": "{colors.brand.600}"
@@ -730,11 +580,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.brand.700}",
+            "$description": "Primary action fill (brand indigo). Reserved for the single most important action on a screen. Held identical in Light and Dark; pair with colors/ui/text/on-action/*. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.brand.700}",
                 "Light": "{colors.brand.700}"
@@ -746,11 +593,8 @@
           "error": {
             "$type": "color",
             "$value": "{colors.error.700}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens. Error state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.700}",
                 "Light": "{colors.error.700}"
@@ -760,11 +604,8 @@
           "error-subtle": {
             "$type": "color",
             "$value": "{colors.error.600}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.600}",
                 "Light": "{colors.error.600}"
@@ -774,11 +615,8 @@
           "success": {
             "$type": "color",
             "$value": "{colors.success.700}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens. Success state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.700}",
                 "Light": "{colors.success.700}"
@@ -788,11 +626,8 @@
           "success-subtle": {
             "$type": "color",
             "$value": "{colors.success.600}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.600}",
                 "Light": "{colors.success.600}"
@@ -802,11 +637,8 @@
           "information": {
             "$type": "color",
             "$value": "{colors.information.900}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens. Informational state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.900}",
                 "Light": "{colors.information.900}"
@@ -816,11 +648,8 @@
           "information-subtle": {
             "$type": "color",
             "$value": "{colors.information.600}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.600}",
                 "Light": "{colors.information.600}"
@@ -830,11 +659,8 @@
           "warning": {
             "$type": "color",
             "$value": "{colors.warning.700}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens. Warning state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.700}",
                 "Light": "{colors.warning.700}"
@@ -844,11 +670,8 @@
           "warning-subtle": {
             "$type": "color",
             "$value": "{colors.warning.600}",
+            "$description": "Status banner fill. Use behind notification and badge content. The plain step is the deeper fill; -subtle is the brighter one, not a transparent tint — this system has no tint tokens.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.600}",
                 "Light": "{colors.warning.600}"
@@ -861,11 +684,8 @@
         "primary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.450}",
+          "$description": "Border and outline colour. Default step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.450}",
               "Light": "{colors.neutral.stone.450}"
@@ -875,11 +695,8 @@
         "primary-hover": {
           "$type": "color",
           "$value": "{colors.neutral.cold.350}",
+          "$description": "Border and outline colour. Hover state.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.350}",
               "Light": "{colors.neutral.stone.550}"
@@ -889,11 +706,8 @@
         "secondary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.600}",
+          "$description": "Border and outline colour. One step lifted from default.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.600}",
               "Light": "{colors.neutral.stone.250}"
@@ -903,11 +717,8 @@
         "tertiary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.700}",
+          "$description": "Border and outline colour. Two steps lifted; the most prominent resting surface.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.700}",
               "Light": "{colors.neutral.stone.100}"
@@ -917,11 +728,8 @@
         "tertiary-hover": {
           "$type": "color",
           "$value": "{colors.neutral.cold.800}",
+          "$description": "Border and outline colour. Hover state of tertiary.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.800}",
               "Light": "{colors.neutral.stone.300}"
@@ -931,11 +739,8 @@
         "disabled": {
           "$type": "color",
           "$value": "{colors.neutral.cold.650}",
+          "$description": "Border and outline colour. Non-interactive state. Never rely on colour alone to signal this.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.650}",
               "Light": "{colors.neutral.stone.250}"
@@ -945,11 +750,8 @@
         "on-color": {
           "$type": "color",
           "$value": "{colors.neutral.cold.200}",
+          "$description": "Border and outline colour. The variant for use on an inverted or coloured background.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.200}",
               "Light": "{colors.neutral.stone.700}"
@@ -959,11 +761,8 @@
         "on-color-hover": {
           "$type": "color",
           "$value": "{colors.neutral.cold.100}",
+          "$description": "Border and outline colour. Hover state of the on-color variant.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.100}",
               "Light": "{colors.neutral.stone.650}"
@@ -973,11 +772,8 @@
         "error": {
           "$type": "color",
           "$value": "{colors.error.300}",
+          "$description": "Border and outline colour. Error state.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.error.300}",
               "Light": "{colors.error.600}"
@@ -987,11 +783,8 @@
         "success": {
           "$type": "color",
           "$value": "{colors.success.300}",
+          "$description": "Border and outline colour. Success state.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.success.300}",
               "Light": "{colors.success.600}"
@@ -1001,11 +794,8 @@
         "warning": {
           "$type": "color",
           "$value": "{colors.warning.300}",
+          "$description": "Border and outline colour. Warning state.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.warning.300}",
               "Light": "{colors.warning.600}"
@@ -1015,11 +805,8 @@
         "information": {
           "$type": "color",
           "$value": "{colors.information.300}",
+          "$description": "Border and outline colour. Informational state.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.information.300}",
               "Light": "{colors.information.600}"
@@ -1029,11 +816,8 @@
         "action": {
           "$type": "color",
           "$value": "{colors.brand.500}",
+          "$description": "Border and outline colour. Border matching the brand action colour — selected and active states.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.brand.500}",
               "Light": "{colors.brand.500}"
@@ -1043,11 +827,8 @@
         "focus": {
           "$type": "color",
           "$value": "{colors.blue.500}",
+          "$description": "Border and outline colour. Keyboard focus ring. Held identical in Light and Dark so focus is always recognisable.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.blue.500}",
               "Light": "{colors.blue.600}"
@@ -1057,11 +838,8 @@
         "contrast": {
           "$type": "color",
           "$value": "{colors.base.white}",
+          "$description": "Border and outline colour. Maximum-contrast border for high-visibility outlines.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.base.white}",
               "Light": "{colors.neutral.stone.1000}"
@@ -1073,11 +851,8 @@
         "primary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.600}",
+          "$description": "Divider rule between sections or rows. Lighter weight than a border. Default step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.600}",
               "Light": "{colors.neutral.stone.250}"
@@ -1087,11 +862,8 @@
         "secondary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.450}",
+          "$description": "Divider rule between sections or rows. Lighter weight than a border. One step lifted from default.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.450}",
               "Light": "{colors.neutral.stone.400}"
@@ -1101,11 +873,8 @@
         "subtle": {
           "$type": "color",
           "$value": "{colors.neutral.cold.700}",
+          "$description": "Divider rule between sections or rows. Lighter weight than a border. De-emphasised step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.700}",
               "Light": "{colors.neutral.stone.200}"
@@ -1118,11 +887,8 @@
           "default": {
             "$type": "color",
             "$value": "{colors.neutral.cold.100}",
+            "$description": "Icon colour on a standard surface. Resting state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.100}",
                 "Light": "{colors.neutral.stone.900}"
@@ -1132,11 +898,8 @@
           "default-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.50}",
+            "$description": "Icon colour on a standard surface. Hover state of default.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.1000}"
@@ -1146,11 +909,8 @@
           "subtle": {
             "$type": "color",
             "$value": "{colors.neutral.cold.300}",
+            "$description": "Icon colour on a standard surface. De-emphasised step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.300}",
                 "Light": "{colors.neutral.stone.750}"
@@ -1160,11 +920,8 @@
           "subtle-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.150}",
+            "$description": "Icon colour on a standard surface. Hover state of subtle.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.150}",
                 "Light": "{colors.neutral.stone.900}"
@@ -1174,11 +931,8 @@
           "disabled": {
             "$type": "color",
             "$value": "{colors.neutral.cold.350}",
+            "$description": "Icon colour on a standard surface. Non-interactive state. Never rely on colour alone to signal this.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.350}",
                 "Light": "{colors.neutral.stone.700}"
@@ -1188,11 +942,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.neutral.cold.900}",
+            "$description": "Icon colour on a standard surface. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.900}",
                 "Light": "{colors.neutral.stone.100}"
@@ -1202,30 +953,10 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.neutral.cold.700}",
+            "$description": "Icon colour on a standard surface. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
-                "Light": "{colors.neutral.stone.50}"
-              }
-            }
-          }
-        },
-        "on-action": {
-          "primary": {
-            "$type": "color",
-            "$value": "{colors.neutral.cold.50}",
-            "$extensions": {
-              "com.figma.scopes": [
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "com.figma.hiddenFromPublishing": false,
-              "modes": {
-                "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.50}"
               }
             }
@@ -1235,11 +966,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.error.300}",
+            "$description": "Error-coloured icon. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.300}",
                 "Light": "{colors.error.700}"
@@ -1249,11 +977,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.error.400}",
+            "$description": "Error-coloured icon. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.400}",
                 "Light": "{colors.error.800}"
@@ -1263,11 +988,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.error.200}",
+            "$description": "Error-coloured icon. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.200}",
                 "Light": "{colors.error.100}"
@@ -1277,11 +999,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.error.300}",
+            "$description": "Error-coloured icon. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.error.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -1293,11 +1012,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.success.300}",
+            "$description": "Success-coloured icon. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.300}",
                 "Light": "{colors.success.800}"
@@ -1307,11 +1023,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.success.400}",
+            "$description": "Success-coloured icon. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.400}",
                 "Light": "{colors.success.900}"
@@ -1321,11 +1034,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.success.200}",
+            "$description": "Success-coloured icon. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.200}",
                 "Light": "{colors.success.100}"
@@ -1335,11 +1045,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.success.300}",
+            "$description": "Success-coloured icon. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.success.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -1351,11 +1058,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.information.300}",
+            "$description": "Informational icon. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.300}",
                 "Light": "{colors.information.700}"
@@ -1365,11 +1069,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.information.400}",
+            "$description": "Informational icon. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.400}",
                 "Light": "{colors.information.800}"
@@ -1379,11 +1080,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.information.200}",
+            "$description": "Informational icon. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.200}",
                 "Light": "{colors.information.100}"
@@ -1393,11 +1091,8 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.information.300}",
+            "$description": "Informational icon. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.information.300}",
                 "Light": "{colors.neutral.stone.50}"
@@ -1409,11 +1104,8 @@
           "primary": {
             "$type": "color",
             "$value": "{colors.warning.300}",
+            "$description": "Warning-coloured icon. Default step.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.300}",
                 "Light": "{colors.warning.800}"
@@ -1423,11 +1115,8 @@
           "primary-hover": {
             "$type": "color",
             "$value": "{colors.warning.400}",
+            "$description": "Warning-coloured icon. Hover state.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.400}",
                 "Light": "{colors.warning.900}"
@@ -1437,11 +1126,8 @@
           "on-color": {
             "$type": "color",
             "$value": "{colors.warning.200}",
+            "$description": "Warning-coloured icon. The variant for use on an inverted or coloured background.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.200}",
                 "Light": "{colors.warning.100}"
@@ -1451,13 +1137,23 @@
           "on-color-hover": {
             "$type": "color",
             "$value": "{colors.warning.300}",
+            "$description": "Warning-coloured icon. Hover state of the on-color variant.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{colors.warning.300}",
+                "Light": "{colors.neutral.stone.50}"
+              }
+            }
+          }
+        },
+        "on-action": {
+          "primary": {
+            "$type": "color",
+            "$value": "{colors.neutral.cold.50}",
+            "$description": "Icon sitting on the brand action fill (primary button). Matches text/on-action/primary; light in both Light and Dark because the action surface is the same in both.",
+            "$extensions": {
+              "modes": {
+                "Dark": "{colors.neutral.cold.50}",
                 "Light": "{colors.neutral.stone.50}"
               }
             }
@@ -1468,14 +1164,8 @@
         "manager": {
           "$type": "color",
           "$value": "{colors.violet.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Manager — reads the task, picks the execution strategy, and decides between phases what runs next.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.violet.400}",
               "Light": "{colors.violet.600}"
@@ -1485,14 +1175,8 @@
         "startup": {
           "$type": "color",
           "$value": "{colors.blue.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Startup — the original meta-agent that analyses a task and selects a strategy. Overlaps with manager; see the role legend.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.blue.400}",
               "Light": "{colors.blue.600}"
@@ -1502,14 +1186,8 @@
         "planning": {
           "$type": "color",
           "$value": "{colors.slate.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Planning — writes the plan file before any code is touched.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.slate.400}",
               "Light": "{colors.slate.600}"
@@ -1519,14 +1197,8 @@
         "research": {
           "$type": "color",
           "$value": "{colors.indigo.300}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Research — web research for tasks the system has no prior knowledge of.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.indigo.300}",
               "Light": "{colors.indigo.600}"
@@ -1536,14 +1208,8 @@
         "implementation": {
           "$type": "color",
           "$value": "{colors.cyan.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Implementation — the agent that actually writes code and does the milestone work.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.cyan.400}",
               "Light": "{colors.cyan.600}"
@@ -1553,14 +1219,8 @@
         "coordinator": {
           "$type": "color",
           "$value": "{colors.orange.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Coordinator — detects a stalled implementation and selects which reviewers to bring in.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.orange.400}",
               "Light": "{colors.orange.600}"
@@ -1570,14 +1230,8 @@
         "reviewer": {
           "$type": "color",
           "$value": "{colors.green.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Reviewer — a specialist checking one dimension (security, test integrity). Several run in parallel.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.green.400}",
               "Light": "{colors.green.600}"
@@ -1587,14 +1241,8 @@
         "supervisor": {
           "$type": "color",
           "$value": "{colors.yellow.400}",
+          "$description": "ROLE COLOUR — identifies WHICH AGENT a session belongs to. It never signals status; status is carried separately by colors/ui/text/{success,error,warning}/* and the secondary ramp for running. Categorical, so these steps are chosen for mutual distinguishability rather than for a lightness ramp. Supervisor — merges review fixes, verifies integrity, decides whether to iterate again.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.yellow.400}",
               "Light": "{colors.yellow.600}"
@@ -1606,14 +1254,8 @@
         "series-1": {
           "$type": "color",
           "$value": "{colors.cyan.400}",
+          "$description": "Chart series accent. Dark = hue/400, Light = hue/600 so the series stays legible on the light canvas.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.cyan.400}",
               "Light": "{colors.cyan.600}"
@@ -1623,14 +1265,8 @@
         "series-2": {
           "$type": "color",
           "$value": "{colors.violet.400}",
+          "$description": "Chart series accent. Dark = hue/400, Light = hue/600 so the series stays legible on the light canvas.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.violet.400}",
               "Light": "{colors.violet.600}"
@@ -1640,14 +1276,8 @@
         "series-3": {
           "$type": "color",
           "$value": "{colors.green.400}",
+          "$description": "Chart series accent. Dark = hue/400, Light = hue/600 so the series stays legible on the light canvas.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.green.400}",
               "Light": "{colors.green.600}"
@@ -1657,14 +1287,8 @@
         "series-4": {
           "$type": "color",
           "$value": "{colors.orange.400}",
+          "$description": "Chart series accent. Dark = hue/400, Light = hue/600 so the series stays legible on the light canvas.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.orange.400}",
               "Light": "{colors.orange.600}"
@@ -1678,11 +1302,8 @@
         "primary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.50}",
+          "$description": "Syntax highlighting tier. primary is the brightest, subtle the dimmest. Default step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.50}",
               "Light": "{colors.neutral.stone.1000}"
@@ -1692,11 +1313,8 @@
         "secondary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.150}",
+          "$description": "Syntax highlighting tier. primary is the brightest, subtle the dimmest. One step lifted from default.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.150}",
               "Light": "{colors.neutral.stone.900}"
@@ -1706,11 +1324,8 @@
         "tertiary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.400}",
+          "$description": "Syntax highlighting tier. primary is the brightest, subtle the dimmest. Two steps lifted; the most prominent resting surface.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.400}",
               "Light": "{colors.neutral.stone.800}"
@@ -1720,11 +1335,8 @@
         "subtle": {
           "$type": "color",
           "$value": "{colors.neutral.cold.500}",
+          "$description": "Syntax highlighting tier. primary is the brightest, subtle the dimmest. De-emphasised step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.500}",
               "Light": "{colors.neutral.stone.700}"
@@ -1734,11 +1346,8 @@
         "on-color": {
           "$type": "color",
           "$value": "{colors.neutral.cold.900}",
+          "$description": "Syntax highlighting tier. primary is the brightest, subtle the dimmest. De-emphasised step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.900}",
               "Light": "{colors.neutral.stone.50}"
@@ -1748,13 +1357,8 @@
         "plain": {
           "$type": "color",
           "$value": "{colors.editor.syntax.primary}",
+          "$description": "Identifiers and plain code. Aliases editor/syntax/primary.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.editor.syntax.primary}",
               "Light": "{colors.editor.syntax.primary}"
@@ -1764,13 +1368,8 @@
         "keyword": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.pink}",
+          "$description": "Keywords, control flow, operators. Dark → alias/colors/syntax/dracula/pink, Light → alias/colors/syntax/alucard/pink.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.pink}",
               "Light": "{colors.syntax.alucard.pink}"
@@ -1780,13 +1379,8 @@
         "function": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.green}",
+          "$description": "Function and method names. Dark → alias/colors/syntax/dracula/green, Light → alias/colors/syntax/alucard/green.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.green}",
               "Light": "{colors.syntax.alucard.green}"
@@ -1796,13 +1390,8 @@
         "string": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.yellow}",
+          "$description": "Strings and char literals. Dark → alias/colors/syntax/dracula/yellow, Light → alias/colors/syntax/alucard/yellow.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.yellow}",
               "Light": "{colors.syntax.alucard.yellow}"
@@ -1812,13 +1401,8 @@
         "number": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.purple}",
+          "$description": "Numbers, booleans, constants. Dark → alias/colors/syntax/dracula/purple, Light → alias/colors/syntax/alucard/purple.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.purple}",
               "Light": "{colors.syntax.alucard.purple}"
@@ -1828,13 +1412,8 @@
         "type": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.cyan}",
+          "$description": "Types, classes, structs. Dark → alias/colors/syntax/dracula/cyan, Light → alias/colors/syntax/alucard/cyan.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.cyan}",
               "Light": "{colors.syntax.alucard.cyan}"
@@ -1844,13 +1423,8 @@
         "parameter": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.orange}",
+          "$description": "Parameters and arguments. Dark → alias/colors/syntax/dracula/orange, Light → alias/colors/syntax/alucard/orange.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.orange}",
               "Light": "{colors.syntax.alucard.orange}"
@@ -1860,13 +1434,8 @@
         "error": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.red}",
+          "$description": "Errors and invalid tokens. Dark → alias/colors/syntax/dracula/red, Light → alias/colors/syntax/alucard/red.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.red}",
               "Light": "{colors.syntax.alucard.red}"
@@ -1876,13 +1445,8 @@
         "comment": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.comment}",
+          "$description": "Comments and doc blocks. Dark → alias/colors/syntax/dracula/comment, Light → alias/colors/syntax/alucard/comment.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.comment}",
               "Light": "{colors.syntax.alucard.comment}"
@@ -1892,13 +1456,8 @@
         "punctuation": {
           "$type": "color",
           "$value": "{colors.editor.syntax.secondary}",
+          "$description": "Braces, commas, semicolons. Aliases editor/syntax/secondary.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.editor.syntax.secondary}",
               "Light": "{colors.editor.syntax.secondary}"
@@ -1908,13 +1467,8 @@
         "disabled": {
           "$type": "color",
           "$value": "{colors.editor.syntax.subtle}",
+          "$description": "Folded or unreachable code. Aliases editor/syntax/subtle.",
           "$extensions": {
-            "com.figma.scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL",
-              "STROKE_COLOR"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.editor.syntax.subtle}",
               "Light": "{colors.editor.syntax.subtle}"
@@ -1924,12 +1478,8 @@
         "current-line": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.current-line}",
+          "$description": "The active line band. Dark → alias/colors/syntax/dracula/current-line, Light → alias/colors/syntax/alucard/current-line. Note the official spec sets Current Line equal to Comment in both palettes, so these are dark values; if you want a light band behind the caret row in Light mode, editor/surface/select is the warm alternative.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.current-line}",
               "Light": "{colors.syntax.alucard.current-line}"
@@ -1939,12 +1489,8 @@
         "selection": {
           "$type": "color",
           "$value": "{colors.syntax.dracula.selection}",
+          "$description": "Selected text band. Dark → alias/colors/syntax/dracula/selection, Light → alias/colors/syntax/alucard/selection. Alucard's selection is a cool lavender-grey (#CFCFDE) that reads cold against this product's #E6E2DB editor ground; editor/surface/select (#DBD6CC) is the warm equivalent and is what the syntax accents were levelled against.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.syntax.dracula.selection}",
               "Light": "{colors.syntax.alucard.selection}"
@@ -1956,11 +1502,8 @@
         "primary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.900}",
+          "$description": "Code editor chrome background. Default step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.900}",
               "Light": "{colors.neutral.stone.50}"
@@ -1970,11 +1513,8 @@
         "secondary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.700}",
+          "$description": "Code editor chrome background. One step lifted from default.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.700}",
               "Light": "{colors.neutral.stone.100}"
@@ -1984,11 +1524,8 @@
         "tertiary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.450}",
+          "$description": "Code editor chrome background. Two steps lifted; the most prominent resting surface.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.450}",
               "Light": "{colors.neutral.stone.200}"
@@ -1998,11 +1535,8 @@
         "select": {
           "$type": "color",
           "$value": "#3e3e3b",
+          "$description": "Code editor chrome background. Selected text / active range in the editor.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "#3e3e3b",
               "Light": "{colors.neutral.stone.150}"
@@ -2042,11 +1576,8 @@
         "primary": {
           "$type": "color",
           "$value": "{colors.brand.400}",
+          "$description": "Code editor accent — gutter marks, active line, selection handles. Default step.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.brand.400}",
               "Light": "{colors.brand.600}"
@@ -2056,11 +1587,8 @@
         "secondary": {
           "$type": "color",
           "$value": "{colors.yellow.400}",
+          "$description": "Code editor accent — gutter marks, active line, selection handles. One step lifted from default.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.yellow.400}",
               "Light": "{colors.yellow.400}"
@@ -2070,11 +1598,8 @@
         "tertiary": {
           "$type": "color",
           "$value": "{colors.neutral.cold.50}",
+          "$description": "Code editor accent — gutter marks, active line, selection handles. Two steps lifted; the most prominent resting surface.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.neutral.cold.50}",
               "Light": "{colors.neutral.stone.1000}"
@@ -2090,11 +1615,8 @@
         "primary": {
           "$type": "text",
           "$value": "{type.fontFamily.ui-primary}",
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.ui-primary}",
               "Light": "{type.fontFamily.ui-primary}"
@@ -2106,10 +1628,6 @@
           "$value": "{type.fontFamily.code-primary}",
           "$description": "Space Mono. Only for code and program data (values, paths, line numbers). Never for interface text: labels, buttons, titles and messages use type/ui/fontFamily/primary.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.code-primary}",
               "Light": "{type.fontFamily.code-primary}"
@@ -2121,11 +1639,8 @@
         "light": {
           "$type": "text",
           "$value": "{type.fontWeight.light}",
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.light}",
               "Light": "{type.fontWeight.light}"
@@ -2135,11 +1650,8 @@
         "regular": {
           "$type": "text",
           "$value": "{type.fontWeight.regular}",
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.regular}",
               "Light": "{type.fontWeight.regular}"
@@ -2149,11 +1661,8 @@
         "medium": {
           "$type": "text",
           "$value": "{type.fontWeight.medium}",
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.medium}",
               "Light": "{type.fontWeight.medium}"
@@ -2163,11 +1672,8 @@
         "bold": {
           "$type": "text",
           "$value": "{type.fontWeight.bold}",
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.bold}",
               "Light": "{type.fontWeight.bold}"
@@ -2179,10 +1685,6 @@
           "$value": "{type.fontWeight.light}",
           "$description": "Weight for running interface text. Dark theme never goes above 300 (Light), so Dark = Light; Light theme = Regular.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FONT_STYLE"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.light}",
               "Light": "{type.fontWeight.regular}"
@@ -2194,10 +1696,6 @@
           "$value": "{type.fontWeight.light}",
           "$description": "Weight for titles, headings and emphasis. Dark theme never goes above 300, so Dark = Light; Light theme = Medium.",
           "$extensions": {
-            "com.figma.scopes": [
-              "FONT_STYLE"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontWeight.light}",
               "Light": "{type.fontWeight.medium}"
@@ -2210,11 +1708,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.2xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.2xl}",
                 "Light": "{type.fontSize.2xl}"
@@ -2224,11 +1719,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.3xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.3xl}",
                 "Light": "{type.fontSize.3xl}"
@@ -2238,11 +1730,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.4xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.4xl}",
                 "Light": "{type.fontSize.4xl}"
@@ -2254,11 +1743,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.sm}",
                 "Light": "{type.fontSize.sm}"
@@ -2268,11 +1754,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.md}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.md}",
                 "Light": "{type.fontSize.md}"
@@ -2282,11 +1765,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.lg}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.lg}",
                 "Light": "{type.fontSize.lg}"
@@ -2298,11 +1778,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.xs}",
                 "Light": "{type.fontSize.xs}"
@@ -2312,11 +1789,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.sm}",
                 "Light": "{type.fontSize.sm}"
@@ -2326,11 +1800,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.md}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.md}",
                 "Light": "{type.fontSize.md}"
@@ -2342,11 +1813,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.2xs}",
                 "Light": "{type.fontSize.2xs}"
@@ -2356,11 +1824,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.xs}",
                 "Light": "{type.fontSize.xs}"
@@ -2370,11 +1835,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.sm}",
                 "Light": "{type.fontSize.sm}"
@@ -2386,11 +1848,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.2xs}",
                 "Light": "{type.fontSize.2xs}"
@@ -2400,11 +1859,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.xs}",
                 "Light": "{type.fontSize.xs}"
@@ -2414,11 +1870,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.sm}",
                 "Light": "{type.fontSize.sm}"
@@ -2432,11 +1885,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xl}",
                 "Light": "{type.lineHeight.xl}"
@@ -2446,11 +1896,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.2xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xl}",
                 "Light": "{type.lineHeight.2xl}"
@@ -2460,11 +1907,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.3xl}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.3xl}",
                 "Light": "{type.lineHeight.3xl}"
@@ -2476,11 +1920,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xs}",
                 "Light": "{type.lineHeight.xs}"
@@ -2490,11 +1931,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xs}",
                 "Light": "{type.lineHeight.xs}"
@@ -2504,11 +1942,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.sm}",
                 "Light": "{type.lineHeight.sm}"
@@ -2520,11 +1955,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xs}",
                 "Light": "{type.lineHeight.2xs}"
@@ -2534,11 +1966,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.sm}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.sm}",
                 "Light": "{type.lineHeight.sm}"
@@ -2548,11 +1977,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.md}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.md}",
                 "Light": "{type.lineHeight.md}"
@@ -2564,11 +1990,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xs}",
                 "Light": "{type.lineHeight.2xs}"
@@ -2578,11 +2001,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xs}",
                 "Light": "{type.lineHeight.2xs}"
@@ -2592,11 +2012,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xs}",
                 "Light": "{type.lineHeight.xs}"
@@ -2608,11 +2025,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.3xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.3xs}",
                 "Light": "{type.lineHeight.3xs}"
@@ -2622,11 +2036,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.2xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xs}",
                 "Light": "{type.lineHeight.2xs}"
@@ -2636,11 +2047,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.xs}",
+            "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xs}",
                 "Light": "{type.lineHeight.xs}"
@@ -2653,11 +2061,8 @@
         "tight": {
           "$type": "number",
           "$value": -1,
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": -1,
               "Light": -1
@@ -2667,11 +2072,8 @@
         "normal": {
           "$type": "number",
           "$value": 0,
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 0,
               "Light": 0
@@ -2681,11 +2083,8 @@
         "wide": {
           "$type": "number",
           "$value": 1,
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 1,
               "Light": 1
@@ -2695,11 +2094,8 @@
         "max": {
           "$type": "number",
           "$value": 2,
+          "$description": "Typography token for interface text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 2,
               "Light": 2
@@ -2713,11 +2109,8 @@
         "primary": {
           "$type": "text",
           "$value": "{type.fontFamily.code-primary}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.code-primary}",
               "Light": "{type.fontFamily.code-primary}"
@@ -2727,11 +2120,8 @@
         "secondary": {
           "$type": "text",
           "$value": "{type.fontFamily.code-primary}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.code-primary}",
               "Light": "{type.fontFamily.code-primary}"
@@ -2743,11 +2133,8 @@
         "light": {
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Light}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.Space Mono.weight.Light}",
               "Light": "{type.fontFamily.Space Mono.weight.Light}"
@@ -2757,11 +2144,8 @@
         "regular": {
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Regular}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.Space Mono.weight.Regular}",
               "Light": "{type.fontFamily.Space Mono.weight.Regular}"
@@ -2771,11 +2155,8 @@
         "medium": {
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Medium}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.Space Mono.weight.Medium}",
               "Light": "{type.fontFamily.Space Mono.weight.Medium}"
@@ -2785,11 +2166,8 @@
         "bold": {
           "$type": "text",
           "$value": "{type.fontFamily.Space Mono.weight.Bold}",
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{type.fontFamily.Space Mono.weight.Bold}",
               "Light": "{type.fontFamily.Space Mono.weight.Bold}"
@@ -2802,11 +2180,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.fontSize.xs}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.xs}",
                 "Light": "{type.fontSize.xs}"
@@ -2816,11 +2191,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.fontSize.sm}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.sm}",
                 "Light": "{type.fontSize.sm}"
@@ -2830,11 +2202,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.fontSize.md}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.fontSize.md}",
                 "Light": "{type.fontSize.md}"
@@ -2848,11 +2217,8 @@
           "sm": {
             "$type": "number",
             "$value": "{type.lineHeight.2xs}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.2xs}",
                 "Light": "{type.lineHeight.2xs}"
@@ -2862,11 +2228,8 @@
           "md": {
             "$type": "number",
             "$value": "{type.lineHeight.xs}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.xs}",
                 "Light": "{type.lineHeight.xs}"
@@ -2876,11 +2239,8 @@
           "lg": {
             "$type": "number",
             "$value": "{type.lineHeight.sm}",
+            "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
             "$extensions": {
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.hiddenFromPublishing": false,
               "modes": {
                 "Dark": "{type.lineHeight.sm}",
                 "Light": "{type.lineHeight.sm}"
@@ -2893,11 +2253,8 @@
         "tight": {
           "$type": "number",
           "$value": -1,
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": -1,
               "Light": -1
@@ -2907,11 +2264,8 @@
         "normal": {
           "$type": "number",
           "$value": 0,
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 0,
               "Light": 0
@@ -2921,11 +2275,8 @@
         "wide": {
           "$type": "number",
           "$value": 1,
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 1,
               "Light": 1
@@ -2935,11 +2286,8 @@
         "max": {
           "$type": "number",
           "$value": 2,
+          "$description": "Typography token for code and editor text. Prefer the matching text style over binding this directly.",
           "$extensions": {
-            "com.figma.scopes": [
-              "ALL_SCOPES"
-            ],
-            "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": 2,
               "Light": 2

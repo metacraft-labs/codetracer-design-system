@@ -12,7 +12,7 @@ const dump = {
       modes: ['Dark', 'Light'],
       vars: [
         { n: 'colors/ui/surface/base/canvas', t: 'COLOR', v: { Dark: { a: 'colors/neutral/900' }, Light: { a: 'colors/neutral/50' } } },
-        { n: 'colors/ui/text/primary/body', t: 'COLOR', v: { Dark: '#f5f5f5', Light: '#111111' } },
+        { n: 'colors/ui/text/primary/body', t: 'COLOR', v: { Dark: '#f5f5f5', Light: '#111111' }, d: 'Running text on any panel.' },
         { n: 'type/ui/size/body', t: 'FLOAT', v: { Dark: { a: 'scale/300' }, Light: { a: 'scale/300' } } },
         { n: 'type/ui/fontFamily/ui', t: 'STRING', v: { Dark: 'Space Grotesk', Light: 'Space Grotesk' } },
         { n: 'flags/experimental', t: 'BOOLEAN', v: { Dark: true, Light: true } },
@@ -37,6 +37,11 @@ const dump = {
       n: 'body/caption', family: 'Space Grotesk', weight: 'Regular', size: 12,
       lineHeight: { unit: 'AUTO' }, letterSpacing: { value: 0.2 }, textCase: 'UPPER',
       bound: {},
+    },
+    {
+      n: 'label/label-md', family: 'Space Grotesk', weight: 'Regular', size: 12,
+      lineHeight: { unit: 'PERCENT', value: 150 }, letterSpacing: { unit: 'PERCENT', value: 2 },
+      bound: { fontStyle: 'type/ui/fontWeight/regular' },
     },
   ],
 };
@@ -98,4 +103,19 @@ test('typography AUTO line-height + textCase extension', () => {
 test('buildTypography is independently exported', () => {
   assert.equal(typeof buildTypography, 'function');
   assert.ok(buildTypography(dump.textStyles).header['heading-md']);
+});
+
+test('a Figma description becomes $description, before $extensions', () => {
+  const t = out.mapped.colors.ui.text.primary.body;
+  assert.equal(t.$description, 'Running text on any panel.');
+  assert.deepEqual(Object.keys(t), ['$type', '$value', '$description', '$extensions']);
+  assert.equal(out.mapped.colors.ui.surface.base.canvas.$description, undefined);
+});
+
+test('typography keeps PERCENT units; PIXELS stay bare numbers', () => {
+  const l = out.typography.label['label-md'];
+  assert.equal(l.$value.lineHeight, '150%');
+  assert.equal(l.$value.letterSpacing, '2%');
+  assert.equal(l.$value.fontWeight, '{type.ui.fontWeight.regular}');
+  assert.equal(out.typography.body.caption.$value.letterSpacing, 0.2);
 });
