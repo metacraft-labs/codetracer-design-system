@@ -87,6 +87,7 @@ code). Dark theme: weight 300 or lighter.
 | Hover | darker brand fill | `surface/action/primary-hover`; text: dark `text/primary/body`, light `text/on-action/primary-hover` |
 | Key-focus | as secondary | `key-focus()` |
 | Disabled | **fill unchanged**, label at 50% (dark) / 70% (light) | `text/on-action/primary` with alpha |
+| Icon | light in both modes, matches the label; dims with it when disabled | `icon/on-action/primary` (D-45) |
 
 ### Welcome screens only
 
@@ -102,6 +103,10 @@ changes here unless Nikolay names the welcome screens (D-14).
   tooltip child, or `mask-icon(ICON_…)` on an element of its own. The icon takes
   the text colour, so hover, disabled and both themes work with no extra rules
   (D-38).
+- On a primary button the icon is `icon/on-action/primary` (D-45). The primary
+  rule sets `--ct-icon-color` and `mask-icon()` paints with it, so a new icon
+  on a primary button needs no rule of its own. Never use `icon/primary/default`
+  there (dark in Light) or `icon/primary/on-color` (dark in Dark).
 - Add a new icon as an `ICON_*` constant at the top of `button.styl`, with its
   Figma name in a comment.
 
@@ -131,6 +136,7 @@ other work; ask Nikolay.
 - **D-37** The Agent panel uses the shared buttons (md, 26px).
 - **D-38** Every icon is a Design System icon in the text colour.
 - **D-41** Every button has a shared class; no browser default look.
+- **D-45** An icon on a primary button is `icon/on-action/primary`.
 
 ## Don't
 
