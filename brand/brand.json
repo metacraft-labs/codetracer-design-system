@@ -1,1147 +1,903 @@
 {
-  "lineHeights": {
-    "0": {
-      "$type": "lineHeights",
-      "$value": 48
-    },
-    "1": {
-      "$type": "lineHeights",
-      "$value": 40
-    },
-    "2": {
-      "$type": "lineHeights",
-      "$value": 36
-    },
-    "3": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "4": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "5": {
-      "$type": "lineHeights",
-      "$value": 24
-    },
-    "6": {
-      "$type": "lineHeights",
-      "$value": 16
-    },
-    "7": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "8": {
-      "$type": "lineHeights",
-      "$value": 28
-    },
-    "9": {
-      "$type": "lineHeights",
-      "$value": 16
-    },
-    "10": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "11": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "12": {
-      "$type": "lineHeights",
-      "$value": 14
-    },
-    "13": {
-      "$type": "lineHeights",
-      "$value": 16
-    },
-    "14": {
-      "$type": "lineHeights",
-      "$value": 20
-    },
-    "15": {
-      "$type": "lineHeights",
-      "$value": "AUTO"
-    },
-    "16": {
-      "$type": "lineHeights",
-      "$value": "AUTO"
-    },
-    "17": {
-      "$type": "lineHeights",
-      "$value": "AUTO"
-    }
-  },
-  "fontSize": {
-    "0": {
-      "$type": "fontSizes",
-      "$value": 10
-    },
-    "1": {
-      "$type": "fontSizes",
-      "$value": 12
-    },
-    "2": {
-      "$type": "fontSizes",
-      "$value": 14
-    },
-    "3": {
-      "$type": "fontSizes",
-      "$value": 16
-    },
-    "4": {
-      "$type": "fontSizes",
-      "$value": 20
-    },
-    "5": {
-      "$type": "fontSizes",
-      "$value": 28
-    },
-    "6": {
-      "$type": "fontSizes",
-      "$value": 32
-    },
-    "7": {
-      "$type": "fontSizes",
-      "$value": 40
-    }
-  },
-  "letterSpacing": {
-    "0": {
-      "$type": "letterSpacing",
-      "$value": -1
-    },
-    "1": {
-      "$type": "letterSpacing",
-      "$value": 0
-    },
-    "2": {
-      "$type": "letterSpacing",
-      "$value": 1
-    },
-    "3": {
-      "$type": "letterSpacing",
-      "$value": "0%"
-    }
-  },
-  "paragraphSpacing": {
-    "0": {
-      "$type": "paragraphSpacing",
-      "$value": 0
-    }
-  },
-  "titles": {
-    "title-lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.bold}",
-        "lineHeight": "{lineHeights.0}",
-        "fontSize": "{fontSize.7}",
-        "letterSpacing": "{letterSpacing.0}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "title-md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.bold}",
-        "lineHeight": "{lineHeights.1}",
-        "fontSize": "{fontSize.6}",
-        "letterSpacing": "{letterSpacing.0}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "title-sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.bold}",
-        "lineHeight": "{lineHeights.2}",
-        "fontSize": "{fontSize.5}",
-        "letterSpacing": "{letterSpacing.0}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "header": {
-    "heading-sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.medium}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.2}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "heading-md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.medium}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.3}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "heading-lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.medium}",
-        "lineHeight": "{lineHeights.5}",
-        "fontSize": "{fontSize.4}",
-        "letterSpacing": "{letterSpacing.0}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "body": {
-    "body-sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.6}",
-        "fontSize": "{fontSize.1}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "body-md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.2}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "body-lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.8}",
-        "fontSize": "{fontSize.3}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "label": {
-    "label-sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.6}",
-        "fontSize": "{fontSize.0}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "label-md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.1}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "label-lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.2}",
-        "letterSpacing": "{letterSpacing.1}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.uppercase}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "caption": {
-    "caption-sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.12}",
-        "fontSize": "{fontSize.0}",
-        "letterSpacing": "{letterSpacing.2}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.uppercase}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "caption-md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.6}",
-        "fontSize": "{fontSize.1}",
-        "letterSpacing": "{letterSpacing.2}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "caption-lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.ui.fontFamily.primary}",
-        "fontWeight": "{type.ui.fontWeight.regular}",
-        "lineHeight": "{lineHeights.3}",
-        "fontSize": "{fontSize.2}",
-        "letterSpacing": "{letterSpacing.2}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "editor": {
-    "lg": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.editor.fontFamily.primary}",
-        "fontWeight": "{type.editor.fontWeight.regular}",
-        "lineHeight": "{lineHeights.15}",
-        "fontSize": "{fontSize.3}",
-        "letterSpacing": "{letterSpacing.3}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "md": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.editor.fontFamily.primary}",
-        "fontWeight": "{type.editor.fontWeight.regular}",
-        "lineHeight": "{lineHeights.15}",
-        "fontSize": "{fontSize.2}",
-        "letterSpacing": "{letterSpacing.3}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    },
-    "sm": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{type.editor.fontFamily.primary}",
-        "fontWeight": "{type.editor.fontWeight.regular}",
-        "lineHeight": "{lineHeights.15}",
-        "fontSize": "{fontSize.1}",
-        "letterSpacing": "{letterSpacing.3}",
-        "paragraphSpacing": "{paragraphSpacing.0}",
-        "paragraphIndent": "{paragraphIndent.0}",
-        "textCase": "{textCase.none}",
-        "textDecoration": "{textDecoration.none}"
-      }
-    }
-  },
-  "textCase": {
-    "none": {
-      "$type": "textCase",
-      "$value": "none"
-    },
-    "uppercase": {
-      "$type": "textCase",
-      "$value": "uppercase"
-    }
-  },
-  "textDecoration": {
-    "none": {
-      "$type": "textDecoration",
-      "$value": "none"
-    }
-  },
-  "paragraphIndent": {
-    "0": {
-      "$type": "dimension",
-      "$value": "0px"
-    }
-  },
   "colors": {
     "grey": {
       "50": {
         "$type": "color",
-        "$value": "#f3f3f3"
+        "$value": "#f3f3f3",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#dddddd"
+        "$value": "#dddddd",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "150": {
         "$type": "color",
-        "$value": "#c8c8c8"
+        "$value": "#c8c8c8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#b4b4b4"
+        "$value": "#b4b4b4",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "250": {
         "$type": "color",
-        "$value": "#a2a2a2"
+        "$value": "#a2a2a2",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#919191"
+        "$value": "#919191",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "350": {
         "$type": "color",
-        "$value": "#818181"
+        "$value": "#818181",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#727272"
+        "$value": "#727272",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "450": {
         "$type": "color",
-        "$value": "#565656"
+        "$value": "#565656",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#484848"
+        "$value": "#484848",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "550": {
         "$type": "color",
-        "$value": "#414141"
+        "$value": "#414141",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#3a3a3a"
+        "$value": "#3a3a3a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "650": {
         "$type": "color",
-        "$value": "#333333"
+        "$value": "#333333",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#282828"
+        "$value": "#282828",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "750": {
         "$type": "color",
-        "$value": "#262626"
+        "$value": "#262626",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#242424"
+        "$value": "#242424",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "850": {
         "$type": "color",
-        "$value": "#202020"
+        "$value": "#202020",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#1b1b1b"
+        "$value": "#1b1b1b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "950": {
         "$type": "color",
-        "$value": "#161616"
+        "$value": "#161616",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "1000": {
         "$type": "color",
-        "$value": "#101010"
+        "$value": "#101010",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "clay": {
       "50": {
         "$type": "color",
-        "$value": "#f8f6f2"
+        "$value": "#f8f6f2",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#f0eeea"
+        "$value": "#f0eeea",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "150": {
         "$type": "color",
-        "$value": "#e6e2db"
+        "$value": "#e6e2db",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#dbd6cc"
+        "$value": "#dbd6cc",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "250": {
         "$type": "color",
-        "$value": "#d2ccc1"
+        "$value": "#d2ccc1",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#c8c2b5"
+        "$value": "#c8c2b5",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "350": {
         "$type": "color",
-        "$value": "#bfb8aa"
+        "$value": "#bfb8aa",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#b5ae9f"
+        "$value": "#b5ae9f",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "450": {
         "$type": "color",
-        "$value": "#aca494"
+        "$value": "#aca494",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#a29a89"
+        "$value": "#a29a89",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "550": {
         "$type": "color",
-        "$value": "#999180"
+        "$value": "#999180",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#8e8778"
+        "$value": "#8e8778",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "650": {
         "$type": "color",
-        "$value": "#847e71"
+        "$value": "#847e71",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#7a756a"
+        "$value": "#7a756a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "750": {
         "$type": "color",
-        "$value": "#6c685f"
+        "$value": "#6c685f",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#5d5951"
+        "$value": "#5d5951",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "850": {
         "$type": "color",
-        "$value": "#4e4b45"
+        "$value": "#4e4b45",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#353430"
+        "$value": "#353430",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "950": {
         "$type": "color",
-        "$value": "#272522"
+        "$value": "#272522",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "1000": {
         "$type": "color",
-        "$value": "#1d1c1a"
-      }
-    },
-    "stone": {
-      "50": {
-        "$type": "color",
-        "$value": "#f7f6f4"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#efeeec"
-      },
-      "150": {
-        "$type": "color",
-        "$value": "#e4e2df"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#d9d6d1"
-      },
-      "250": {
-        "$type": "color",
-        "$value": "#cfccc7"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#c5c2bc"
-      },
-      "350": {
-        "$type": "color",
-        "$value": "#bcb8b1"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#b2aea7"
-      },
-      "450": {
-        "$type": "color",
-        "$value": "#a8a49c"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#9e9a92"
-      },
-      "550": {
-        "$type": "color",
-        "$value": "#959189"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#8b8780"
-      },
-      "650": {
-        "$type": "color",
-        "$value": "#817e78"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#787570"
-      },
-      "750": {
-        "$type": "color",
-        "$value": "#6a6864"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#5b5955"
-      },
-      "850": {
-        "$type": "color",
-        "$value": "#4d4b48"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#353432"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#262523"
-      },
-      "1000": {
-        "$type": "color",
-        "$value": "#1d1c1a"
+        "$value": "#1d1c1a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "red": {
       "50": {
         "$type": "color",
-        "$value": "#fef2f2"
+        "$value": "#fef2f2",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#fee2e2"
+        "$value": "#fee2e2",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#fecaca"
+        "$value": "#fecaca",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#fca5a5"
+        "$value": "#fca5a5",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#f87171"
+        "$value": "#f87171",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#ef4444"
+        "$value": "#ef4444",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#dc2626"
+        "$value": "#dc2626",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#b91c1c"
+        "$value": "#b91c1c",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#991b1b"
+        "$value": "#991b1b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#7f1d1d"
+        "$value": "#7f1d1d",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "brand": {
         "$type": "color",
-        "$value": "#ff3300"
+        "$value": "#ff3300",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "green": {
       "50": {
         "$type": "color",
-        "$value": "#f0fdf4"
+        "$value": "#f0fdf4",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#dcfce7"
+        "$value": "#dcfce7",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#bbf7d0"
+        "$value": "#bbf7d0",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#86efac"
+        "$value": "#86efac",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#4ade80"
+        "$value": "#4ade80",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#22c55e"
+        "$value": "#22c55e",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#16a34a"
+        "$value": "#16a34a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#15803d"
+        "$value": "#15803d",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#166534"
+        "$value": "#166534",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#14532d"
+        "$value": "#14532d",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "yellow": {
       "50": {
         "$type": "color",
-        "$value": "#fefce8"
+        "$value": "#fefce8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#fef9c3"
+        "$value": "#fef9c3",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#fef08a"
+        "$value": "#fef08a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#fde047"
+        "$value": "#fde047",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#facc15"
+        "$value": "#facc15",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#eab308"
+        "$value": "#eab308",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#ca8a04"
+        "$value": "#ca8a04",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#a16207"
+        "$value": "#a16207",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#854d0e"
+        "$value": "#854d0e",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#713f12"
+        "$value": "#713f12",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "amber": {
       "50": {
         "$type": "color",
-        "$value": "#fffbeb"
+        "$value": "#fffbeb",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#fef3c7"
+        "$value": "#fef3c7",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#fde68a"
+        "$value": "#fde68a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#fcd34d"
+        "$value": "#fcd34d",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#fbbf24"
+        "$value": "#fbbf24",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#f59e0b"
+        "$value": "#f59e0b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#d97706"
+        "$value": "#d97706",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#b45309"
+        "$value": "#b45309",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#92400e"
+        "$value": "#92400e",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#78350f"
+        "$value": "#78350f",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "graphite": {
       "50": {
         "$type": "color",
-        "$value": "#ececeb"
+        "$value": "#ececeb",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#d8d8d8"
+        "$value": "#d8d8d8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#bbbbba"
+        "$value": "#bbbbba",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#9e9e9d"
+        "$value": "#9e9e9d",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#6e6e6c"
+        "$value": "#6e6e6c",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#3e3e3b"
+        "$value": "#3e3e3b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#353532"
+        "$value": "#353532",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#2b2b29"
+        "$value": "#2b2b29",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#222220"
+        "$value": "#222220",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#191918"
+        "$value": "#191918",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "orange": {
       "50": {
         "$type": "color",
-        "$value": "#fff7ed"
+        "$value": "#fff7ed",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#ffedd5"
+        "$value": "#ffedd5",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#fed7aa"
+        "$value": "#fed7aa",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#fdba74"
+        "$value": "#fdba74",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#fb923c"
+        "$value": "#fb923c",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#f97316"
+        "$value": "#f97316",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#ea580c"
+        "$value": "#ea580c",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#c2410c"
+        "$value": "#c2410c",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#9a3412"
+        "$value": "#9a3412",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#7c2d12"
+        "$value": "#7c2d12",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "blue": {
       "50": {
         "$type": "color",
-        "$value": "#eff6ff"
+        "$value": "#eff6ff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#dbeafe"
+        "$value": "#dbeafe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#bfdbfe"
+        "$value": "#bfdbfe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#93c5fd"
+        "$value": "#93c5fd",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#60a5fa"
+        "$value": "#60a5fa",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#3b82f6"
+        "$value": "#3b82f6",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#2563eb"
+        "$value": "#2563eb",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#1d4ed8"
+        "$value": "#1d4ed8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#1e40af"
+        "$value": "#1e40af",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#1e3a8a"
+        "$value": "#1e3a8a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "cyan": {
       "50": {
         "$type": "color",
-        "$value": "#ecfeff"
+        "$value": "#ecfeff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#cffafe"
+        "$value": "#cffafe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#a5f3fc"
+        "$value": "#a5f3fc",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#67e8f9"
+        "$value": "#67e8f9",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#22d3ee"
+        "$value": "#22d3ee",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#06b6d4"
+        "$value": "#06b6d4",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#0891b2"
+        "$value": "#0891b2",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#0e7490"
+        "$value": "#0e7490",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#155e75"
+        "$value": "#155e75",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#164e63"
+        "$value": "#164e63",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "indigo": {
       "50": {
         "$type": "color",
-        "$value": "#eef2ff"
+        "$value": "#eef2ff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#e0e7ff"
+        "$value": "#e0e7ff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#c7d2fe"
+        "$value": "#c7d2fe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#a5b4fc"
+        "$value": "#a5b4fc",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#818cf8"
+        "$value": "#818cf8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#6366f1"
+        "$value": "#6366f1",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#4f46e5"
+        "$value": "#4f46e5",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#4338ca"
+        "$value": "#4338ca",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#3730a3"
+        "$value": "#3730a3",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#312e81"
+        "$value": "#312e81",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "violet": {
       "50": {
         "$type": "color",
-        "$value": "#f5f3ff"
+        "$value": "#f5f3ff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#ede9fe"
+        "$value": "#ede9fe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#ddd6fe"
+        "$value": "#ddd6fe",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#c4b5fd"
+        "$value": "#c4b5fd",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#a78bfa"
+        "$value": "#a78bfa",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#8b5cf6"
+        "$value": "#8b5cf6",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#7c3aed"
+        "$value": "#7c3aed",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#6d28d9"
+        "$value": "#6d28d9",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#5b21b6"
+        "$value": "#5b21b6",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#4c1d95"
+        "$value": "#4c1d95",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "slate": {
       "50": {
         "$type": "color",
-        "$value": "#f8fafc"
+        "$value": "#f8fafc",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "100": {
         "$type": "color",
-        "$value": "#f1f5f9"
+        "$value": "#f1f5f9",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "200": {
         "$type": "color",
-        "$value": "#e2e8f0"
+        "$value": "#e2e8f0",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "300": {
         "$type": "color",
-        "$value": "#cbd5e1"
+        "$value": "#cbd5e1",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "400": {
         "$type": "color",
-        "$value": "#94a3b8"
+        "$value": "#94a3b8",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "500": {
         "$type": "color",
-        "$value": "#64748b"
+        "$value": "#64748b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "600": {
         "$type": "color",
-        "$value": "#475569"
+        "$value": "#475569",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "700": {
         "$type": "color",
-        "$value": "#334155"
+        "$value": "#334155",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "750": {
         "$type": "color",
-        "$value": "#283548"
+        "$value": "#283548",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "800": {
         "$type": "color",
-        "$value": "#1e293b"
+        "$value": "#1e293b",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "900": {
         "$type": "color",
-        "$value": "#0f172a"
+        "$value": "#0f172a",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       }
     },
     "base": {
       "black": {
         "$type": "color",
-        "$value": "#000000"
+        "$value": "#000000",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
       },
       "white": {
         "$type": "color",
-        "$value": "#ffffff"
+        "$value": "#ffffff",
+        "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
+      }
+    },
+    "stone": {
+      "50": {
+        "$type": "color",
+        "$value": "#f7f6f4",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#efeeec",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "150": {
+        "$type": "color",
+        "$value": "#e4e2df",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#d9d6d1",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "250": {
+        "$type": "color",
+        "$value": "#cfccc7",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#c5c2bc",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "350": {
+        "$type": "color",
+        "$value": "#bcb8b1",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#b2aea7",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "450": {
+        "$type": "color",
+        "$value": "#a8a49c",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#9e9a92",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "550": {
+        "$type": "color",
+        "$value": "#959189",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#8b8780",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "650": {
+        "$type": "color",
+        "$value": "#817e78",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#787570",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "750": {
+        "$type": "color",
+        "$value": "#6a6864",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#5b5955",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "850": {
+        "$type": "color",
+        "$value": "#4d4b48",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#353432",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#262523",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
+      },
+      "1000": {
+        "$type": "color",
+        "$value": "#1d1c1a",
+        "$description": "Raw primitive. Softer warm neutral (half the warmth of clay, same lightness per step). Used by the Light theme. Reference it through colors/neutral/stone in \"alias\"."
       }
     }
   },
@@ -1151,29 +907,35 @@
         "style": {
           "Sans": {
             "$type": "text",
-            "$value": "Space Grotesk"
+            "$value": "Space Grotesk",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Light": {
             "$type": "text",
-            "$value": "Light"
+            "$value": "Light",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Medium": {
             "$type": "text",
-            "$value": "Medium"
+            "$value": "Medium",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Semi-bold": {
             "$type": "text",
-            "$value": "Semi-bold"
+            "$value": "Semi-bold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Bold": {
             "$type": "text",
-            "$value": "Bold"
+            "$value": "Bold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       },
@@ -1181,29 +943,35 @@
         "style": {
           "Mono": {
             "$type": "text",
-            "$value": "Space Mono"
+            "$value": "Space Mono",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Light": {
             "$type": "text",
-            "$value": "Light"
+            "$value": "Light",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Medium": {
             "$type": "text",
-            "$value": "Medium"
+            "$value": "Medium",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Semi-bold": {
             "$type": "text",
-            "$value": "Semi-bold"
+            "$value": "Semi-bold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Bold": {
             "$type": "text",
-            "$value": "Bold"
+            "$value": "Bold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       },
@@ -1211,33 +979,40 @@
         "style": {
           "Fira": {
             "$type": "text",
-            "$value": "Fira"
+            "$value": "Fira",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Light": {
             "$type": "text",
-            "$value": "Light"
+            "$value": "Light",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Retina": {
             "$type": "text",
-            "$value": "Retina"
+            "$value": "Retina",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Medium": {
             "$type": "text",
-            "$value": "Medium"
+            "$value": "Medium",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "SemiBold": {
             "$type": "text",
-            "$value": "SemiBold"
+            "$value": "SemiBold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           },
           "Bold": {
             "$type": "text",
-            "$value": "Bold"
+            "$value": "Bold",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       },
@@ -1245,13 +1020,15 @@
         "style": {
           "Iosevka": {
             "$type": "text",
-            "$value": "Iosevka"
+            "$value": "Iosevka",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       },
@@ -1259,13 +1036,15 @@
         "style": {
           "JetBrains": {
             "$type": "text",
-            "$value": "JetBrains"
+            "$value": "JetBrains",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       },
@@ -1273,13 +1052,15 @@
         "style": {
           "DM Mono": {
             "$type": "text",
-            "$value": "DM Mono"
+            "$value": "DM Mono",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         },
         "weight": {
           "Regular": {
             "$type": "text",
-            "$value": "Regular"
+            "$value": "Regular",
+            "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
           }
         }
       }
@@ -1288,99 +1069,123 @@
   "scale": {
     "0": {
       "$type": "number",
-      "$value": 0
+      "$value": 0,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "50": {
       "$type": "number",
-      "$value": 0.5
+      "$value": 0.5,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "100": {
       "$type": "number",
-      "$value": 1
+      "$value": 1,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "150": {
       "$type": "number",
-      "$value": 1.5
+      "$value": 1.5,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "200": {
       "$type": "number",
-      "$value": 2
+      "$value": 2,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "250": {
       "$type": "number",
-      "$value": 4
+      "$value": 4,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "300": {
       "$type": "number",
-      "$value": 6
+      "$value": 6,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "350": {
       "$type": "number",
-      "$value": 8
+      "$value": 8,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "400": {
       "$type": "number",
-      "$value": 10
+      "$value": 10,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "450": {
       "$type": "number",
-      "$value": 12
+      "$value": 12,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "500": {
       "$type": "number",
-      "$value": 14
+      "$value": 14,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "550": {
       "$type": "number",
-      "$value": 16
+      "$value": 16,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "600": {
       "$type": "number",
-      "$value": 20
+      "$value": 20,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "650": {
       "$type": "number",
-      "$value": 24
+      "$value": 24,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "700": {
       "$type": "number",
-      "$value": 28
+      "$value": 28,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "750": {
       "$type": "number",
-      "$value": 32
+      "$value": 32,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "800": {
       "$type": "number",
-      "$value": 36
+      "$value": 36,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "850": {
       "$type": "number",
-      "$value": 40
+      "$value": 40,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "900": {
       "$type": "number",
-      "$value": 44
+      "$value": 44,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "950": {
       "$type": "number",
-      "$value": 48
+      "$value": 48,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "1000": {
       "$type": "number",
-      "$value": 52
+      "$value": 52,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "1100": {
       "$type": "number",
-      "$value": 56
+      "$value": 56,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "1200": {
       "$type": "number",
-      "$value": 60
+      "$value": 60,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     },
     "1300": {
       "$type": "number",
-      "$value": 100
+      "$value": 100,
+      "$description": "Raw primitive. Not for direct use in components — reference it through a semantic token in \"alias\", then a role token in \"mapped\"."
     }
   }
 }

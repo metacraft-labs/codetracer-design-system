@@ -1,12 +1,16 @@
 // validate-collection.mjs — normalize a committed DTCG collection file the same
-// way build-tokens produces it (strip $extensions, keep $type/$value, sort keys),
+// way build-tokens produces it (keep $type/$value/$description and
+// $extensions.modes, drop other $extensions, sort keys),
 // then print { count, len, hash }. The Figma-side reflection computes the SAME
 // three numbers with the SAME stable()/djb2() below; equal numbers ⇒ parity.
 import { readFileSync } from 'node:fs';
 
+// Keeps $extensions.modes (Light mode counts); drops any other $extensions.
 const strip = (o) => Array.isArray(o) ? o.map(strip)
   : (o && typeof o === 'object')
-    ? Object.fromEntries(Object.entries(o).filter(([k]) => k !== '$extensions').map(([k, v]) => [k, strip(v)]))
+    ? Object.fromEntries(Object.entries(o)
+        .map(([k, v]) => k === '$extensions' ? (v?.modes ? [k, { modes: v.modes }] : null) : [k, strip(v)])
+        .filter(Boolean))
     : o;
 export const stable = (o) => Array.isArray(o) ? '[' + o.map(stable).join(',') + ']'
   : (o && typeof o === 'object') ? '{' + Object.keys(o).sort().map(k => JSON.stringify(k) + ':' + stable(o[k])).join(',') + '}'

@@ -7,9 +7,10 @@ reflecting that Figma file. Do not hand-author token values — change them in
 Figma and re-export (see below).
 
 ## Layout
-- `brand/brand.json` — primitives (colour ramps, the numeric `scale`, font families).
+- `brand/brand.json` — primitives (colour ramps, the numeric `scale`, font families). Variables only.
 - `alias/alias.json` — semantic aliases (neutral/brand/error…, fontSize/lineHeight/spacing/icon → `{scale.*}`).
 - `mapped/mapped.json` — role/component tokens (`colors/ui/*`, `colors/editor/*`, `colors/ui/role/*`, `type/ui/*`, `type/editor/*`). Colour roles carry **Dark + Light** under `$extensions.modes` (default `$value` = Dark).
+- `typography/typography.json` — one composite per Figma text style (titles, headings, body, labels, captions, editor), referencing the `type/*` tokens.
 - `space/space.json` — density roles (`padding/*`, `gap/*`, `border/border radius/*`) with **Compact/Comfortable/Spacious** under `$extensions.modes` (default `$value` = Compact). See `scripts/AXES-CAMPAIGN.md`.
 - `docs/` — the docs token layer + `DESIGN-DIVERGENCES.md`.
 - `nim/metacraft_docs_theme.nim` — the shared docs-theme helper consumed by isonim-docs sites.
@@ -39,9 +40,9 @@ above replaced that.
 ## Updating the tokens
 
 Follow **[`docs/updating-tokens.md`](docs/updating-tokens.md)**: the full
-procedure, the exporter's known problems (`--write` deletes the typography sets
-in `brand.json`; the comparison ignores Light mode), when a hand edit is allowed,
-and how the change reaches the app.
+procedure, how to confirm Figma and the repo agree, and how the change reaches
+the app. Typography comes from Figma's text styles (`typography/typography.json`);
+every token carries the description written in Figma as `$description`.
 
 The conventions that make this **maintainable** — add a variable / collection /
 mode / text style in Figma and the scripts need **no edits** — are in
@@ -58,8 +59,8 @@ history now.
   exact, generic reflection. Aliases resolve to `{dotted.ref}`, colours to hex.
 - To regenerate the repo, follow [`docs/updating-tokens.md`](docs/updating-tokens.md).
   Don't hand-edit `brand`/`alias`/`mapped` JSON except as that page allows.
-- Verify drift with `scripts/validate-collection.mjs <file>` (a content hash that
-  ignores `$extensions`; equal hash ⇒ parity).
+- Verify drift with `scripts/validate-collection.mjs <file>` (a content hash over
+  values, descriptions and every mode; equal hash ⇒ parity).
 - **Designer feedback** arrives as Figma **Dev Mode annotations** (readable — they
   ride along in `get_design_context` as `data-annotations`, and via
   `node.annotations`). **Figma comment pins are NOT readable by agents** — ask the
