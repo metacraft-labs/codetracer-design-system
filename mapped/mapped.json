@@ -367,7 +367,7 @@
             "$extensions": {
               "modes": {
                 "Dark": "{colors.neutral.cold.900}",
-                "Light": "{colors.neutral.stone.150}"
+                "Light": "{colors.neutral.stone.50}"
               }
             }
           },
@@ -378,7 +378,7 @@
             "$extensions": {
               "modes": {
                 "Dark": "{colors.neutral.cold.700}",
-                "Light": "{colors.neutral.stone.100}"
+                "Light": "{colors.neutral.stone.150}"
               }
             }
           },
