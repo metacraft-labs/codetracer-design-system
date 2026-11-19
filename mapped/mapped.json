@@ -1050,7 +1050,7 @@
             "com.figma.hiddenFromPublishing": false,
             "modes": {
               "Dark": "{colors.blue.500}",
-              "Light": "{colors.blue.500}"
+              "Light": "{colors.blue.600}"
             }
           }
         },
