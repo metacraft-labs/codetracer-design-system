@@ -152,7 +152,6 @@ Open until Nikolay settles them; until then **the code wins**.
 |---|---|---|
 | `button` type: primary / secondary / tertiary | tertiary = secondary (one look) | Figma still draws a separate tertiary |
 | Disabled primary loses its indigo fill | keeps the fill, label dims (D-20) | Figma should follow D-20 |
-| `text/primary/active` = brand/600 | app pins brand/500 | pending Nikolay's choice |
 | `icon-button` type: primary / **outlined** / secondary | no `outlined` | |
 | Sizes: large / medium / small | xl / lg / md / sm / xs (34–20px) | mapping between the two not yet written down |
 | Status `selected` | `.open` / `.active` / `aria-expanded` → `control-button-active()` | same idea, different name |
