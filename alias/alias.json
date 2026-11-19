@@ -164,6 +164,88 @@
           "$type": "color",
           "$value": "{colors.clay.1000}"
         }
+      },
+      "stone": {
+        "50": {
+          "$type": "color",
+          "$value": "{colors.stone.50}"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{colors.stone.100}"
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{colors.stone.150}"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{colors.stone.200}"
+        },
+        "250": {
+          "$type": "color",
+          "$value": "{colors.stone.250}"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "{colors.stone.300}"
+        },
+        "350": {
+          "$type": "color",
+          "$value": "{colors.stone.350}"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "{colors.stone.400}"
+        },
+        "450": {
+          "$type": "color",
+          "$value": "{colors.stone.450}"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "{colors.stone.500}"
+        },
+        "550": {
+          "$type": "color",
+          "$value": "{colors.stone.550}"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "{colors.stone.600}"
+        },
+        "650": {
+          "$type": "color",
+          "$value": "{colors.stone.650}"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "{colors.stone.700}"
+        },
+        "750": {
+          "$type": "color",
+          "$value": "{colors.stone.750}"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "{colors.stone.800}"
+        },
+        "850": {
+          "$type": "color",
+          "$value": "{colors.stone.850}"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "{colors.stone.900}"
+        },
+        "950": {
+          "$type": "color",
+          "$value": "{colors.stone.950}"
+        },
+        "1000": {
+          "$type": "color",
+          "$value": "{colors.stone.1000}"
+        }
       }
     },
     "brand": {
