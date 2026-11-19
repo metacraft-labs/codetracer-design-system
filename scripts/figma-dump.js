@@ -9,7 +9,9 @@
 // Output shape (consumed by build-tokens.mjs):
 //   { collections: [ { name, modes:[modeName,…],
 //                      vars:[ { n, t:"COLOR|FLOAT|STRING|BOOLEAN",
-//                               v:{ [modeName]: "#hex" | number | string | bool | {a:"slash/name"} } } ] } ] }
+//                               v:{ [modeName]: "#hex" | number | string | bool | {a:"slash/name"} },
+//                               d?: "description" } ] } ],
+//     textStyles: [ { n, family, weight, size, lineHeight, letterSpacing, textCase, … } ] }
 
 const EXCLUDE = /^zz-demo\//; // disposable/demo collections never export
 const cols = await figma.variables.getLocalVariableCollectionsAsync();
@@ -29,6 +31,10 @@ async function nameOf(id) {
 const h = x => Math.round(x * 255).toString(16).padStart(2, '0');
 const hex = c => { let s = '#' + h(c.r) + h(c.g) + h(c.b); if (c.a !== undefined && c.a < 1) s += h(c.a); return s; };
 
+// Figma hands descriptions back HTML-escaped (`&quot;`); store plain text.
+const unescape = (t) => t.replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+
 const out = { collections: [] };
 for (const c of keep) {
   const vars = [];
@@ -39,7 +45,9 @@ for (const c of keep) {
       if (val && typeof val === 'object' && val.type === 'VARIABLE_ALIAS') vv[m.name] = { a: await nameOf(val.id) };
       else vv[m.name] = (v.resolvedType === 'COLOR') ? hex(val) : val;
     }
-    vars.push({ n: v.name, t: v.resolvedType, v: vv });
+    const row = { n: v.name, t: v.resolvedType, v: vv };
+    if (v.description) row.d = unescape(v.description); // what the token is for → $description
+    vars.push(row);
   }
   out.collections.push({ name: c.name, modes: c.modes.map(m => m.name), vars });
 }

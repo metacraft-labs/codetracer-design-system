@@ -7,6 +7,7 @@
 //                      vars:[ { n:"a/b/c", t:"COLOR|FLOAT|STRING|BOOLEAN",
 //                               v:{ [modeName]: <value> } } ] } ] }
 //   value = "#rrggbb[aa]" (color) | number | string | boolean | { a:"slash/name" } (alias)
+//   d     = the variable's Figma description, emitted as $description
 //
 // Mode policy = "A" (see conventions): default mode flat in `$value`; if a
 // collection has >1 mode, all modes are also recorded under
@@ -49,6 +50,7 @@ function buildCollection(col) {
   const multi = col.modes.length > 1;
   for (const v of col.vars) {
     const leaf = { $type: dtcgType(v.n, v.t), $value: fmtValue(v.v[defaultMode]) };
+    if (v.d) leaf.$description = v.d; // written in Figma's variable description field
     if (multi) {
       leaf.$extensions = { modes: {} };
       for (const m of col.modes) leaf.$extensions.modes[m] = fmtValue(v.v[m]);
@@ -64,11 +66,14 @@ function buildCollection(col) {
 // is bound to a variable in Figma, we emit a `{ref}` to that token (so the
 // composite stays DRY against the type/scale system); otherwise the literal value.
 const ref = (name) => '{' + name.replaceAll('/', '.') + '}';
+// Figma measures line height and letter spacing in PIXELS or PERCENT. Pixels
+// stay a bare number (the consumers convert to rem); percent keeps its `%`.
+const measure = (m) => m?.unit === 'PERCENT' ? `${m.value}%` : (m?.value ?? 0);
 function typographyValue(s) {
   const b = s.bound || {};
   const lh = b.lineHeight ? ref(b.lineHeight)
-           : (s.lineHeight?.unit === 'AUTO' ? 'AUTO' : s.lineHeight?.value);
-  const ls = b.letterSpacing ? ref(b.letterSpacing) : (s.letterSpacing?.value ?? 0);
+           : (s.lineHeight?.unit === 'AUTO' ? 'AUTO' : measure(s.lineHeight));
+  const ls = b.letterSpacing ? ref(b.letterSpacing) : measure(s.letterSpacing);
   return {
     fontFamily:    b.fontFamily ? ref(b.fontFamily) : s.family,
     fontWeight:    b.fontStyle  ? ref(b.fontStyle)  : s.weight,
