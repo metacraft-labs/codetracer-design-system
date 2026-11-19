@@ -12,14 +12,90 @@
       "variantProperties": "Variant axes and their allowed values (long value lists capped with '…+N more').",
       "variantCount": "Total number of variant combinations in the set.",
       "properties": "Component property definitions: name -> type (VARIANT | TEXT | BOOLEAN | INSTANCE_SWAP).",
-      "variantError": "(resolved) previously flagged sets with variant conflicts; none remain."
+      "variantError": "(resolved) previously flagged sets with variant conflicts; none remain.",
+      "code": "Where the component lives in the codetracer app (paths relative to that repo; `doc` is relative to this repo): stylesheets, shared mixins, CSS classes, Nim views, and the protected decisions (D-numbers in codetracer/docs/UI-Design-Decisions.md). Hand-written: keep these blocks when re-exporting the manifest from Figma."
     },
     "counts": {
       "total": 116,
       "componentSets": 76,
       "singleComponents": 40
     },
-    "knownIssues": []
+    "knownIssues": [],
+    "codeWithoutComponent": {
+      "panel": {
+        "figmaReference": "3833:14203",
+        "doc": "docs/components/panel.md",
+        "styl": [
+          "src/frontend/styles/components/golden_layout.styl",
+          "src/frontend/styles/components/button.styl",
+          "src/frontend/styles/components/input.styl",
+          "src/frontend/styles/components/shared_widgets.styl",
+          "src/frontend/styles/components/shared_components.styl",
+          "src/frontend/styles/components/auto_hide.styl",
+          "src/frontend/styles/default_dark_theme.styl",
+          "src/frontend/styles/default_white_theme.styl"
+        ],
+        "mixins": [
+          "segmented-tabs()",
+          "segmented-tab()",
+          "tab-icon(icon, size)",
+          "field-fill(dark)",
+          "search-icon(color)",
+          "key-focus()"
+        ],
+        "classes": [
+          ".lm_goldenlayout",
+          ".lm_stack",
+          ".lm_header",
+          ".lm_tabs",
+          ".lm_tab",
+          ".lm_active",
+          ".lm_title",
+          ".lm_pin_tab",
+          ".lm_close_tab",
+          ".lm_tab_busy",
+          ".lm_items",
+          ".lm_content",
+          ".lm_splitter",
+          ".lm_horizontal",
+          ".lm_vertical",
+          ".lm_dragging",
+          ".lm_drag_handle",
+          ".ct-selected-outline",
+          ".component-container",
+          ".ct-flex",
+          ".ct-input-panel",
+          ".ct-input-search-image",
+          "ct-button-md-secondary",
+          "ct-button-image-md-secondary"
+        ],
+        "view": [
+          "src/frontend/ui/layout.nim",
+          "src/frontend/ui/panel_host.nim",
+          "src/frontend/renderer.nim",
+          "src/frontend/viewmodel/views/isonim_event_log_view.nim",
+          "src/frontend/viewmodel/views/isonim_request_panel_view.nim",
+          "src/frontend/viewmodel/views/keyboard_focus.nim",
+          "src/frontend/viewmodel/views/tooltips.nim"
+        ],
+        "decisions": [
+          "D-06",
+          "D-11",
+          "D-12",
+          "D-15",
+          "D-16",
+          "D-21",
+          "D-22",
+          "D-24",
+          "D-25",
+          "D-32",
+          "D-36",
+          "D-37",
+          "D-39",
+          "D-43"
+        ]
+      }
+    }
   },
   "components": [
     {
@@ -1306,7 +1382,40 @@
         "status": "VARIANT",
         "size": "VARIANT"
       },
-      "description": "Primary interactive control for triggering actions."
+      "description": "Primary interactive control for triggering actions.",
+      "code": {
+        "doc": "docs/components/button.md",
+        "styl": [
+          "src/frontend/styles/components/button.styl",
+          "src/frontend/styles/components/welcome_screen.styl"
+        ],
+        "mixins": [
+          "control-button()",
+          "control-button-hover()",
+          "control-button-active()",
+          "key-focus()",
+          "button-icon()",
+          "mask-icon()"
+        ],
+        "classes": [
+          "ct-button-<size>-<type>",
+          "ct-button-no-border"
+        ],
+        "decisions": [
+          "D-06",
+          "D-14",
+          "D-17",
+          "D-20",
+          "D-31",
+          "D-32",
+          "D-35",
+          "D-37",
+          "D-38",
+          "D-41",
+          "D-45"
+        ],
+        "note": "Sizes xl/lg/md/sm/xs (34/28/26/24/20px); type primary or secondary (tertiary = old name for secondary)."
+      }
     },
     {
       "name": "icon-button",
@@ -1343,7 +1452,36 @@
         "size": "VARIANT",
         "radius": "VARIANT"
       },
-      "description": "Compact button containing only an icon, without a text label."
+      "description": "Compact button containing only an icon, without a text label.",
+      "code": {
+        "doc": "docs/components/button.md",
+        "styl": [
+          "src/frontend/styles/components/button.styl"
+        ],
+        "mixins": [
+          "control-button()",
+          "control-button-hover()",
+          "control-button-active()",
+          "key-focus()",
+          "button-icon()",
+          "mask-icon()"
+        ],
+        "classes": [
+          "ct-button-image-<size>-<type>",
+          "ct-button-no-border"
+        ],
+        "decisions": [
+          "D-06",
+          "D-17",
+          "D-20",
+          "D-31",
+          "D-35",
+          "D-38",
+          "D-41",
+          "D-45"
+        ],
+        "note": "Needs a title (the tooltip text, D-31). The code has no 'outlined' type."
+      }
     },
     {
       "name": "main-menu-buttons",
@@ -1369,7 +1507,27 @@
         "type": "VARIANT",
         "status": "VARIANT"
       },
-      "description": "Navigation buttons for the application main menu bar."
+      "description": "Navigation buttons for the application main menu bar.",
+      "code": {
+        "doc": "docs/components/button.md",
+        "styl": [
+          "src/frontend/styles/components/button.styl",
+          "src/frontend/styles/components/menu_bar.styl"
+        ],
+        "classes": [
+          "ct-button-image-md-secondary",
+          "ct-button-no-border"
+        ],
+        "view": [
+          "src/frontend/viewmodel/views/isonim_menu_shell_view.nim"
+        ],
+        "decisions": [
+          "D-31",
+          "D-35",
+          "D-38"
+        ],
+        "note": "Mapping inferred: the caption bar's icon buttons use the shared icon button with no border. The window controls are .menu-button-svg (menu_bar.styl), not this component."
+      }
     },
     {
       "name": "check box",
@@ -1401,7 +1559,37 @@
         "type": "VARIANT",
         "checkbox": "VARIANT"
       },
-      "description": "Toggle control for binary or indeterminate selection."
+      "description": "Toggle control for binary or indeterminate selection.",
+      "code": {
+        "doc": "docs/components/checkbox.md",
+        "styl": [
+          "src/frontend/styles/components/checkmark.styl",
+          "src/frontend/styles/components/event_log.styl",
+          "src/frontend/styles/subwindow.styl"
+        ],
+        "mixins": [
+          "key-focus()"
+        ],
+        "classes": [
+          "ct-checkmark",
+          "ct-checkmark-field",
+          "ct-checkmark-input",
+          "ct-checkmark-label"
+        ],
+        "view": [
+          "src/frontend/viewmodel/views/isonim_welcome_screen_view.nim",
+          "src/frontend/viewmodel/views/isonim_event_log_filter_dropdown_view.nim",
+          "src/frontend/viewmodel/views/isonim_event_log_view.nim",
+          "src/frontend/subwindow.nim"
+        ],
+        "decisions": [
+          "D-08",
+          "D-07",
+          "D-16",
+          "D-23",
+          "D-37"
+        ]
+      }
     },
     {
       "name": "field",
@@ -1476,7 +1664,51 @@
         "corner": "VARIANT",
         "Size": "VARIANT"
       },
-      "description": "Individual row within a dropdown or context menu."
+      "description": "Individual row within a dropdown or context menu.",
+      "code": {
+        "doc": "docs/components/dropdown.md",
+        "styl": [
+          "src/frontend/styles/components/menu_item.styl",
+          "src/frontend/styles/components/shared_widgets.styl",
+          "src/frontend/styles/components/checkmark.styl",
+          "src/frontend/styles/components/button.styl"
+        ],
+        "mixins": [
+          "dropdown-surface-row()",
+          "key-focus()"
+        ],
+        "classes": [
+          "ct-menu-item",
+          "ct-menu-item-icon",
+          "ct-menu-item-label",
+          "ct-menu-item-sublabel",
+          "ct-menu-item-trailing",
+          "ct-menu-item--active",
+          "ct-menu-item--chosen",
+          "ct-menu-item--disabled"
+        ],
+        "view": [
+          "src/frontend/viewmodel/views/isonim_menu_shell_view.nim",
+          "src/frontend/viewmodel/views/isonim_command_palette_view.nim",
+          "src/frontend/viewmodel/views/context_menu_bridge.nim",
+          "src/frontend/renderer.nim",
+          "src/frontend/viewmodel/views/isonim_event_log_view.nim",
+          "src/frontend/viewmodel/views/isonim_vcs_view.nim",
+          "src/frontend/viewmodel/views/isonim_agent_activity_view.nim",
+          "src/frontend/viewmodel/views/keyboard_focus.nim"
+        ],
+        "decisions": [
+          "D-07",
+          "D-16",
+          "D-18",
+          "D-23",
+          "D-26",
+          "D-28",
+          "D-29",
+          "D-30",
+          "D-37"
+        ]
+      }
     },
     {
       "name": "tab",
@@ -1774,7 +2006,35 @@
         "Size": "VARIANT",
         "Direction": "VARIANT"
       },
-      "description": "Tooltip — a small floating label that explains a control, value or icon on hover/focus."
+      "description": "Tooltip — a small floating label that explains a control, value or icon on hover/focus.",
+      "code": {
+        "doc": "docs/components/tooltip.md",
+        "styl": [
+          "src/frontend/styles/components/tooltip.styl",
+          "src/frontend/styles/components/button.styl",
+          "src/frontend/styles/defaults.styl"
+        ],
+        "mixins": [
+          "tooltip-look()"
+        ],
+        "classes": [
+          "ct-tooltip",
+          "ct-tooltip--shown",
+          "ct-tooltip--lg",
+          "custom-tooltip"
+        ],
+        "view": [
+          "src/frontend/viewmodel/views/tooltips.nim",
+          "src/frontend/ui_js.nim",
+          "src/frontend/viewmodel/views/keyboard_focus.nim",
+          "src/frontend/viewmodel/views/isonim_debug_controls_view.nim"
+        ],
+        "decisions": [
+          "D-31",
+          "D-35",
+          "D-44"
+        ]
+      }
     },
     {
       "name": "text area",
@@ -1826,7 +2086,58 @@
         "select": "VARIANT",
         "state": "VARIANT"
       },
-      "description": "Dropdown item — one selectable option inside a dropdown menu; the building block for single- and multi-select menus."
+      "description": "Dropdown item — one selectable option inside a dropdown menu; the building block for single- and multi-select menus.",
+      "code": {
+        "doc": "docs/components/dropdown.md",
+        "styl": [
+          "src/frontend/styles/components/shared_widgets.styl",
+          "src/frontend/styles/components/menu_item.styl",
+          "src/frontend/styles/components/button.styl"
+        ],
+        "mixins": [
+          "dropdown-surface()",
+          "dropdown-surface-chrome()",
+          "dropdown-surface-row()",
+          "dropdown-scrollbar()",
+          "control-button()",
+          "control-button-hover()",
+          "control-button-active()",
+          "key-focus()"
+        ],
+        "classes": [
+          "ct-picker",
+          "ct-picker-trigger",
+          "ct-picker-trigger--open",
+          "ct-picker-chevron",
+          "ct-picker-label",
+          "ct-picker-dropdown",
+          "ct-menu-item",
+          "ct-menu-item-label",
+          "ct-menu-item--chosen",
+          "ct-menu-item--disabled"
+        ],
+        "view": [
+          "src/frontend/viewmodel/views/isonim_request_panel_view.nim",
+          "src/frontend/viewmodel/views/keyboard_focus.nim",
+          "src/frontend/viewmodel/views/tooltips.nim",
+          "src/frontend/ui/key_router.nim"
+        ],
+        "decisions": [
+          "D-06",
+          "D-16",
+          "D-17",
+          "D-18",
+          "D-19",
+          "D-21",
+          "D-26",
+          "D-29",
+          "D-30",
+          "D-35",
+          "D-37",
+          "D-41"
+        ],
+        "note": "The code's rows follow menu-item (1279:1317); this Figma component is a second, older row design."
+      }
     },
     {
       "name": "method-badge",
