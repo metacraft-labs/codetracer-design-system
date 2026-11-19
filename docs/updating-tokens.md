@@ -50,8 +50,6 @@ section "When a hand edit is allowed" below applies.
 8. **Update the app** (`codetracer`), in one pull request:
    - move the submodule `libs/codetracer-design-system` to the new commit;
    - run `scripts/tokens-to-styl.sh` to rebuild `src/frontend/styles/generated/`;
-   - in `generated/brand.styl`, change `paragraphindent-0 = 0px` back to
-     `paragraphindent-0 = 0` (the app bans px; the generator still writes it);
    - run `ci/test/design-tokens-fresh.sh` and
      `python3 ci/test/ui-design-decisions.py`. Both must pass.
 
@@ -80,4 +78,3 @@ Never hand-edit the app's `src/frontend/styles/generated/`. Rebuild it.
 | Comparison strips `$extensions` | Light-mode changes are invisible in step 3 | step 4 |
 | `--write` replaces the whole file | Tokens Studio typography sets in `brand.json` are deleted | step 6 |
 | Stray `Label` variable in Figma | appears in `mapped.json` | step 6, or delete it in Figma |
-| Generator writes `0px` for `paragraphIndent.0` | breaks the app's px ban | step 8 |
