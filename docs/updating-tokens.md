@@ -42,8 +42,6 @@ section "When a hand edit is allowed" below applies.
      not from variables, so the dump doesn't contain them and `--write` deletes
      them. Commit `3be59c6` shows the right result: variables re-exported,
      typography sets kept as they were.
-   - **mapped.json:** delete the stray `Label` token if it reappears (a junk
-     variable in Figma).
    - Run `git diff --stat`. A drop of hundreds of lines in `brand.json` means
      the typography sets were lost.
 7. **Commit here,** in `metacraft-labs/codetracer-design-system`.
@@ -77,4 +75,3 @@ Never hand-edit the app's `src/frontend/styles/generated/`. Rebuild it.
 |---|---|---|
 | Comparison strips `$extensions` | Light-mode changes are invisible in step 3 | step 4 |
 | `--write` replaces the whole file | Tokens Studio typography sets in `brand.json` are deleted | step 6 |
-| Stray `Label` variable in Figma | appears in `mapped.json` | step 6, or delete it in Figma |

@@ -2056,17 +2056,18 @@
             }
           }
         },
-        "secondary": {
+        "code": {
           "$type": "text",
-          "$value": "{type.fontFamily.ui-secondary}",
+          "$value": "{type.fontFamily.code-primary}",
+          "$description": "Space Mono. Only for code and program data (values, paths, line numbers). Never for interface text: labels, buttons, titles and messages use type/ui/fontFamily/primary.",
           "$extensions": {
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
             "com.figma.hiddenFromPublishing": false,
             "modes": {
-              "Dark": "{type.fontFamily.ui-secondary}",
-              "Light": "{type.fontFamily.ui-secondary}"
+              "Dark": "{type.fontFamily.code-primary}",
+              "Light": "{type.fontFamily.code-primary}"
             }
           }
         }
@@ -2125,6 +2126,36 @@
             "modes": {
               "Dark": "{type.fontWeight.bold}",
               "Light": "{type.fontWeight.bold}"
+            }
+          }
+        },
+        "body": {
+          "$type": "text",
+          "$value": "{type.fontWeight.light}",
+          "$description": "Weight for running interface text. Dark theme never goes above 300 (Light), so Dark = Light; Light theme = Regular.",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_STYLE"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.light}",
+              "Light": "{type.fontWeight.regular}"
+            }
+          }
+        },
+        "emphasis": {
+          "$type": "text",
+          "$value": "{type.fontWeight.light}",
+          "$description": "Weight for titles, headings and emphasis. Dark theme never goes above 300, so Dark = Light; Light theme = Medium.",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_STYLE"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{type.fontWeight.light}",
+              "Light": "{type.fontWeight.medium}"
             }
           }
         }
@@ -2650,15 +2681,15 @@
         },
         "secondary": {
           "$type": "text",
-          "$value": "{type.fontFamily.ui-secondary}",
+          "$value": "{type.fontFamily.code-primary}",
           "$extensions": {
             "com.figma.scopes": [
               "ALL_SCOPES"
             ],
             "com.figma.hiddenFromPublishing": false,
             "modes": {
-              "Dark": "{type.fontFamily.ui-secondary}",
-              "Light": "{type.fontFamily.ui-secondary}"
+              "Dark": "{type.fontFamily.code-primary}",
+              "Light": "{type.fontFamily.code-primary}"
             }
           }
         }
