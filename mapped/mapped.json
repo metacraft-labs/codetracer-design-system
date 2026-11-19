@@ -1214,6 +1214,23 @@
             }
           }
         },
+        "on-action": {
+          "primary": {
+            "$type": "color",
+            "$value": "{colors.neutral.cold.50}",
+            "$extensions": {
+              "com.figma.scopes": [
+                "SHAPE_FILL",
+                "STROKE_COLOR"
+              ],
+              "com.figma.hiddenFromPublishing": false,
+              "modes": {
+                "Dark": "{colors.neutral.cold.50}",
+                "Light": "{colors.neutral.stone.50}"
+              }
+            }
+          }
+        },
         "error": {
           "primary": {
             "$type": "color",
