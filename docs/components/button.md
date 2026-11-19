@@ -157,4 +157,4 @@ Open until Nikolay settles them; until then **the code wins**.
 | Status `selected` | `.open` / `.active` / `aria-expanded` → `control-button-active()` | same idea, different name |
 | Status `focused` | `key-focus()` outline | |
 | `icon-button` radius: sm / md | one radius per kind (`0.375em`) | |
-| Key-focus in light | `border/focus` token = blue/500 in both modes; code uses blue/600 in light | token should change in Figma |
+
