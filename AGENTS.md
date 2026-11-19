@@ -6,6 +6,17 @@ artifact**: the source of truth is **Figma**, and the JSON here is produced by
 reflecting that Figma file. Do not hand-author token values — change them in
 Figma and re-export (see below).
 
+## Start here: what to read for your task
+
+| Task | Read |
+|---|---|
+| Picking a colour | [`docs/foundations/color.md`](docs/foundations/color.md) (generated from the tokens) |
+| Building or changing a component | [`docs/components/`](docs/components/) — one page per component (`button.md` so far) |
+| Changing a token | [`docs/updating-tokens.md`](docs/updating-tokens.md) |
+
+Every token in `brand`/`alias`/`mapped`/`space` has a `$description` saying what
+it is for. Read it before choosing a token by its name.
+
 ## Layout
 - `brand/brand.json` — primitives (colour ramps, the numeric `scale`, font families). Variables only.
 - `alias/alias.json` — semantic aliases (neutral/brand/error…, fontSize/lineHeight/spacing/icon → `{scale.*}`).
