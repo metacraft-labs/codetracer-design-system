@@ -595,10 +595,6 @@
         "$type": "text",
         "$value": "{type.fontFamily.Space Grotesk.style.Sans}"
       },
-      "ui-secondary": {
-        "$type": "text",
-        "$value": "{type.fontFamily.Space Mono.style.Mono}"
-      },
       "code-primary": {
         "$type": "text",
         "$value": "{type.fontFamily.Space Mono.style.Mono}"

@@ -1,10 +1,4 @@
 {
-  "fontfamilies": {
-    "2": {
-      "$type": "fontFamilies",
-      "$value": "Space Grotesk Variable"
-    }
-  },
   "lineHeights": {
     "0": {
       "$type": "lineHeights",
@@ -213,7 +207,7 @@
     "heading-lg": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.medium}",
         "lineHeight": "{lineHeights.5}",
         "fontSize": "{fontSize.4}",
@@ -229,7 +223,7 @@
     "body-sm": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.6}",
         "fontSize": "{fontSize.1}",
@@ -243,7 +237,7 @@
     "body-md": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.3}",
         "fontSize": "{fontSize.2}",
@@ -257,7 +251,7 @@
     "body-lg": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.8}",
         "fontSize": "{fontSize.3}",
@@ -273,7 +267,7 @@
     "label-sm": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.6}",
         "fontSize": "{fontSize.0}",
@@ -287,7 +281,7 @@
     "label-md": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.3}",
         "fontSize": "{fontSize.1}",
@@ -301,7 +295,7 @@
     "label-lg": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.3}",
         "fontSize": "{fontSize.2}",
@@ -317,7 +311,7 @@
     "caption-sm": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.12}",
         "fontSize": "{fontSize.0}",
@@ -331,7 +325,7 @@
     "caption-md": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.6}",
         "fontSize": "{fontSize.1}",
@@ -345,7 +339,7 @@
     "caption-lg": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{fontfamilies.2}",
+        "fontFamily": "{type.ui.fontFamily.primary}",
         "fontWeight": "{type.ui.fontWeight.regular}",
         "lineHeight": "{lineHeights.3}",
         "fontSize": "{fontSize.2}",
