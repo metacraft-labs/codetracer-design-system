@@ -11,6 +11,9 @@ Figma and re-export (see below).
 | Task | Read |
 |---|---|
 | Picking a colour | [`docs/foundations/color.md`](docs/foundations/color.md) (generated from the tokens) |
+| Fonts, weights, text styles, rem/em, spacing | [`docs/foundations/typography.md`](docs/foundations/typography.md) |
+| Adding or painting an icon | [`docs/foundations/icons.md`](docs/foundations/icons.md) |
+| Designing a screen or component in Figma | [`docs/designing-in-figma.md`](docs/designing-in-figma.md) |
 | Building or changing a component | its page in [`docs/components/`](docs/components/): `button`, `checkbox`, `dropdown`, `tooltip`, `panel` |
 | Finding a Figma component's code | the `code` block of its entry in [`components/codetracer-components.json`](components/codetracer-components.json) |
 | Changing a token | [`docs/updating-tokens.md`](docs/updating-tokens.md) |
