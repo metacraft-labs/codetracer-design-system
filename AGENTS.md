@@ -11,7 +11,8 @@ Figma and re-export (see below).
 | Task | Read |
 |---|---|
 | Picking a colour | [`docs/foundations/color.md`](docs/foundations/color.md) (generated from the tokens) |
-| Building or changing a component | [`docs/components/`](docs/components/) — one page per component (`button.md` so far) |
+| Building or changing a component | its page in [`docs/components/`](docs/components/): `button`, `checkbox`, `dropdown`, `tooltip`, `panel` |
+| Finding a Figma component's code | the `code` block of its entry in [`components/codetracer-components.json`](components/codetracer-components.json) |
 | Changing a token | [`docs/updating-tokens.md`](docs/updating-tokens.md) |
 
 Every token in `brand`/`alias`/`mapped`/`space` has a `$description` saying what
