@@ -234,6 +234,29 @@ the PLAT-46 arrangement and are tracked by their own issues. The owning spec is
 `codetracer-pm`'s `spec/Front-Ends/CodeTracer-TUI.md` §6, under "The editor is the
 desktop's Monaco theme (PLAT-47)".
 
+### The find highlights: `colors/editor/surface/find-match` and `find-match-highlight`
+
+The in-document find's two highlights have tokens of their own, added 2026-11-20 by the
+user's decision on `codetracer-pm`'s `spec/GUI/Find-And-Incremental-Search.md` OQ-F6:
+`find-match` grounds the CURRENT match and `find-match-highlight` every other one. Both
+Monaco theme documents refer to them from their `codetracer` block (`findMatch`,
+`findMatchHighlight`), so `scripts/tokens-to-styl.sh --editor-theme` resolves them to
+`editor-theme/findMatch` and `editor-theme/findMatchHighlight` for the terminal and GPUI,
+and the desktop feeds the same hexes to Monaco as `editor.findMatchBackground` and
+`editor.findMatchHighlightBackground`. Until then the terminal and GPUI painted the alert
+surfaces (`colors/ui/surface/alert/information` and `.../warning`) and the desktop drew
+Monaco's `vs-dark` defaults.
+
+Dark keeps the alert surfaces' primitives (`information/900`, `warning/700`). Light does
+not: those resolve to the same dark hexes in both modes, and the Light editor's text
+(`#464646`) read at a contrast of 1.1 on `blue/900`. Light uses `blue/300` (5.2 against
+that text) and `orange/300` (5.6).
+
+**The Figma variables do not exist yet.** These two tokens were added to `mapped.json` by
+hand; add them to the Figma file's `mapped` collection under `colors/editor/surface/`
+with the values above, or the next export removes them (which
+`scripts/check-token-refs.mjs` would then refuse, `codetracer` referencing both).
+
 ## Where the design-system revision is pinned
 
 `codetracer/libs/codetracer-design-system` pins **3d0703d** (the commit the desktop's
