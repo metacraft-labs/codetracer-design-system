@@ -1,6 +1,6 @@
 # Tooltip
 
-> Status: Current · Last checked: 2026-11-19 against codetracer branch `ui-design-improvements-part10`.
+> Status: Current · Last checked: 2026-11-21 against codetracer branch `ui-design-improvements-part10`.
 > A small chip that says what a control does, or shows text that is cut off.
 > It appears after a short rest of the pointer or when the keyboard reaches
 > the control. There is one tooltip for the whole app.
@@ -61,6 +61,9 @@ What `tooltips.nim` then does for you:
 - Add the key chord in brackets when there is one: "Run tracepoints (Ctrl+Enter)".
 - Don't repeat the label on screen. That tooltip is dropped (see above).
 - Keep it to one line where you can. Longer text wraps into the `lg` size.
+- Never shorten a value with "…". The tooltip is where the full value shows;
+  it wraps into `lg` when it is long (the value-origin badge: "Show where this
+  value came from: <full expression>").
 
 ## Variants and sizes
 
@@ -69,8 +72,8 @@ when the text runs taller than two lines.
 
 | Size | Class | Width | Corners | Padding (top/bottom, sides) | When |
 |---|---|---|---|---|---|
-| `sm` | `.ct-tooltip` | fits the text, at most `min(20rem, 100vw - 1rem)` | 4px (`0.25rem`) | Dark 6px, 12px · Light 4px, 8px | one line |
-| `lg` | `.ct-tooltip.ct-tooltip--lg` | 320px (`20rem`) | 8px (`0.5rem`) | 6px, 8px in both themes | the text wraps |
+| `sm` | `.ct-tooltip` | fits the text, at most `min(20rem, 100vw - 1rem)` | 2px (`0.125rem`) | Dark 6px, 12px · Light 4px, 8px | one line |
+| `lg` | `.ct-tooltip.ct-tooltip--lg` | 320px (`20rem`) | 6px (`0.375rem`) | 6px, 8px in both themes | the text wraps |
 
 Type: Space Grotesk, 12px on a 16px line (`0.75rem` / `1rem`). Weight 300 in Dark,
 400 in Light (`tooltip-look()`). Long words break anywhere (`overflow-wrap: anywhere`).
@@ -124,12 +127,16 @@ their text on key-focus.
 
 - **Allowed:** the debug toolbar (`views/isonim_debug_controls_view.nim`). Its
   tests read the `.custom-tooltip` text (D-31).
-- **Still in the code, not named by D-31:** the value-history button
-  (`views/isonim_state_view.nim`, `ui/value.nim`), the VCS "View Diff" button
-  (`views/isonim_vcs_view.nim`), the status bar's copy tooltip
-  (`views/isonim_status_view.nim`, shown with `.active`), the event log and
-  history rules (`event_log.styl`, `history.styl`), and the info icon in
-  `subwindow.nim`. The subwindow's `.custom-tooltip` in
+- **Still in the code, not named by D-31:** the status bar's "Path copied to
+  clipboard" note (`views/isonim_status_view.nim`, shown with `.active` after
+  a click: a confirmation, not a hover tooltip), leftover style rules in
+  `event_log.styl` and `history.styl` that nothing builds any more, and the
+  info icon in `subwindow.nim` (a separate window without `tooltips.nim`).
+- **Moved to a `title` on 2026-11-21:** the value-history button
+  (`views/isonim_state_view.nim`, `ui/value.nim`) and the VCS "View diff"
+  button (`views/isonim_vcs_view.nim`). The history button's child tooltip sat
+  inside the Variables panel, which clipped it, and it covered the origin badge
+  beside it. The subwindow's `.custom-tooltip` in
   `src/frontend/styles/subwindow.styl` has its own hex colours, not
   `tooltip-look()`.
 

@@ -60,8 +60,9 @@ field is the same height.
 
 Icon buttons are square: width = height of their size. The icon is 1em high.
 
-Corners: the base rule gives buttons `0.5em`, icon buttons `0.375em`, and `xl`
-`6px` to match the xl fields. Gap between neighbouring controls: `CONTROL_GAP`
+Corners: the base rule gives buttons `0.5em` minus 2px, icon buttons `0.375em`
+minus 2px, and `xl` `4px` to match the xl fields (all corners 2px smaller since
+2026-11-21). Gap between neighbouring controls: `CONTROL_GAP`
 (6px).
 
 Label font: Space Grotesk (never Space Mono, even for a button that acts on
@@ -162,5 +163,5 @@ Open until Nikolay settles them; until then **the code wins**.
 | Sizes: large / medium / small | xl / lg / md / sm / xs (34–20px) | mapping between the two not yet written down |
 | Status `selected` | `.open` / `.active` / `aria-expanded` → `control-button-active()` | same idea, different name |
 | Status `focused` | `key-focus()` outline | |
-| `icon-button` radius: sm / md | one radius per kind (`0.375em`) | |
+| `icon-button` radius: sm / md | one radius per kind (`0.375em` minus 2px) | |
 

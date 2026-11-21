@@ -47,7 +47,7 @@ writes its own toolbar row. Copy the Event Log or Requests pattern below.
       .lm_tab[.lm_active]    24px tall, 4px from the header's top
         .lm_pin_tab  .lm_title  .lm_close_tab
   .lm_items
-    .lm_content              the body: surface/base/panel, 6px corners, 8px top padding
+    .lm_content              the body: surface/base/panel, 4px corners, 8px top padding
       div.component-container.<name>   your view's root
         toolbar row          search field + buttons, 6px apart, 8px from the sides
         rows / table / tree
@@ -60,12 +60,12 @@ writes its own toolbar row. Copy the Event Log or Requests pattern below.
 | Part | Size | Look |
 |---|---|---|
 | Header `.lm_header` | 32px. Set from JavaScript (`headerHeight`), not CSS | transparent; label text colour |
-| Tab `.lm_tab` | 24px tall, 4px below the header's top (`LAYOUT_TAB_TOP`), so 4 + 24 + 4 | `surface/base/panel`, `0.5em` side padding, `TAB_CORNER_RADIUS` 6px |
+| Tab `.lm_tab` | 24px tall, 4px below the header's top (`LAYOUT_TAB_TOP`), so 4 + 24 + 4 | `surface/base/panel`, `0.5em` side padding, `TAB_CORNER_RADIUS` 4px |
 | Gap between tabs | `LAYOUT_TAB_GAP` 4px, as flex `gap` | never `margin-right` (Golden Layout miscounts it) |
 | Title `.lm_title` | 14px (`0.875rem`), weight 400, one line with `…` | Space Grotesk. Back tab `text/primary/disabled`; active tab and hovered back tab `text/primary/label`. At least 8px before the icons |
 | Pin `.lm_pin_tab` | 14px, 5px after it | `tab-icon()`: `icon/primary/subtle` |
 | Close `.lm_close_tab` | 10px, does not shrink | `tab-icon()`: `icon/primary/subtle` |
-| Active tab connectors | the `::before` / `::after` curves, painted radius `LAYOUT_TAB_CONNECTOR_RADIUS` 6px | join the tab to the body. Switched off on a first or last tab, where that body corner is square |
+| Active tab connectors | the `::before` / `::after` curves, painted radius `LAYOUT_TAB_CONNECTOR_RADIUS` 4px (`0.25rem`), also the `::before` / `::after` border-radius itself | join the tab to the body. Switched off on a first or last tab, where that body corner is square |
 
 A panel stacked under another has its header slid up by 4px, so the gap above
 its tab is 4px like the gap between columns.
@@ -79,7 +79,7 @@ The first row of the body. It holds the search field and the panel's buttons.
 | Space above | none of its own. The body's 8px top padding is the whole gap | `.lm_content` padding `PANEL_INSET` |
 | Sides | `PANEL_INSET` (8px) left and right | D-11 |
 | Between controls | `CONTROL_GAP` (6px) | D-32 |
-| Search field | `.ct-input-panel .ct-input-search-image`: 26px (`INPUT_HEIGHT_MD`), fills the free width, 1px `border/secondary`, 6px corners, magnifier 6px in | `input.styl` |
+| Search field | `.ct-input-panel .ct-input-search-image`: 26px (`INPUT_HEIGHT_MD`), fills the free width, 1px `border/secondary`, 4px corners, magnifier 6px in | `input.styl` |
 | Buttons | md size: `ct-button-md-secondary`, or `ct-button-image-md-secondary` for an icon only | see `button.md` |
 | Sub-tabs (mode switch) | `segmented-tabs()`: 26px track, 20px tabs, 2px padding | `shared_widgets.styl`. Used by State, Search, Flow |
 
@@ -105,7 +105,7 @@ tdiv(class = "ct-flex"):
 | Rule | Value | Source |
 |---|---|---|
 | Fill | `surface/base/panel` | `.lm_content` |
-| Corners | `TAB_CORNER_RADIUS` 6px, square where the active tab is flush with the edge | D-12 |
+| Corners | `TAB_CORNER_RADIUS` 4px, square where the active tab is flush with the edge | D-12 |
 | Top inset | 8px (`PANEL_INSET`), padding on `.lm_content`. Your rows add no top padding | D-11 |
 | Side inset | 8px on text, fields and values. Rows with a fill (list, table, header bands) run edge to edge, with content 8px in | `button.styl` comment on `PANEL_INSET` |
 | Row hover | `LIST_HOVER_BG` (`surface/primary/secondary-hover`), whole row, square corners | `button.styl` |
@@ -184,7 +184,7 @@ other work; ask Nikolay.
 
 - **D-06** Panel buttons share one look and a 100ms hover.
 - **D-11** Panel content has an 8px inset (`PANEL_INSET`).
-- **D-12** One 6px corner for the tab and its panel (`TAB_CORNER_RADIUS`).
+- **D-12** One 4px corner for the tab and its panel (`TAB_CORNER_RADIUS`).
 - **D-15** The selected panel outline is subtle and grey (`border/primary`).
 - **D-16** key-focus is the one keyboard selection style.
 - **D-21** Esc closes the open dropdown first.
