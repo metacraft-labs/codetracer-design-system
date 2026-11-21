@@ -79,25 +79,25 @@
     "border radius": {
       "card": {
         "$type": "number",
-        "$value": 8,
+        "$value": 6,
         "$description": "Corner radius of cards and panels' content blocks. Changes with the density setting.",
         "$extensions": {
           "modes": {
-            "Compact": 8,
-            "Comfortable": 12,
-            "Spacious": 16
+            "Compact": 6,
+            "Comfortable": 10,
+            "Spacious": 14
           }
         }
       },
       "control": {
         "$type": "number",
-        "$value": 6,
+        "$value": 4,
         "$description": "Corner radius of controls (buttons, fields, dropdowns). Changes with the density setting.",
         "$extensions": {
           "modes": {
-            "Compact": 6,
-            "Comfortable": 8,
-            "Spacious": 12
+            "Compact": 4,
+            "Comfortable": 6,
+            "Spacious": 10
           }
         }
       }

@@ -28,7 +28,7 @@
 | Row | `src/frontend/styles/components/menu_item.styl` (`.ct-menu-item`) |
 | Hover colour | `DROPDOWN_HOVER_BG` in `src/frontend/styles/components/button.styl` |
 | Mixins | `dropdown-surface()` the full menu: chrome + clip to the radius + reveal animation · `dropdown-surface-chrome()` the look only, no clip and no animation · `dropdown-surface-row()` rounds the first and last row into the menu's corners · `dropdown-scrollbar()` a 6px scrollbar for a menu · `key-focus()` (button.styl) the keyboard outline |
-| Constants | `DROPDOWN_RADIUS` 6px · `DROPDOWN_TRIGGER_GAP` 6px between trigger and menu · `DROPDOWN_TRIGGER_OFFSET` the same gap measured from the trigger's bottom · `DROPDOWN_SCROLLBAR_SIZE` 6px · `DROPDOWN_HOVER_BG` (all in `shared_widgets.styl` except the hover, in `button.styl`) |
+| Constants | `DROPDOWN_RADIUS` 4px · `DROPDOWN_TRIGGER_GAP` 6px between trigger and menu · `DROPDOWN_TRIGGER_OFFSET` the same gap measured from the trigger's bottom · `DROPDOWN_SCROLLBAR_SIZE` 6px · `DROPDOWN_HOVER_BG` (all in `shared_widgets.styl` except the hover, in `button.styl`) |
 | Ready-made picker | `.ct-picker` / `.ct-picker-trigger` / `.ct-picker-dropdown` in `shared_widgets.styl`, rendered by `renderPicker` in `src/frontend/viewmodel/views/isonim_request_panel_view.nim` |
 | Keyboard | `src/frontend/viewmodel/views/keyboard_focus.nim` (arrow keys, focus, Esc), `src/frontend/ui/key_router.nim` (Esc first, D-21) |
 | Tooltip rule | `src/frontend/viewmodel/views/tooltips.nim` (`isOpen()`, D-35) |
@@ -74,11 +74,11 @@ slot (the Columns menu, `isonim_event_log_view.nim`).
 (`.dropdown-container` / `.dropdown-list`, `event_log.styl`: own canvas fill,
 shadow, and a line on top of each `.dropdown-list-row`), the tracepoint
 options ⋯ menu (`.hamburger-dropdown-container > .dropdown-list`,
-`tracepoint.styl`: own surface, `.dropdown-list-item` rows with 4px corners),
+`tracepoint.styl`: own surface, `.dropdown-list-item` rows with 2px corners),
 the diff's "show more lines" menu (`.ct-diff-expand-menu`, `unified_diff.styl`:
-fixed dark colours, 4px corners, shadow), the older `.context-menu`
+fixed dark colours, 2px corners, shadow), the older `.context-menu`
 (`renderer.nim` `renderContextMenu`, `text_editor.styl`: panel fill, rows
-`context-menu-option ct-menu-item` with an `em` font size and 5px corners), and
+`context-menu-option ct-menu-item` with an `em` font size and 3px corners), and
 the application menu's search results (`.menu-search-result`, `menu_bar.styl`,
 old row markup).
 
@@ -88,11 +88,11 @@ old row markup).
 
 | Variant | Mixin | When |
 |---|---|---|
-| Standard | `dropdown-surface()` | **Every new dropdown.** Clips rows to the 6px corners and plays the reveal. |
+| Standard | `dropdown-surface()` | **Every new dropdown.** Clips rows to the 4px corners and plays the reveal. |
 | Chrome only | `dropdown-surface-chrome()` | Only for a menu that is rebuilt while open, or that shows children outside its box (submenus). Both broke `#menu-main` (flicker, missing submenus); the comment above `dropdown-surface()` explains. Clip the rows on an inner element instead (`#menu-elements`). |
 
 - Fill `colors-ui-surface-primary-default`, a 0.5px (`0.03125rem`)
-  `colors-ui-border-primary` border, `DROPDOWN_RADIUS` (6px), no shadow.
+  `colors-ui-border-primary` border, `DROPDOWN_RADIUS` (4px), no shadow.
 - Inset: the pickers and Agent menus pad the surface by 4px (`0.25rem`) on
   every side (D-37). Rows have no gap between them.
 - Gap to the trigger: `DROPDOWN_TRIGGER_GAP` (6px), below the trigger with
@@ -150,8 +150,9 @@ Hover and chosen must look different: that is why the hover is the quieter
 `#262626` and the chosen fill is `#333333` (D-30). A dropdown painted `#242424`
 or lighter keeps the list hover instead (D-30).
 
-**Light theme** (only where it differs): hover is pure white,
-`colors-base-white` (D-30). The tokens resolve to: surface and row
+**Light theme** (only where it differs): the same hover token, its light value
+(D-30; pure white from 2026-11-18 until it was reverted on 2026-11-21). The
+tokens resolve to: surface and row
 `#f7f6f4`, border `#a8a49c`, chosen `#d9d6d1`, text `#262523`
 (`foundations/color.md`).
 
@@ -220,7 +221,7 @@ other work; ask Nikolay.
 - **D-26** Every dropdown row's text is 14px (`0.875rem`); the trigger keeps its own size.
 - **D-28** The command palette's first row is chosen, not focused, until an arrow key moves.
 - **D-29** No line between dropdown rows.
-- **D-30** A dropdown row's hover is quieter than a list row's; pure white in light.
+- **D-30** A dropdown row's hover is quieter than a list row's; the same token in light (no longer white).
 - **D-35** An open or just-pressed trigger shows no tooltip.
 - **D-37** The Agent panel's menus are the shared dropdown (4px inset, 36px rows).
 - **D-41** Every menu is in `DROPDOWNS`, so Esc closes it.
@@ -257,11 +258,10 @@ then **the code wins**.
 | `menu-item` focused: row filled with `colors/ui/border/focus` | `key-focus()` 1.5px outline, no fill (D-16) | `menu_item.styl`'s header comment still says "Focused: fill=colors-ui-border-focus"; the rule below it uses `key-focus()` |
 | `menu-item` type=selected: trailing check, no fill | `--chosen`: grey fill `surface/primary/tertiary`, no check (D-18); a tick only in the Agent settings selects | |
 | `dropdown-item` hover and selected: the same fill, `surface/primary/secondary` | hover `DROPDOWN_HOVER_BG`, chosen `surface/primary/tertiary`, different on purpose (D-30) | |
-| Hover in light: `surface/primary/default-hover` | pure white `colors-base-white` (D-30) | |
 | `menu-item` disabled: fill `default-hover` | fill unchanged, only text and icon grey | |
 | `dropdown-item` secondary text `text/primary/caption` | sublabel `text/primary/body-subtle` | `menu-item` matches the code |
-| `menu-item` corner=rounded (8px / 6px rows) | square rows; only the menu's ends round (6px) | |
+| `menu-item` corner=rounded (8px / 6px rows) | square rows; only the menu's ends round (4px) | |
 | `menu-item` type=line (dot, line under the lg row) | no such row; no line between rows (D-29) | |
-| Open example's menu: `surface/base/card` fill, 1px `border/secondary`, 10px radius, 4px top/bottom inset | `surface/primary/default`, 0.5px `border/primary`, 6px radius, 4px inset all round | |
+| Open example's menu: `surface/base/card` fill, 1px `border/secondary`, 10px radius, 4px top/bottom inset | `surface/primary/default`, 0.5px `border/primary`, 4px radius, 4px inset all round | |
 | Open example's trigger: a 36px field (`surface/input/default`, 8px radius, `border/action` when open) | a 26px md button; open = `control-button-active()` | |
 | `menu-item` right chevron: an icon in `icon/primary/default` | `.ct-menu-item-trailing` is a data-URI picture with a fixed `#DDDDDD` stroke | in the light theme this near-white chevron will barely show (compare D-38, D-42) |
