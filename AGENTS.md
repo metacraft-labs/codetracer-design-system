@@ -6,10 +6,26 @@ artifact**: the source of truth is **Figma**, and the JSON here is produced by
 reflecting that Figma file. Do not hand-author token values — change them in
 Figma and re-export (see below).
 
+## Start here: what to read for your task
+
+| Task | Read |
+|---|---|
+| Picking a colour | [`docs/foundations/color.md`](docs/foundations/color.md) (generated from the tokens) |
+| Fonts, weights, text styles, rem/em, spacing | [`docs/foundations/typography.md`](docs/foundations/typography.md) |
+| Adding or painting an icon | [`docs/foundations/icons.md`](docs/foundations/icons.md) |
+| Designing a screen or component in Figma | [`docs/designing-in-figma.md`](docs/designing-in-figma.md) |
+| Building or changing a component | its page in [`docs/components/`](docs/components/): `button`, `checkbox`, `dropdown`, `tooltip`, `panel` |
+| Finding a Figma component's code | the `code` block of its entry in [`components/codetracer-components.json`](components/codetracer-components.json) |
+| Changing a token | [`docs/updating-tokens.md`](docs/updating-tokens.md) |
+
+Every token in `brand`/`alias`/`mapped`/`space` has a `$description` saying what
+it is for. Read it before choosing a token by its name.
+
 ## Layout
-- `brand/brand.json` — primitives (colour ramps, the numeric `scale`, font families).
+- `brand/brand.json` — primitives (colour ramps, the numeric `scale`, font families). Variables only.
 - `alias/alias.json` — semantic aliases (neutral/brand/error…, fontSize/lineHeight/spacing/icon → `{scale.*}`).
 - `mapped/mapped.json` — role/component tokens (`colors/ui/*`, `colors/editor/*`, `colors/ui/role/*`, `type/ui/*`, `type/editor/*`). Colour roles carry **Dark + Light** under `$extensions.modes` (default `$value` = Dark).
+- `typography/typography.json` — one composite per Figma text style (titles, headings, body, labels, captions, editor), referencing the `type/*` tokens.
 - `space/space.json` — density roles (`padding/*`, `gap/*`, `border/border radius/*`) with **Compact/Comfortable/Spacious** under `$extensions.modes` (default `$value` = Compact). See `scripts/AXES-CAMPAIGN.md`.
 - `docs/` — the docs token layer + `DESIGN-DIVERGENCES.md`.
 - `nim/metacraft_docs_theme.nim` — the shared docs-theme helper consumed by isonim-docs sites.
@@ -33,50 +49,33 @@ scripts/figma-dump.js   →   scripts/build-tokens.mjs   →   brand/ alias/ map
    (generic reflection)       (pure DTCG transform)          committed JSON
 ```
 
-Historically this was a **manual** "export from the plugin, drag files into GitHub"
-step, which drifts: as of this writing the committed `mapped.json` was **17 tokens
-out of sync** with Figma (12 added, 5 renamed). The scripts automate the export off
-a developer's own Figma login so the repo stays faithful.
+Tokens were once exported by hand from the plugin, which drifted; the scripts
+above replaced that.
 
-## Updating the tokens (developer workflow — no CI required)
-1. Edit tokens in Figma / Tokens Studio; **push to Figma variables + text styles**.
-2. Produce a dump — run `scripts/figma-dump.js` through your **Figma MCP client**
-   (e.g. Claude Code / Cursor with the Figma MCP, using your own Figma login) and
-   save the JSON as `dump.json`. (For large files, dump per collection — prepend
-   `const ONLY=["mapped"];` — to stay under the MCP response cap.)
-3. `node scripts/export-tokens.mjs --dump dump.json` → **review the diff** vs the
-   committed files.
-4. **Safety gate (mandatory):** if the diff *removes or renames* any token, run the
-   breakage check against every consumer before writing — it exits non-zero
-   (`file:line`) if a consumer still references a removed token:
-   ```
-   node scripts/check-token-refs.mjs --removed <removed-var-names> \
-        --src ../codetracer/src/frontend/styles   # + any other consumer roots
-   ```
-   A failure means you must **migrate those references in the consumer repo in the
-   same change** (renames here are usually value-preserving, so it's a pure rename)
-   — or keep the token in Figma. Never land a token removal that breaks a consumer.
-5. `node scripts/export-tokens.mjs --dump dump.json --write` → apply, then commit
-   (design-system + any consumer ref-migrations together).
+## Updating the tokens
+
+Follow **[`docs/updating-tokens.md`](docs/updating-tokens.md)**: the full
+procedure, how to confirm Figma and the repo agree, and how the change reaches
+the app. Typography comes from Figma's text styles (`typography/typography.json`);
+every token carries the description written in Figma as `$description`.
 
 The conventions that make this **maintainable** — add a variable / collection /
 mode / text style in Figma and the scripts need **no edits** — are in
 **[`scripts/TOKEN-EXPORT-CONVENTIONS.md`](scripts/TOKEN-EXPORT-CONVENTIONS.md)**.
 Read that before touching the scripts.
 
-The in-flight plan to add **colour-mode (Dark/Light) × density
-(Compact/Comfortable/Spacious)** mode axes — the prototype, the additive
-migration procedure, the consumer opt-in, and the designer sign-off gate — is in
-**[`scripts/AXES-CAMPAIGN.md`](scripts/AXES-CAMPAIGN.md)**.
+The Dark/Light × density mode work in
+[`scripts/AXES-CAMPAIGN.md`](scripts/AXES-CAMPAIGN.md) has shipped; that file is
+history now.
 
 ## For coding agents (Claude / Cursor / … with the Figma MCP)
 - You can reflect the DS directly: `getLocalVariableCollectionsAsync()` /
   `getLocalTextStylesAsync()` via `use_figma` — see `scripts/figma-dump.js` for the
   exact, generic reflection. Aliases resolve to `{dotted.ref}`, colours to hex.
-- To regenerate the repo, run `figma-dump.js` → `build-tokens.mjs` → diff/`--write`.
-  **Never hand-edit `brand`/`alias`/`mapped` JSON** — regenerate from Figma.
-- Verify drift with `scripts/validate-collection.mjs <file>` (a content hash that
-  ignores `$extensions`; equal hash ⇒ parity).
+- To regenerate the repo, follow [`docs/updating-tokens.md`](docs/updating-tokens.md).
+  Don't hand-edit `brand`/`alias`/`mapped` JSON except as that page allows.
+- Verify drift with `scripts/validate-collection.mjs <file>` (a content hash over
+  values, descriptions and every mode; equal hash ⇒ parity).
 - **Designer feedback** arrives as Figma **Dev Mode annotations** (readable — they
   ride along in `get_design_context` as `data-annotations`, and via
   `node.annotations`). **Figma comment pins are NOT readable by agents** — ask the

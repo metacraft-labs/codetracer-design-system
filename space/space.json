@@ -3,6 +3,7 @@
     "panel": {
       "$type": "number",
       "$value": 20,
+      "$description": "Inner padding of a panel or docked region, between its edge and its content. Changes with the density setting.",
       "$extensions": {
         "modes": {
           "Compact": 20,
@@ -14,6 +15,7 @@
     "card": {
       "$type": "number",
       "$value": 16,
+      "$description": "Inner padding of a card or other discrete content block. Changes with the density setting.",
       "$extensions": {
         "modes": {
           "Compact": 16,
@@ -25,6 +27,7 @@
     "control-horizontal": {
       "$type": "number",
       "$value": 10,
+      "$description": "Left and right padding inside a control (button, field, dropdown). Changes with the density setting.",
       "$extensions": {
         "modes": {
           "Compact": 10,
@@ -36,6 +39,7 @@
     "control-vertical": {
       "$type": "number",
       "$value": 6,
+      "$description": "Top and bottom padding inside a control (button, field, dropdown). Changes with the density setting.",
       "$extensions": {
         "modes": {
           "Compact": 6,
@@ -49,6 +53,7 @@
     "card": {
       "$type": "number",
       "$value": 6,
+      "$description": "Space between cards or content blocks in a list or grid. Changes with the density setting.",
       "$extensions": {
         "modes": {
           "Compact": 6,
@@ -60,6 +65,7 @@
     "control": {
       "$type": "number",
       "$value": 6,
+      "$description": "Space between neighbouring controls in a row. Compact = 6, the desktop app's control gap (D-32).",
       "$extensions": {
         "modes": {
           "Compact": 6,
@@ -73,23 +79,25 @@
     "border radius": {
       "card": {
         "$type": "number",
-        "$value": 8,
+        "$value": 6,
+        "$description": "Corner radius of cards and panels' content blocks. Changes with the density setting.",
         "$extensions": {
           "modes": {
-            "Compact": 8,
-            "Comfortable": 12,
-            "Spacious": 16
+            "Compact": 6,
+            "Comfortable": 10,
+            "Spacious": 14
           }
         }
       },
       "control": {
         "$type": "number",
-        "$value": 6,
+        "$value": 4,
+        "$description": "Corner radius of controls (buttons, fields, dropdowns). Changes with the density setting.",
         "$extensions": {
           "modes": {
-            "Compact": 6,
-            "Comfortable": 8,
-            "Spacious": 12
+            "Compact": 4,
+            "Comfortable": 6,
+            "Spacious": 10
           }
         }
       }

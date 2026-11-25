@@ -2,7 +2,8 @@
 // export-tokens.mjs — developer-run token export (Figma → repo DTCG JSON).
 // No CI: it uses the developer's own Figma login. Two steps:
 //   1. get a GENERIC reflection dump of the Figma variables (scripts/figma-dump.js);
-//   2. build-tokens.mjs → DTCG, then diff against (or --write to) brand/alias/mapped.
+//   2. build-tokens.mjs → DTCG, then diff against (or --write to) brand/alias/mapped/
+//      space and typography/ (built from Figma's text styles).
 //
 // Supplying the dump (step 1) — pick one:
 //   A) --dump <file.json>  A dump produced by running scripts/figma-dump.js through
@@ -15,6 +16,7 @@
 //
 // Usage:
 //   node export-tokens.mjs --dump dump.json           # build + DIFF vs repo (no writes)
+//   node export-tokens.mjs --dump brand.json --dump mapped.json …   # several dumps
 //   node export-tokens.mjs --dump dump.json --write    # apply to <col>/<col>.json
 //
 // Maintainability: this file has NO token names. Adding variables/collections/modes
@@ -27,47 +29,54 @@ import { buildTokens } from './build-tokens.mjs';
 
 const REPO = dirname(dirname(fileURLToPath(import.meta.url))); // codetracer-design-system/
 const args = process.argv.slice(2);
-const dumpPath = args[args.indexOf('--dump') + 1];
+// One or more dumps: `--dump a.json --dump b.json` (one per collection when a
+// single dump is too large for the MCP answer). Collections are merged; the
+// text styles come from the first dump that has them.
+const dumpPaths = args.flatMap((a, i) => a === '--dump' ? [args[i + 1]] : []);
+const dumpPath = dumpPaths[0];
 const write = args.includes('--write');
-if (!dumpPath || !existsSync(dumpPath)) {
+if (!dumpPath || dumpPaths.some(p => !p || !existsSync(p))) {
   console.error('usage: node export-tokens.mjs --dump <dump.json> [--write]\n(produce dump.json by running scripts/figma-dump.js via your Figma MCP client — see NOTES)');
   process.exit(1);
 }
 
-const dump = JSON.parse(readFileSync(dumpPath, 'utf8'));
+const dump = { collections: [] };
+for (const p of dumpPaths) {
+  const d = JSON.parse(readFileSync(p, 'utf8'));
+  dump.collections.push(...(d.collections || []));
+  if (!dump.textStyles?.length && d.textStyles?.length) dump.textStyles = d.textStyles;
+}
 const tokens = buildTokens(dump);
 
-// Compare on structure+values only — the current TS export carries a
-// `$extensions.com.figma.*` block the consumers ignore, and our mode-policy-A
-// output adds `$extensions.modes`; strip all `$extensions` before diffing.
-const stripExt = (o) => {
-  if (Array.isArray(o)) return o.map(stripExt);
-  if (o && typeof o === 'object') {
-    const r = {};
-    for (const [k, v] of Object.entries(o)) if (k !== '$extensions') r[k] = stripExt(v);
-    return r;
-  }
-  return o;
-};
+// Compare what a consumer can read: $type, $value, $description and every
+// mode's value under $extensions.modes. (An earlier version stripped all of
+// $extensions, so a Light-only change showed as "0 differences".)
 function leaves(o, path = [], acc = {}) {
-  if (o && typeof o === 'object' && '$value' in o) { acc[path.join('.')] = { $type: o.$type, $value: o.$value }; return acc; }
-  if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) leaves(v, [...path, k], acc);
+  if (o && typeof o === 'object' && '$value' in o) {
+    acc[path.join('.')] = { $type: o.$type, $value: o.$value, $description: o.$description, modes: o.$extensions?.modes };
+    return acc;
+  }
+  if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) if (!k.startsWith('$')) leaves(v, [...path, k], acc);
   return acc;
 }
+const show = (t) => t.modes ? JSON.stringify(t.modes) : JSON.stringify(t.$value);
 
 let totalDiffs = 0;
 for (const [name, obj] of Object.entries(tokens)) {
   const repoFile = join(REPO, name, `${name}.json`);
-  const gen = leaves(stripExt(obj));
+  const gen = leaves(obj);
   if (existsSync(repoFile)) {
-    const cur = leaves(stripExt(JSON.parse(readFileSync(repoFile, 'utf8'))));
+    const cur = leaves(JSON.parse(readFileSync(repoFile, 'utf8')));
     const keys = new Set([...Object.keys(gen), ...Object.keys(cur)]);
     const diffs = [];
     for (const k of keys) {
       const a = cur[k], b = gen[k];
-      if (!a) diffs.push(`  + ${k} = ${JSON.stringify(b.$value)} (${b.$type})`);
-      else if (!b) diffs.push(`  - ${k} (was ${JSON.stringify(a.$value)})`);
-      else if (JSON.stringify(a) !== JSON.stringify(b)) diffs.push(`  ~ ${k}: ${JSON.stringify(a.$value)}(${a.$type}) -> ${JSON.stringify(b.$value)}(${b.$type})`);
+      if (!a) diffs.push(`  + ${k} = ${show(b)} (${b.$type})`);
+      else if (!b) diffs.push(`  - ${k} (was ${show(a)})`);
+      else if (JSON.stringify(a) !== JSON.stringify(b)) {
+        const what = a.$description !== b.$description && show(a) === show(b) && a.$type === b.$type ? ' [description]' : '';
+        diffs.push(`  ~ ${k}${what}: ${show(a)}(${a.$type}) -> ${show(b)}(${b.$type})`);
+      }
     }
     totalDiffs += diffs.length;
     console.log(`\n[${name}] ${diffs.length} difference(s) vs repo (of ${Object.keys(gen).length} tokens)`);
