@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    # The repository's mainline (`dev`). `agents` runs no CI by policy: work
+    # landing there runs `node scripts/run-tests.mjs` locally and is measured
+    # here when it is promoted to `dev`.
+    branches: [dev]
+  pull_request:
+    # Named base: an unfiltered trigger would also run on pull requests into
+    # `agents`, which runs no CI.
+    branches: [dev]
+
+jobs:
+  # Runs every `*.test.mjs` in the repository through `node --test`: the
+  # dump-to-DTCG transform tests (scripts/build-tokens.test.mjs) and the
+  # committed-collection checks (scripts/collections.test.mjs). The log ends
+  # with a `TEST-COUNTS:` line, and the command is the one a developer runs
+  # locally, so a failure reproduces with it.
+  #
+  # One leg, Linux x64, by documented exception to the five-leg matrix. The
+  # omitted legs are Linux arm64, macOS arm64, Windows x64 and Windows arm64.
+  # The reason: the code under test is plain JavaScript with no native code,
+  # no subprocesses and no platform-specific paths (files are located with
+  # fileURLToPath), so its behaviour does not vary by OS or architecture, and
+  # the macOS and Windows legs are the scarce ones. It needs only Node.js, so
+  # there is no Nix here, matching the repository's flake-free stance.
+  test:
+    name: Test (${{ join(matrix.runner, '-') }})
+    strategy:
+      fail-fast: false
+      matrix:
+        runner:
+          - [self-hosted, linux, x64]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      # Fails if the branch filters above stop naming the mainline, which
+      # would otherwise make this workflow stop running without any error.
+      - name: Workflow triggers name the mainline
+        uses: metacraft-labs/metacraft-github-actions/assert-workflow-triggers@dev
+        with:
+          mainline: dev
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: node scripts/run-tests.mjs
+        # An explicit `shell: bash` runs with `-o pipefail`, so `tee` cannot
+        # hide a failing test.
+        shell: bash
+        run: |
+          mkdir -p test-logs
+          node --version
+          node scripts/run-tests.mjs 2>&1 | tee test-logs/test.log
+      # A short-lived convenience copy; the durable copy is the in-house S3
+      # store below.
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs-${{ join(matrix.runner, '-') }}
+          path: test-logs/
+          retention-days: 1
+      - name: Mirror artifacts to S3 (non-blocking)
+        if: always()
+        continue-on-error: true
+        shell: bash
+        env:
+          MCL_S3_ARTIFACTS_ENDPOINT: ${{ vars.MCL_S3_ARTIFACTS_ENDPOINT }}
+          MCL_S3_ARTIFACTS_BUCKET: ${{ vars.MCL_S3_ARTIFACTS_BUCKET }}
+          MCL_S3_ARTIFACTS_REGION: ${{ vars.MCL_S3_ARTIFACTS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.MCL_S3_ARTIFACTS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.MCL_S3_ARTIFACTS_SECRET_ACCESS_KEY }}
+          AWS_EC2_METADATA_DISABLED: "true"
+          S3_OBJECT_PREFIX: test-logs/${{ github.run_id }}/${{ join(matrix.runner, '-') }}
+        run: |
+          set -u
+          if [[ -z "${AWS_ACCESS_KEY_ID:-}" || -z "${MCL_S3_ARTIFACTS_ENDPOINT:-}" ]]; then
+            echo "S3 artifact store not configured for this repo; skipping mirror."
+            exit 0
+          fi
+          nix shell nixpkgs#awscli2 -c \
+            aws --endpoint-url "$MCL_S3_ARTIFACTS_ENDPOINT" \
+                --region "${MCL_S3_ARTIFACTS_REGION:-garage}" \
+                s3 cp --recursive test-logs/ \
+                "s3://${MCL_S3_ARTIFACTS_BUCKET:-ci-artifacts}/$S3_OBJECT_PREFIX/" \
+            || echo "::warning title=S3 artifact mirror::upload failed (non-blocking)"
