@@ -1991,6 +1991,34 @@
               "Light": "#f1efeb"
             }
           }
+        },
+        "find-match": {
+          "$type": "color",
+          "$value": "{colors.information.900}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.information.900}",
+              "Light": "{colors.blue.300}"
+            }
+          }
+        },
+        "find-match-highlight": {
+          "$type": "color",
+          "$value": "{colors.warning.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "ALL_SCOPES"
+            ],
+            "com.figma.hiddenFromPublishing": false,
+            "modes": {
+              "Dark": "{colors.warning.700}",
+              "Light": "{colors.orange.300}"
+            }
+          }
         }
       },
       "action": {

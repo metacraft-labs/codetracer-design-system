@@ -84,6 +84,28 @@ migration procedure, the consumer opt-in, and the designer sign-off gate — is 
 - Never treat `use_figma` write access to the production file casually: build demos
   on a disposable, clearly-named page/collection (e.g. `zz-demo/*`) and delete after.
 
+## Tests and CI
+Run every test with **`node scripts/run-tests.mjs`** (Node.js 22 or later, from
+anywhere; nothing else is needed). It is `node --test` from the repository root
+with the spec reporter, and it closes the log with a
+`TEST-COUNTS: executed=N passed=N failed=N skipped=N` line. It exits non-zero
+when a test fails, a test file fails to load, or no test ran.
+
+- `scripts/build-tokens.test.mjs` — fixture tests of the dump→DTCG transform,
+  one per convention in `TOKEN-EXPORT-CONVENTIONS.md`.
+- `scripts/collections.test.mjs` — every committed collection
+  (`<name>/<name>.json`: `brand`, `alias`, `mapped`, `space`, and any collection
+  added later) parses and normalises, as `validate-collection.mjs` does, to a
+  non-zero token count.
+
+`.github/workflows/ci.yml` runs the same command on every push to `dev` and every
+pull request into `dev`. `agents` runs no CI, so run it locally before landing
+there. Name a new test file `*.test.mjs` and the runner picks it up.
+
+`check-token-refs.mjs` is not part of this run: it checks consumer sources,
+which this repository does not contain, so it is run by hand during an export
+(step 4 above).
+
 ## Who consumes these tokens
 - **Desktop app** — `codetracer/scripts/tokens-to-styl.sh` transforms this JSON into
   `codetracer/src/frontend/styles/generated/*.styl`.
