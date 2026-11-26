@@ -23,8 +23,13 @@ jobs:
   # The reason: the code under test is plain JavaScript with no native code,
   # no subprocesses and no platform-specific paths (files are located with
   # fileURLToPath), so its behaviour does not vary by OS or architecture, and
-  # the macOS and Windows legs are the scarce ones. It needs only Node.js, so
-  # there is no Nix here, matching the repository's flake-free stance.
+  # the macOS and Windows legs are the scarce ones.
+  #
+  # Node.js comes from nixpkgs (`nix shell nixpkgs#nodejs_24`), not from
+  # actions/setup-node: the self-hosted Linux runners are NixOS, where the
+  # glibc Node that setup-node downloads cannot start ("Could not start
+  # dynamically linked executable"). The repository itself stays flake-free:
+  # `nix shell` needs no flake.nix here.
   test:
     name: Test (${{ join(matrix.runner, '-') }})
     strategy:
@@ -43,17 +48,20 @@ jobs:
         uses: metacraft-labs/metacraft-github-actions/assert-workflow-triggers@dev
         with:
           mainline: dev
-      - uses: actions/setup-node@v4
+      # Configures nix.conf and verifies flakes are enabled, which
+      # `nix shell nixpkgs#…` needs; cachix/install-nix-action must not be
+      # used on these runners.
+      - uses: metacraft-labs/devops-modules/.github/setup-nix@dev
         with:
-          node-version: 24
+          nix-github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: node scripts/run-tests.mjs
         # An explicit `shell: bash` runs with `-o pipefail`, so `tee` cannot
         # hide a failing test.
         shell: bash
         run: |
           mkdir -p test-logs
-          node --version
-          node scripts/run-tests.mjs 2>&1 | tee test-logs/test.log
+          nix shell nixpkgs#nodejs_24 --command bash -c \
+            'node --version && node scripts/run-tests.mjs' 2>&1 | tee test-logs/test.log
       # A short-lived convenience copy; the durable copy is the in-house S3
       # store below.
       - name: Upload logs
