@@ -33,7 +33,7 @@ deliberate docs-specific look pending a joint design decision.
 | Dimension | Docs design | Brand token | Status |
 |-----------|-------------|-------------|--------|
 | Focus ring | `#3b82f6` | `colors.ui.border.focus` = blue.500 `#3b82f6` | **exact match** |
-| Admonition palette (note/tip/important/warning/caution) | blue/green/violet/amber/red `.500`+`.50` | same hexes in `brand.json` primitives | **exact match** — the docs admonitions already *are* the brand palette; all five severities render distinctly as of M3 |
+| Admonition palette (note/tip/important/warning/caution) | blue/green/violet/amber/red `.500`+`.50` | same hexes in `brand.json` primitives | **exact match** — the docs admonitions already *are* the brand palette; all five severities render distinctly (see Gap D below) |
 | Body text | `#111` / dark `#dfe0e4` | `neutral.1000 #101010` / dark `neutral.150` | near-match, keep |
 | Muted text | `#7e7e7e` / `#a8aab1` | `neutral.300 #919191` / `neutral.250` | near-match, keep |
 | Borders/dividers | `#e5e7eb` / `#3c4046` | `divider.subtle` (neutral.700) | close, keep docs values |
@@ -52,9 +52,9 @@ deliberate docs-specific look pending a joint design decision.
 
 ---
 
-## Implemented binding (M2 docs token layer)
+## Implemented binding (the docs token layer)
 
-The docs token layer (`src/theme_tokens.nim`, emitted by the M1
+The docs token layer (`src/theme_tokens.nim`, emitted by
 `emitTokensCss`) binds each `--docs-*` variable either as a docs-specific
 **literal** (`bkLiteral`) or by **token** (`bkToken`, resolved against
 `codetracer-design-system/{brand,alias,mapped}/*.json`). This is the
@@ -75,8 +75,8 @@ mechanical tag the "How this doc is meant to be used" section calls for.
 | `--docs-admonition-tip-border` | `#22c55e` | **token** `colors.green.500` | exact match |
 | `--docs-admonition-warning-border` | `#f59e0b` | **token** `colors.amber.500` | exact match |
 | `--docs-admonition-danger-border` | `#ef4444` | **token** `colors.red.500` | exact match |
-| `--docs-admonition-important-border` (M3) | `#8b5cf6` | **token** `colors.violet.500` | exact match |
-| `--docs-admonition-caution-border` (M3) | `#ef4444` | **token** `colors.red.500` | exact match (WebFlow `caution` = red, now its own severity) |
+| `--docs-admonition-important-border` | `#8b5cf6` | **token** `colors.violet.500` | exact match |
+| `--docs-admonition-caution-border` | `#ef4444` | **token** `colors.red.500` | exact match (WebFlow `caution` = red, now its own severity) |
 | `--docs-admonition-*-bg` | tint / rgba tint | **literal** | brand `*.50` primitives (light); dark tints docs-specific |
 | `--docs-code-*`, `--docs-tok-*`, `--docs-api-*`, radii/spacing/sizes | see `theme_tokens.nim` | **literal** | structural / no WebFlow spec |
 
@@ -88,37 +88,37 @@ mechanical tag the "How this doc is meant to be used" section calls for.
   brand `*.50` primitives, but the dark tints are translucent `rgba(...)`
   overlays with no single brand-token equivalent, and a `Binding` is
   all-token or all-literal (no per-side mix).
-- **Gap A** (logo) — RESOLVED in M3. The framework's optional `siteLogo`/
+- **Gap A** (logo) — RESOLVED. The framework's optional `siteLogo`/
   `logoHref` `DocsConfig` hooks now render the vendored CodeTracer mark as a
   real `<img class="docs-logo">` in `.docs-header` (linked home), replacing the
-  M2 `.docs-title::before` background-image stopgap. `.docs-logo` styling +
+  earlier `.docs-title::before` background-image stopgap. `.docs-logo` styling +
   dark-mode `filter: invert(1)` live in the consumer stylesheet.
-- **Gap B** (header nav-links) — RESOLVED in metacraft-theme-parity M1. The
+- **Gap B** (header nav-links) — RESOLVED. The
   framework's optional `headerLinks: seq[{label, href}]` `DocsConfig` hook now
   renders the WebFlow `.ct-nav-btn` row (Support/FAQ) as a `.docs-header-nav`
   group at the right of `.docs-header`. Content-agnostic in the framework
-  (empty ⇒ nothing, header byte-for-byte pre-M1); the CodeTracer button
+  (empty ⇒ nothing, header byte-for-byte as before the hook); the CodeTracer button
   set + `.docs-header-nav-btn` pill styling live in the consumer.
-- **Gap C** (sidebar social icons + toggle placement) — RESOLVED in
-  metacraft-theme-parity M1. Two optional framework hooks: `sidebarLinks:
+- **Gap C** (sidebar social icons + toggle placement) — RESOLVED.
+  Two optional framework hooks: `sidebarLinks:
   seq[{label, href, icon}]` renders the WebFlow `.link-with-icon` external
   items (Github/Twitter, with the vendored `icon__github.svg`/
   `icon__twitter.svg` marks under `static/img/`) at the bottom of
   `.docs-nav-sidebar`; `sidebarThemeToggle: bool` moves the single
   `#docs-theme-toggle` out of the header into a bottom-of-sidebar pill
-  (WebFlow `.theme-switch`). Both default off (byte-for-byte pre-M1); the
+  (WebFlow `.theme-switch`). Both default off (byte-for-byte as before the hooks); the
   `.docs-sidebar-extras` / `.docs-theme-switch-wrap` styling is consumer-side.
   The black Github/Twitter marks invert in dark mode (like the logo); the
   blue need-help icons do not.
-- **Content-page header/footer parity** — ADDED in metacraft-theme-parity M1.
+- **Content-page header/footer parity** — ADDED.
   Optional framework hooks: `pageTitleInContent: bool` renders the page title
   as an `<h1 class="docs-md-title">` at the top of `.docs-main` and drops it
   from the header (WebFlow's big content H1); `lastUpdated`/`showLastUpdated`
   add the "Last updated <date>" `.docs-md-meta` line under it (left off in this
   consumer — no per-page date source yet); and `needHelp: {heading, links}`
   renders the WebFlow "Need some help?" `.docs-need-help` block above the
-  footer. All default off ⇒ byte-for-byte pre-M1.
-- **Gap D** (the book's `important`/`caution` severities) — RESOLVED in M3.
+  footer. All default off ⇒ byte-for-byte as before the hooks.
+- **Gap D** (the book's `important`/`caution` severities) — RESOLVED.
   The framework markdown renderer now has first-class `important` (violet) and
   `caution` (red) admonition kinds, so `:::important` / `:::caution` parse and
   render their own `.docs-md-admonition-important` / `-caution` classes. The
@@ -127,12 +127,12 @@ mechanical tag the "How this doc is meant to be used" section calls for.
   `colors.red.500`. WebFlow `caution` is now its OWN severity (red) instead of
   borrowing `danger`, and `important` renders distinctly (violet) — no more
   lossy remap.
-- **Gap F** (footer) — RESOLVED in M3. The framework's optional `footerHtml`
+- **Gap F** (footer) — RESOLVED. The framework's optional `footerHtml`
   hook fills the previously-empty `.docs-footer` with the WebFlow attribution
   line ("Built by metacraft-labs — 2026"). SSR-string hook (raw HTML has no
   generic-renderer node form); the consumer is a static SSG build, so this is
   the delivery path.
-- **Asset delivery deviation.** The design-port spec calls for vendoring the
+- **Asset delivery deviation.** The port's authoring convention vendors the
   Geist woff2 / logo / glyph under `assets/` referenced as `url(/assets/...)`.
   The framework SSG hash pipeline content-hashes+renames *and removes* every
   file under `assets/` but does **not** rewrite CSS `url()` refs, so a font
@@ -142,7 +142,7 @@ mechanical tag the "How this doc is meant to be used" section calls for.
   `public/assets/` *after* the hash pass. Net effect: real files at the
   exact unhashed `/assets/...` paths the stylesheet points at.
 
-- **Landing hero H1 vs the framework content H1 (M3).** `pageTitleInContent`
+- **Landing hero H1 vs the framework content H1.** `pageTitleInContent`
   renders the page title as a `.docs-md-title` H1 at the top of `.docs-main` on
   every page (WebFlow's `.content-title` H1). The home ALSO opens with a
   `:::hero`, which brings its own H1 + subtitle + button group — the WebFlow home
@@ -151,7 +151,7 @@ mechanical tag the "How this doc is meant to be used" section calls for.
   its meta line) on the one page that carries a hero, keyed purely on the hero
   component's presence (`.docs-main:has(.docs-md-hero) > .docs-md-title`), so
   ordinary article pages keep their content H1 unchanged.
-- **Home product video — OMITTED (M3).** The WebFlow home embeds a CodeTracer
+- **Home product video — OMITTED.** The WebFlow home embeds a CodeTracer
   Noir demo video (a YouTube/embedly iframe) between the Overview and the
   "Start here" cards. This consumer documents IsoNim / isonim-docs, for which no
   real product video exists, so the embed is deliberately omitted rather than
@@ -160,8 +160,7 @@ mechanical tag the "How this doc is meant to be used" section calls for.
   card grids, need-help) is reproduced.
 
 _Maintained alongside the docs theme in `isonim/docs/users/`. Last updated by the
-M3 landing + FAQ build (WebFlow-equivalent home, FAQ accordion, prev/next fix);
-see the design-port spec for exact CSS line references and per-component mapping._
+landing + FAQ build (WebFlow-equivalent home, FAQ accordion, prev/next fix)._
 
 ---
 
@@ -178,20 +177,21 @@ deliberately paint a shared role with different tokens.
 
 ## Roles the terminal needed that the system lacks (filed, painted with the nearest token)
 
-| Role | What the terminal paints instead | Filed as |
-|------|----------------------------------|----------|
-| `srSyntaxOperator` — operators, distinct from punctuation | `colors/editor/syntax/secondary` (the punctuation tier) + bold on every colour rung | `codetracer-specs/issues/2026-09-26-design-system-no-operator-syntax-token.md` |
-| `srHeat0`…`srHeat5` — the heatmap's ordered execution-count scale | syntax tertiary → error → parameter → string → editor action secondary → syntax primary | `…/2026-09-26-design-system-no-heat-scale.md` |
+Each was filed with the CodeTracer maintainers on 2026-09-26 as a request for a token.
+
+| Role | What the terminal paints instead |
+|------|----------------------------------|
+| `srSyntaxOperator` — operators, distinct from punctuation | `colors/editor/syntax/secondary` (the punctuation tier) + bold on every colour rung |
+| `srHeat0`…`srHeat5` — the heatmap's ordered execution-count scale | syntax tertiary → error → parameter → string → editor action secondary → syntax primary |
 
 ## Token values the terminal paints as published, and which fail there (filed, not adjusted)
 
 - `colors/editor/syntax/current-line` resolves to the SAME hex as
   `colors/editor/syntax/comment` in both modes, so a comment on the execution line is
-  invisible (1.0:1) — `…/2026-09-26-design-system-current-line-equals-comment.md`.
+  invisible (1.0:1). Filed 2026-09-26.
 - WCAG AA failures, mostly the Light mode's `colors/editor/surface/primary` (`#7a756a`,
-  a mid-grey under Alucard's syntax colours) and the Light selection/status tiers —
-  `…/2026-09-26-design-system-contrast-failures.md`. The terminal's read-back contrast
-  suite carries exactly these pairs in a counted register.
+  a mid-grey under Alucard's syntax colours) and the Light selection/status tiers.
+  Filed 2026-09-26. The terminal's read-back contrast suite carries exactly these pairs in a counted register.
 
 ## Shared roles the desktop and the terminal paint differently (recorded, by decision)
 
@@ -205,9 +205,9 @@ colours (the two syntax roles the capture measures) agree to the byte.
 
 | Role | Desktop | Terminal | Why |
 |------|---------|----------|-----|
-| Active tab background | the pane's `colors/ui/surface/base/panel` | `colors/ui/surface/primary/tertiary` | The user, 2026-10-01 (PLAT-49 finding 4): the selected tab has a ground of its own |
-| Active tab label | the label tier | the headings tier | PLAT-49 finding 4: the selected tab differs from the others by foreground as well as ground |
-| Inactive tab background | the pane's `colors/ui/surface/base/panel` | the strip's `colors/ui/surface/primary/default` | PLAT-50 (the user, 2026-10-02): the strip has a ground of its own, the one the desktop's tabs sit on |
+| Active tab background | the pane's `colors/ui/surface/base/panel` | `colors/ui/surface/primary/tertiary` | Decided 2026-10-01: the selected tab has a ground of its own |
+| Active tab label | the label tier | the headings tier | Decided 2026-10-01: the selected tab differs from the others by foreground as well as ground |
+| Inactive tab background | the pane's `colors/ui/surface/base/panel` | the strip's `colors/ui/surface/primary/default` | Decided 2026-10-02: the strip has a ground of its own, the one the desktop's tabs sit on |
 
 ## The editor is painted from the desktop's Monaco theme, not `colors/editor/syntax/*` (by decision)
 
@@ -217,10 +217,10 @@ No CodeTracer front-end paints its editor's syntax colours from this system's
 `src/public/third_party/monaco-themes/themes/customThemes/json/codetracerDark.json` and
 `codetracerWhite.json` (Dark keyword `#5a9dd4`). The terminal and GPUI front-ends paint
 from the same documents, resolved to `editor-theme/*` tokens by the same
-`scripts/tokens-to-styl.sh --editor-theme` run that writes the stylus. The user required
-on 2026-09-27 that the native front-ends' editor match the desktop's; PLAT-47 met that by
+`scripts/tokens-to-styl.sh --editor-theme` run that writes the stylus. It was decided
+on 2026-09-27 that the native front-ends' editor match the desktop's, and that was met by
 making the desktop's theme documents the single source, which the desktop keeps feeding
-to Monaco. This replaces the PLAT-46 arrangement, in which the terminal painted
+to Monaco. This replaces the earlier arrangement, in which the terminal painted
 `colors/editor/syntax/*` and counted the editor's syntax and surface as divergences from
 the desktop.
 
@@ -230,15 +230,17 @@ ground is `colors/ui/surface/base/panel` and the active line number
 hexes. The `colors/editor/*` tokens still paint the terminal's roles outside the editor
 text: gutter marks, the heat scale, value categories and chrome accents. The
 `srSyntaxOperator` row and the `colors/editor/syntax/current-line` bullet above describe
-the PLAT-46 arrangement and are tracked by their own issues. The owning spec is
-`codetracer-pm`'s `spec/Front-Ends/CodeTracer-TUI.md` §6, under "The editor is the
-desktop's Monaco theme (PLAT-47)".
+the earlier arrangement and remain open as filed. What this section relies on is
+that every front-end's editor paints its syntax colours and editor ground from the two
+Monaco theme documents above, so a change to `colors/editor/syntax/*` alone changes no
+front-end's editor text.
 
 ### The find highlights: `colors/editor/surface/find-match` and `find-match-highlight`
 
-The in-document find's two highlights have tokens of their own, added 2026-11-20 by the
-user's decision on `codetracer-pm`'s `spec/GUI/Find-And-Incremental-Search.md` OQ-F6:
-`find-match` grounds the CURRENT match and `find-match-highlight` every other one. Both
+The in-document find's two highlights have tokens of their own, added by decision on
+2026-11-20 so that the find's highlights are painted from this system rather than from
+alert surfaces or Monaco's defaults: `find-match` grounds the CURRENT match and
+`find-match-highlight` every other one. Both
 Monaco theme documents refer to them from their `codetracer` block (`findMatch`,
 `findMatchHighlight`), so `scripts/tokens-to-styl.sh --editor-theme` resolves them to
 `editor-theme/findMatch` and `editor-theme/findMatchHighlight` for the terminal and GPUI,
