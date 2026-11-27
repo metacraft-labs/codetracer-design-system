@@ -53,7 +53,9 @@ a developer's own Figma login so the repo stays faithful.
    node scripts/check-token-refs.mjs --removed <removed-var-names> \
         --src ../codetracer/src/frontend/styles   # + any other consumer roots
    ```
-   A failure means you must **migrate those references in the consumer repo in the
+   (The downstream lane below runs this check against codetracer for every
+   candidate, but only over codetracer's stylesheets: name any other consumer
+   root here.) A failure means you must **migrate those references in the consumer repo in the
    same change** (renames here are usually value-preserving, so it's a pure rename)
    — or keep the token in Figma. Never land a token removal that breaks a consumer.
 5. `node scripts/export-tokens.mjs --dump dump.json --write` → apply, then commit
@@ -97,14 +99,54 @@ when a test fails, a test file fails to load, or no test ran.
   (`<name>/<name>.json`: `brand`, `alias`, `mapped`, `space`, and any collection
   added later) parses and normalises, as `validate-collection.mjs` does, to a
   non-zero token count.
+- `scripts/downstream-lane.test.mjs` — the downstream lane (below) is triggered
+  on `dev`, clones the consumers it reads, and fails rather than skips without
+  them; `check-token-refs.mjs` reports removed variables in use and refuses a
+  scan of nothing.
 
 `.github/workflows/ci.yml` runs the same command on every push to `dev` and every
 pull request into `dev`. `agents` runs no CI, so run it locally before landing
 there. Name a new test file `*.test.mjs` and the runner picks it up.
 
 `check-token-refs.mjs` is not part of this run: it checks consumer sources,
-which this repository does not contain, so it is run by hand during an export
-(step 4 above).
+which this repository does not contain. It runs by hand during an export
+(step 4 above) and in the downstream lane.
+
+### The downstream lane
+Every consumer pins a revision of this repository, so its own CI checks a token
+change only when someone moves the pin. The downstream lane checks the consumers
+before a change reaches `dev`. Check the consumers out beside this repository
+(`../codetracer`, `../codetracer-ci`, `../codetracer-web-site`, as in the
+workspace) and run:
+
+```
+node scripts/run-tests.mjs scripts/downstream/consumers.lane.mjs
+```
+
+It needs git, bash, python3, `just` and, for the web site, `nix`. It checks the
+`HEAD` commit of this checkout (`DS_DOWNSTREAM_CANDIDATE=<rev>` names another)
+against the commit each consumer checkout has checked out, in scratch copies:
+the checkouts are not modified, and uncommitted edits in them are not measured.
+`DS_DOWNSTREAM_CODETRACER`, `DS_DOWNSTREAM_CODETRACER_CI` and
+`DS_DOWNSTREAM_WEB_SITE` point it at checkouts elsewhere. One test per gate:
+
+- **codetracer** — with the candidate as its `libs/codetracer-design-system`
+  pin: `just sync-design-tokens` regenerates its stylus and terminal token
+  module; `ci/test/design-tokens-fresh.sh` passes; and
+  `check-token-refs.mjs` finds no stylesheet under `src/frontend/styles` that
+  uses a generated variable the candidate stops generating.
+- **codetracer-ci** — `scripts/generate-design-tokens.py --check` resolves every
+  token of its facade map.
+- **codetracer-web-site** — `just test` (the real static export) in its flake's
+  `ci` dev shell, with `DESIGN_SYSTEM_SRC` pointing at the candidate.
+
+A missing checkout or tool fails its gate; nothing skips. The log ends with the
+same `TEST-COUNTS:` line. `.github/workflows/downstream.yml` runs the lane on
+every push to `dev` and every pull request into `dev`, cloning codetracer and
+codetracer-ci at `agents` and the web site at `dev` (it has no `agents`);
+`workflow_dispatch` takes other refs. A red gate means that consumer cannot take
+the candidate as it stands: migrate the consumer in the same change, as step 4
+says, or change the tokens.
 
 ## Who consumes these tokens
 - **Desktop app** — `codetracer/scripts/tokens-to-styl.sh` transforms this JSON into
@@ -115,6 +157,14 @@ which this repository does not contain, so it is run by hand during an export
   (+ `scripts/design-tokens.map.json`) resolves `brand`/`alias`/`mapped`/`space`
   into `wwwroot/css/tokens.css` as `--cci-*` CSS custom properties, mode-aware
   (colour-mode `[data-theme]` + density `[data-density]`), plus self-hosted fonts.
+- **codetracer.com** — `codetracer-web-site/src/design_system/tokens.nim` reads
+  `brand`/`alias`/`mapped` from `DESIGN_SYSTEM_SRC` (its flake input) and emits
+  `--ct-*` CSS custom properties; an unknown token fails its build.
+
+The downstream lane (above) checks the desktop app, the codetracer-ci WebUI and
+codetracer.com against every candidate. The docs sites are not in it: their
+theme reads `docs/codetracer-docs.tokens.json` through
+`nim/metacraft_docs_theme.nim`, both in this repository.
 
 Don't change a token **value** here to fix a downstream look — fix it in Figma and
 re-export, so every surface stays consistent.
