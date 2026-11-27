@@ -142,10 +142,11 @@ the checkouts are not modified, and uncommitted edits in them are not measured.
 
 A missing checkout or tool fails its gate; nothing skips. The log ends with the
 same `TEST-COUNTS:` line. `.github/workflows/downstream.yml` runs the lane on
-every push to `dev` and every pull request into `dev`, cloning codetracer and
-codetracer-ci at `agents` and the web site at `dev` (it has no `agents`);
-`workflow_dispatch` takes other refs. A red gate means that consumer cannot take
-the candidate as it stands: migrate the consumer in the same change, as step 4
+every push to `dev` and every pull request into `dev`, cloning each consumer at a
+commit the workflow pins: a tip of codetracer's and codetracer-ci's `agents` and
+of the web site's `dev` (it has no `agents`). The pins move by hand (the
+workflow says how); `workflow_dispatch` takes other refs. A red gate means
+that consumer cannot take the candidate as it stands: migrate the consumer in the same change, as step 4
 says, or change the tokens.
 
 ## Who consumes these tokens

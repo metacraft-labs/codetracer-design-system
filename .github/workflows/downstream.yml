@@ -32,17 +32,17 @@ on:
   workflow_dispatch:
     inputs:
       codetracer_ref:
-        description: codetracer ref to test against (default its agent landing branch, agents)
+        description: codetracer ref to test against (default the commit pinned below)
         required: false
-        default: agents
+        default: ""
       codetracer_ci_ref:
-        description: codetracer-ci ref to test against (default its agent landing branch, agents)
+        description: codetracer-ci ref to test against (default the commit pinned below)
         required: false
-        default: agents
+        default: ""
       web_site_ref:
-        description: codetracer-web-site ref to test against (default its mainline, dev; it has no agents branch)
+        description: codetracer-web-site ref to test against (default the commit pinned below)
         required: false
-        default: dev
+        default: ""
 
 permissions:
   contents: read
@@ -97,30 +97,40 @@ jobs:
         with:
           nix-github-token: ${{ steps.app-token.outputs.token }}
       # Each consumer is cloned where the lane looks for it by default, the
-      # workspace sibling `../<name>`, at its agent landing branch: the
-      # changes that move together with this repository's land there.
-      # The names and default branches are CONSUMERS in
-      # scripts/downstream/lane.mjs; scripts/downstream-lane.test.mjs checks
-      # that this list matches it.
+      # workspace sibling `../<name>`, at a COMMIT pinned here, never at a
+      # branch tip: a run must be reproducible, and a branch tip would let
+      # the same candidate pass one day and fail the next with nothing in
+      # this repository changed. The consumers depend on this repository,
+      # not the other way round, so nothing here pins them but these clone
+      # steps. Each pin is a tip of the consumer's agent landing branch
+      # (`agents`; `dev` for the web site, which has no `agents`), where the
+      # changes that move together with this repository's land. The pins
+      # MOVE BY HAND: take the branch tip
+      # (`git ls-remote https://github.com/<repo> refs/heads/<branch>`),
+      # replace the sha and its date, and run the lane locally against it.
+      # `workflow_dispatch` takes any other ref.
+      # The names and branches are CONSUMERS in scripts/downstream/lane.mjs;
+      # scripts/downstream-lane.test.mjs checks that this list matches it
+      # and that every default is a full commit id.
       - name: Clone codetracer
         uses: metacraft-labs/metacraft-github-actions/clone-repo@dev
         with:
           repo: metacraft-labs/codetracer
-          ref: ${{ github.event.inputs.codetracer_ref || 'agents' }}
+          ref: ${{ github.event.inputs.codetracer_ref || '55cb65779050942385ba81af569c278b92cd87a7' }}  # agents tip on 2026-11-27; moves by hand
           path: ${{ github.workspace }}/../codetracer
           gh-token: ${{ steps.app-token.outputs.token }}
       - name: Clone codetracer-ci
         uses: metacraft-labs/metacraft-github-actions/clone-repo@dev
         with:
           repo: metacraft-labs/codetracer-ci
-          ref: ${{ github.event.inputs.codetracer_ci_ref || 'agents' }}
+          ref: ${{ github.event.inputs.codetracer_ci_ref || '63702f342dd9aa837f68c5e0ffee9600711b0e37' }}  # agents tip on 2026-11-27; moves by hand
           path: ${{ github.workspace }}/../codetracer-ci
           gh-token: ${{ steps.app-token.outputs.token }}
       - name: Clone codetracer-web-site
         uses: metacraft-labs/metacraft-github-actions/clone-repo@dev
         with:
           repo: metacraft-labs/codetracer-web-site
-          ref: ${{ github.event.inputs.web_site_ref || 'dev' }}
+          ref: ${{ github.event.inputs.web_site_ref || '1108af45347714186975f84911d8d4cce05d40de' }}  # dev tip on 2026-11-27; moves by hand
           path: ${{ github.workspace }}/../codetracer-web-site
           gh-token: ${{ steps.app-token.outputs.token }}
       - name: node scripts/run-tests.mjs scripts/downstream/consumers.lane.mjs

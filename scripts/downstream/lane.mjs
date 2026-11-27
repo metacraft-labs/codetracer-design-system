@@ -24,9 +24,10 @@ export const root = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
  * The consumers the lane checks. `env` names the variable that points the
  * lane at a checkout; without it the lane uses the workspace sibling
  * `../<name>`, which is also where `.github/workflows/downstream.yml` clones
- * each one. `ref` is the branch that workflow clones by default: the
- * repository's agent landing branch, where the changes that move together
- * with this repository's land (`dev` for a repository that has no `agents`).
+ * each one. `ref` is the branch that workflow's hand-moved commit pin for
+ * the consumer is taken from: the repository's agent landing branch, where
+ * the changes that move together with this repository's land (`dev` for a
+ * repository that has no `agents`).
  */
 export const CONSUMERS = [
   { name: 'codetracer', repo: 'metacraft-labs/codetracer', env: 'DS_DOWNSTREAM_CODETRACER', ref: 'agents' },

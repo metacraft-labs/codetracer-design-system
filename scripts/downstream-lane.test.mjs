@@ -75,8 +75,10 @@ test('the downstream workflow clones every consumer the lane reads, where the la
     const step = yml.slice(at, yml.indexOf('- name:', at));
     assert.match(step, new RegExp(`path: \\$\\{\\{ github\\.workspace \\}\\}/\\.\\./${c.name}\\s`),
       `${c.repo} is not cloned to ../${c.name}, where the lane looks for it`);
-    assert.match(step, new RegExp(`\\|\\| '${c.ref}' \\}\\}`),
-      `${c.repo} is not cloned at ${c.ref} by default`);
+    // A sibling revision never comes from a branch tip: the default is a
+    // full commit id, hand-moved along the consumer's landing branch.
+    assert.match(step, new RegExp(`\\|\\| '[0-9a-f]{40}' \\}\\}  # ${c.ref} tip on \\d{4}-\\d{2}-\\d{2}; moves by hand\\n`),
+      `${c.repo} is not cloned at a pinned commit of ${c.ref} by default`);
   }
 });
 
